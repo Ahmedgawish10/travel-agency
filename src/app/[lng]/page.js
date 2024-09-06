@@ -2,7 +2,6 @@ import Com from "../[lng]/pages/Com";
 import Test from "../[lng]/_components/Test";
 import ElgiwarFeatures from "../[lng]/_components/ElgiwarFeatures";
 import Offers from "../[lng]/_components/Offers";
-import Headers from "../[lng]/_components/Headers"
 import { useTranslation } from '../i18n'
 import { MdOutlineLanguage } from "react-icons/md";
 

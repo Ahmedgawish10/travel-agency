@@ -1,0 +1,185 @@
+{
+  "header": {
+    "HomePage": "Home",
+    "Elhag&Elumrah": "Elhag & Umrah Trips",
+    "Hotels": "Hotel Reservation",
+    "Flights": "Flight Tickets",
+    "Contact": "Contact Us"
+  },
+  "Home.MainSlider": [
+    {
+      "CompanyName": "Al-Jewar for Travels & Tourism",
+      "ServiceTitle": "Elhag & Umrah Trips:",
+      "description": "With Al-Jewar for Tourism, enjoy competitive Umrah and Hajj packages. Experience spirituality and top-notch service.",
+      "Contact": "Book now for inquiries."
+    },
+    {
+      "CompanyName": "Al-Jewar for Travels & Tourism",
+      "ServiceTitle": "Flight Ticket Booking:",
+      "description": "Book flights with Al-Jawar for Tourism at great prices. Discover top deals and start your adventure with ease.",
+      "Contact": "Book now for inquiries."
+    },
+    {
+      "CompanyName": "Al-Jewar for Travels & Tourism",
+      "ServiceTitle": "Hotel Booking",
+      "description": "Discover the beauty of Egypt and the world with Al-Jewar for Tourism. We offer you the best deals for domestic and international tourist destinations, from charming beaches to historical landmarks for a unique travel experience.",
+      "Contact": "Book now for inquiries."
+    },
+    {
+      "CompanyName": "Al-Jewar for Travels & Tourism",
+      "ServiceTitle": "Domestic and International Tourism:",
+      "description": "With Al-Jawar for Tourism, enjoy staying at the best hotels in Egypt. We offer a variety of hotel options with the best deals and prices. Book now to ensure your comfort and enjoyment during your trip.",
+      "Contact": "Book now for inquiries."
+    }
+  ]
+    ,
+    "Home.Features": [
+      {
+        "Heading": "Al-Jewar the best choice",
+         "offer": "We offer you the best travel deals, flights, and hotel bookings",
+          "contact": "Contact our team now (by clicking the link or reaching out at 0472550244) and benefit from discounts and the best travel offers.",
+        "OurFeatures": [
+          {
+            "Feat1": "Elhag &Elumrah"
+          },
+            {
+            "Feat1": "Inbound Tourism "
+          },
+             {
+            "Feat1": "International Tourism"
+          },
+            {
+            "Feat1": "Hotel Bookings"
+          },
+            {
+            "Feat1": "Flight Tickets"
+          }
+        ]
+        
+      }
+    ],
+    "BookingValidation": {
+    "departureCountry": "Departure country is required.",
+    "arrivalCountry": "Arrival country is required.",
+    "hotel": "Hotel star rating is required.",
+    "typeTravel": "Type of travel is required.",
+    "phone": "Phone number is required and must be valid.",
+    "date": "Date is required.",
+    "sendMsg":"Send for Reservation"
+  },
+    "BookTicketTitle":"Booking Now",
+    "countries": {
+    "FromCountry":"Departure Country",
+    "ToCountry":"Arrival Country",
+    "egypt": "Egypt",
+    "saudi_arabia": "Saudi Arabia",
+    "united_arab_emirates": "United Arab Emirates",
+    "usa": "United States of America",
+    "france": "France",
+    "germany": "Germany"
+  },
+    "hotel_stars": {
+    "chooseHotelStar": "Hotel Star Number",
+    "one_star": "1 Star",
+    "two_stars": "2 Stars",
+    "three_stars": "3 Stars",
+    "four_stars": "4 Stars",
+    "five_stars": "5 Stars"
+  },
+     "travel_types": {
+      "chooseTravelType": "Choose Travel Type" ,
+    "sea": "Sea",
+    "air": "Air",
+    "land": "Land"
+  },
+   "phone": {
+      "writePhone": "Write Your Phone" 
+    
+  },
+     "date": {
+      "chosedateticket": "choose the date Departure " 
+    
+  }  ,
+    "persons": {
+      "adults": "choose Number of Adults" ,
+      "childs": "choose Number of Childs" 
+
+    
+  },
+    "footer": {
+    "logo_alt": "Al-Jewar Tours Logo",
+    "description": "Al-Jawwar Tours, we offer the best flight and hotel bookings at the lowest prices, along with the best Umrah packages and a variety of travel packages to the most popular global destinations at exceptional prices.",
+    "quick_links": "Quick Links",
+    "pages": "Pages",
+    "contact_us": "Contact Us",
+    "flight_offers": "Flight Offers",
+    "hajj_offers": "Hajj and Umrah Offers",
+    "tourism_offers": "Tourism Offers",
+    "discord": "Discord",
+    "privacy_policy": "Privacy Policy",
+    "terms_conditions": "Terms & Conditions",
+    "all_rights_reserved": "All Rights Reserved at Al-Jewar Tours © 2023.",
+    "facebook": "Facebook page",
+    "discord_community": "Discord community",
+    "twitter": "Twitter page",
+    "github_account": "GitHub account"
+  },    
+  "offers_title": "ِAl-Jewar Offers",
+  "headers": [
+    "Elhag and ElUmrah Offers",
+    "Domestic Tourism Offers",
+    "International Tourism Offers"
+],
+  "labels": [
+    "Enjoy the best Hajj experience this year with our exclusive offers that combine quality and value. We offer you a distinguished Hajj journey at unmatched prices, including all the services you need for an unforgettable spiritual experience.",
+    "Emaar Grand Hotel is located on the bustling Ibrahim Khalil Street in Mecca, just 750 meters from the Grand Mosque. It features elegantly decorated rooms and a restaurant that offers room service around the clock.",
+    "TUI MAGIC LIFE Kalawy, located beachfront in Hurghada, is a 5-star accommodation featuring a garden, shared lounge, and restaurant. The property also offers guests a kids' club and a playground.",
+    "Set in El Alamein, 17 km from Porto Marina, Azur One Eleven Hotel Alamein offers accommodation with a garden, free private parking, a terrace and a restaurant. Among the various facilities of this property are a bar and a private beach area. The accommodation features room service and free WiFi",
+    "The Grand Cosmopolitan Hotel is located in Dubai, 7.7 km from Jumeirah Beach. It offers accommodation with 3 restaurants, free private parking, an outdoor pool, and a fitness center. The property also includes family rooms and provides guests with a children's playground. Additionally, the property features a 24-hour front desk, room service, and currency exchange for guests.",
+    "This hotel was built in 1910 during the period between the late 19th century and World War I. It boasts an ideal location in the heart of Paris, with easy access to the city's tourist attractions. The guest rooms feature elegant decor"
+  ],"DaysOffer": [
+    "14 days / 13 nights",
+    "10 days / 9 nights",
+    "5 days / 4 nights",
+    "3 days / 2 nights",
+    "7 days / 6 nights",
+    "4 days / 3 nights"
+
+
+  ],
+  "more_details": "More Details",
+  "special_price": "Special Price",
+  "rating": "5.0",
+"slider_offers": [
+  "Elhag Offers",
+  "Elumrah Offers",
+  "Hurghada Offers",
+  "North Coast Offers",
+      "Dubai Offers",
+"Paris Offers"
+
+
+]
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

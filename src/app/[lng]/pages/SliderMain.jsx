@@ -37,9 +37,8 @@ export default function App({ lng }  ) {
     };
   return (
     <>
-      {/* <Image src={Img1} width={200} height={300}/> */}
       <Swiper
-                     ref={swiperRef}
+      ref={swiperRef}
 
         pagination={{
           clickable: true,
@@ -71,7 +70,7 @@ export default function App({ lng }  ) {
                   {item.description}  
                 </div>
                       <div className="button-reserv pt-2 mt-4 text-white">
-        <a href="https://wa.me/01064880594" target="_blank" rel="noopener noreferrer" className="xsm:text-[18px]   button-92" role="button">
+        <a href="https://wa.me/01094487922" target="_blank" rel="noopener noreferrer" className="xsm:text-[18px]   button-92" role="button">
                 {item.Contact}
                  </a>
                 

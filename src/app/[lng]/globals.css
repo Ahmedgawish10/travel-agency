@@ -80,7 +80,6 @@ body{
       transition:.2s ease-in-out;
     }
     .nav-links ul li:hover{
-      padding-left:20px;
       transition:.4s ease-in-out;
     }
     .nav-links ul li:hover a{

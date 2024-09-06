@@ -81,12 +81,12 @@ return (
 
                        <div className="icons">  
                                  <div class="social-icons flex mb-3 iconpad text-center xmd:gap-3 lg:gap-3">
-                                  <a  class={`slider-nav-item ${lng=="ar"?"after:right-[100%]":"after:left-[100%]"}    w-[30px] h-[30px] xmd:w-[50px]  xmd:h-[50px] flex justify-center text-[#311f9b] items-center  hover:before:bg-[#3f345f] hover:bg-[#3f345f] hover:text-white`}><FaFacebookF /></a>
+                                  <a href="https://www.facebook.com/profile.php?id=100090367776829&mibextid=ZbWKwL" target="_blank"  class={`slider-nav-item ${lng=="ar"?"after:right-[100%]":"after:left-[100%]"}    w-[30px] h-[30px] xmd:w-[50px]  xmd:h-[50px] flex justify-center text-[#311f9b] items-center  hover:before:bg-[#3f345f] hover:bg-[#3f345f] hover:text-white`}><FaFacebookF /></a>
                                     <a  class={`slider-nav-item ${lng=="ar"?"after:right-[100%]":"after:left-[100%]"}  w-[30px] h-[30px] xmd:w-[50px]  xmd:h-[50px] flex justify-center text-[#311f9b] items-center  hover:before:bg-[#3f345f] hover:bg-[#3f345f] hover:text-white`}><LuInstagram /></a>
                                    
                            <a  class={`slider-nav-item ${lng=="ar"?"after:right-[100%]":"after:left-[100%]"}  w-[30px] h-[30px] xmd:w-[50px]  xmd:h-[50px] flex justify-center text-[#311f9b] items-center  hover:before:bg-[#3f345f] hover:bg-[#6CA0C8] hover:text-white`}><IoLogoTwitter /></a>
                                    </div>
-                                    <a  href="" className={`text-white ${lng=="ar"?"flex-row-reverse justify-end":""} flex gap-2 items-center`}> 
+                                    <a   href="tel:+01094487922" className={`text-white ${lng=="ar"?"flex-row-reverse justify-end":""} flex gap-2 items-center`}> 
                                      <span>    <FaPhoneAlt /> </span>
                                     <span>01064880594</span>
                                     </a>
@@ -112,7 +112,7 @@ return (
       {/*contact phones*/}
      <div className="icons-contact  z-20 fixed">
            <a 
-        href="https://wa.me/01094487922" 
+        href="https://wa.me/+0201094487922" 
         className="fixed bottom-10 right-4 bg-green-500 text-white p-3 rounded-full shadow-lg animate-pulse hover:animate-none"
         target="_blank" 
         rel="noopener noreferrer"

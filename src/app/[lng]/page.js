@@ -1,5 +1,5 @@
-import Com from "../[lng]/pages/Com";
-import Test from "../[lng]/_components/Test";
+import SliderMain from "../[lng]/pages/SliderMain";
+import BookingSystem from "../[lng]/_components/BookingSystem";
 import ElgiwarFeatures from "../[lng]/_components/ElgiwarFeatures";
 import Offers from "../[lng]/_components/Offers";
 import { useTranslation } from '../i18n'
@@ -17,9 +17,9 @@ import Link from 'next/link';
            <Link href={`/${lng}/sec`} className="text-[red]">Sec</Link><br/>
             <Link href={`/${lng}/pages`} className="text-[red]">Error(Pages)</Link>
             */} 
-              <Com lng={lng}/>
+              <SliderMain lng={lng}/>
               <ElgiwarFeatures lng={lng}/>
-              <Test lng={lng} ticket="ticket"/>
+              <BookingSystem lng={lng} ticket="ticket"/>
                <Offers lng={lng}/>
 
              <div className={`home-langSwitcher  fixed top-[8px] z-20 ${lng=="ar"?"left-[5%] ":"right-[5%]"} `}>

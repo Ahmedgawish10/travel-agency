@@ -9,17 +9,16 @@ import { useTranslation } from '../../i18n/clinet'
 import "./style.css"
 import { FaPhoneAlt } from "react-icons/fa";
 import { CgMail } from "react-icons/cg";
+import X from "../../../../public/imgs/eljewar-logo.jpg"
+import Image from "next/image"
 
 import Headers from "../_components/HeaderS"
  const  Header=({lng})=> {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { t } = useTranslation(lng, 'home')
-  const s = useRouter();
-  const p = usePathname();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-     console.log(t);
   };
 
 
@@ -53,9 +52,9 @@ import Headers from "../_components/HeaderS"
          
           <div className={`flex h-10  ${lng=="en"?"":"flex-row-reverse"}   items-center justify-between overflow-hidden `}>
             <div className="md:flex md:items-center md:gap-12">
-              <Link className="block text-teal-600" href="/">
+              <Link href="" className="block text-teal-600" href="/">
                 <span className="sr-only">Home</span>
-                <MdOndemandVideo className="text-4xl text-[#130f40] " />
+<Image src={X} className="w-[40px] h-[40px]  md:w-[40px] md:h-[40px]"  /> 
               </Link>
             </div>
             {/* <div className="call">01064880594</div> */}
@@ -64,23 +63,28 @@ import Headers from "../_components/HeaderS"
               <nav aria-label="Global">
                 <ul className="flex items-center gap-6 text-sm">
                   <li>
-                    <Link className="text-[#130f40] lg:text-[18px] md:text-[16px] font-semibold transition hover:text-black" href={`/${lng}`} >{t("header.HomePage")}</Link>
+                    <Link className="relative  inline cursor-pointer   before:bg-teal-600 hover:rounded-b-none before:absolute before:-bottom-0 before:-left-0  before:block before:h-[4px] before:w-full before:origin-bottom-right before:scale-x-0 before:transition before:duration-300 before:ease-in-out hover:before:origin-bottom-left hover:before:scale-x-100
+                    text-[#130f40] lg:text-[18px] md:text-[16px] font-semibold transition hover:text-black" href={`/${lng}`} >{t("header.HomePage")}</Link>
 
                   </li>
 
                   <li>
-                    <Link className="text-[#130f40] lg:text-[18px] md:text-[16px] font-semibold transition hover:text-black" href="/"  > {t("header.Elhag&Elumrah")}</Link>
+                    <Link className="relative  inline cursor-pointer   before:bg-teal-600 hover:rounded-b-none before:absolute before:-bottom-0 before:-left-0  before:block before:h-[4px] before:w-full before:origin-bottom-right before:scale-x-0 before:transition before:duration-300 before:ease-in-out hover:before:origin-bottom-left hover:before:scale-x-100
+                    text-[#130f40] lg:text-[18px] md:text-[16px] font-semibold transition hover:text-black" href="/"  > {t("header.Elhag&Elumrah")}</Link>
                   </li>
 
                   <li>
-                    <Link className="text-[#130f40] lg:text-[18px] md:text-[16px] font-semibold transition hover:text-black" href="/" > {t("header.Hotels")}</Link>
+                    <Link className="relative  inline cursor-pointer   before:bg-teal-600 hover:rounded-b-none before:absolute before:-bottom-0 before:-left-0  before:block before:h-[4px] before:w-full before:origin-bottom-right before:scale-x-0 before:transition before:duration-300 before:ease-in-out hover:before:origin-bottom-left hover:before:scale-x-100
+                    text-[#130f40] lg:text-[18px] md:text-[16px] font-semibold transition hover:text-black" href="/" > {t("header.Hotels")}</Link>
                   </li>
 
                   <li>
-                    <Link className="text-[#130f40] lg:text-[18px] md:text-[16px] font-semibold transition hover:text-black" href="/" > {t("header.Flights")}</Link>
+                    <Link className="relative  inline cursor-pointer   before:bg-teal-600 hover:rounded-b-none before:absolute before:-bottom-0 before:-left-0  before:block before:h-[4px] before:w-full before:origin-bottom-right before:scale-x-0 before:transition before:duration-300 before:ease-in-out hover:before:origin-bottom-left hover:before:scale-x-100
+                    text-[#130f40] lg:text-[18px] md:text-[16px] font-semibold transition hover:text-black" href="/" > {t("header.Flights")}</Link>
                   </li>
                   <li>
-                    <Link className="text-[#130f40] lg:text-[18px] md:text-[16px] font-semibold transition hover:text-black" href="/" >  {t("header.Contact")}     </Link>
+                    <Link className="relative  inline cursor-pointer   before:bg-teal-600 hover:rounded-b-none before:absolute before:-bottom-0 before:-left-0  before:block before:h-[4px] before:w-full before:origin-bottom-right before:scale-x-0 before:transition before:duration-300 before:ease-in-out hover:before:origin-bottom-left hover:before:scale-x-100
+                    text-[#130f40] lg:text-[18px] md:text-[16px] font-semibold transition hover:text-black" href="/" >  {t("header.Contact")}     </Link>
                   </li>
                   <li>
                

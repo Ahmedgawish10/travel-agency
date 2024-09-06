@@ -32,7 +32,7 @@ export default function Offers({ lng }) {
     <>
       <div className="w-[90%] mx-auto pt-10 lg:w-[70%]">
         <h2 className="text-center text-2xl font-semibold pt-8 pb-4">{t('offers_title')}</h2>
-        <h2 className="text-center text-2xl font-semibold pb-10">
+        <h2 className="text-center text-2xl font-semibold pb-8">
           {headers[activeIndex]}
         </h2>
 
@@ -103,7 +103,10 @@ export default function Offers({ lng }) {
           ))}
         </Swiper>
       </div>
-      
+      <button
+    class="relative  inline cursor-pointer   before:bg-teal-600 hover:rounded-b-none before:absolute before:-bottom-0 before:-left-0  before:block before:h-[4px] before:w-full before:origin-bottom-right before:scale-x-0 before:transition before:duration-300 before:ease-in-out hover:before:origin-bottom-left hover:before:scale-x-100">
+    Hover me
+</button>
       
     </>
   );

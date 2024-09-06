@@ -291,11 +291,11 @@ background-size: cover;
     background-position: top;
 }
 .swiper-offer{
-    height: initial;
+    height: initial !important;
     padding-bottom: 40px !important;
 }
 .swiper-offer .swiper-slide{
-    display: flex;
+/*    display: flex;*/
 }
 
   /*----------hero footer------------*/

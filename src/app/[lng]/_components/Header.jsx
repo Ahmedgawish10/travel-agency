@@ -54,7 +54,7 @@ import Headers from "../_components/HeaderS"
             <div className="md:flex md:items-center md:gap-12">
               <Link href="" className="block text-teal-600" href="/">
                 <span className="sr-only">Home</span>
-<Image src={X} className="w-[40px] h-[40px]  md:w-[40px] md:h-[40px]"  /> 
+<Image src={X} className="w-[40px] h-[40px]  md:w-[40px] md:h-[40px]" alt='logo' /> 
               </Link>
             </div>
             {/* <div className="call">01064880594</div> */}

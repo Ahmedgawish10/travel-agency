@@ -56,9 +56,9 @@ export default function App({ lng }  ) {
           
           >
            <div className="content-box flex items-end w-[100%] h-[100%] ">
-            <div className="overlay py-5 w-[100%] mb-[80px] bg-[#1E10104D]">
+            <div className="overlay py-5 sm:py-1 w-[100%] mb-[80px] bg-[#1E10104D]">
               <div className="content w-[90%] mx-auto ">
-                <div className={`title-company text-4xl pb-4 text-white sm:text-3xl ${lng=="en"?" xsm:text-2xl":""}  `}> {item.CompanyName}</div>
+                <div className={`title-company text-4xl pb-4 text-white sm:text-3xl xsm:pb-1 ${lng=="en"?" xsm:text-2xl":""}  `}> {item.CompanyName}</div>
                 <div className={`title-work  text-2xl pb-1 text-white `}>
                 <span className={`relative ${lng=="en"?"xsm:text-[22px]":""} `}>
                                     {item.ServiceTitle}  
@@ -69,9 +69,9 @@ export default function App({ lng }  ) {
                 <div className="desc mt-2 text-white text-[20px]">
                   {item.description}  
                 </div>
-                      <div className="button-reserv pt-2 mt-4 text-white">
-        <a href="https://wa.me/01094487922" target="_blank" rel="noopener noreferrer" className="xsm:text-[18px]   button-92" role="button">
-                {item.Contact}
+                      <div className="button-reserv pt-2 mt-4 sm:mt-0 text-white">
+        <a   href="https://wa.me/+0201094487922" target="_blank" rel="noopener noreferrer" className="xsm:text-[18px]   button-92" role="button">
+                {item.Contact}x
                  </a>
                 
                 </div>

@@ -271,7 +271,7 @@ function DropdownForm({ lng, ticket }) {
            </div>
             <div className="containerr w-[90%] bg-blue-100 md:w-[90%]  lg:w-[70%] mx-auto  ">
                
-                <form htmlFor="" onSubmit={handleSubmit} className="p-6  grid grid-cols-1 md:grid-cols-2  md:gap-x-5">
+                <form htmlFor="Booking" onSubmit={handleSubmit} className="p-6  grid grid-cols-1 md:grid-cols-2  md:gap-x-5">
                     <div className="relative col-span-1 text-left mb-4" ref={dropdownRef1}>
 
                         <div className={`block ${lng == "ar" ? "text-right" : ""}`}>{t(`countries.FromCountry`)}</div>
@@ -435,7 +435,7 @@ function DropdownForm({ lng, ticket }) {
           </div>*/}
                     {/*7 Date for trip*/}
                     <div className="relative col-span-1 text-left mb-4" ref={dropdownRef6}>
-                        <label for="dateInput" className={`block pb-2 text-[16px]  ${lng == "ar" ? "text-right" : ""} text-sm font-medium text-gray-700`}>{t(`date.chosedateticket`)} </label>
+                        <label htmlFor="dateInput" className={`block pb-2 text-[16px]  ${lng == "ar" ? "text-right" : ""} text-sm font-medium text-gray-700`}>{t(`date.chosedateticket`)} </label>
 
                         <input
                             id="dateInput"

@@ -104,6 +104,9 @@ body{
     {
       display: none !important;
     }
+   .main-slider .swiper-pagination {
+        margin-bottom: -5px !important;
+    }
 }
 
 

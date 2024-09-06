@@ -14,7 +14,7 @@ function ModalBookingInfo() {
         onClick={openModal}
         className="block text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm  text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
       >
-<Image src={Img1} className="w-[40px] h-[40px]  md:w-[50px] md:h-[50px]"  /> 
+<Image src={Img1} className="w-[40px] h-[40px]  md:w-[50px] md:h-[50px]"  alt="info"/> 
            </button>
 
       {isOpen && (
@@ -24,7 +24,7 @@ function ModalBookingInfo() {
         >
           <div
             className="relative w-[90%] bg-white rounded-lg shadow dark:bg-gray-700"
-            onClick={(e) => e.stopPropagation()} // Prevent click from closing the modal
+            onClick={(e) => e.stopPropagation()} 
           >
             <div className="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white">

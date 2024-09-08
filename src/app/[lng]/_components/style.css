@@ -294,8 +294,17 @@ background-size: cover;
     height: initial !important;
     padding-bottom: 40px !important;
 }
+
+/*
 .swiper-offer .swiper-slide{
-/*    display: flex;*/
+    display: flex;
+}
+*/
+/*why*/
+.why-us .content{
+        background-image: url("../../../../public/imgs/xc.avif");
+background-size: cover;
+    background-position: center;
 }
 
   /*----------hero footer------------*/

@@ -106,30 +106,7 @@
 
     
   },
-    "footer": {
-    "logo_alt": "Al-Jewar Tours Logo",
-    "description": "Al-Jawwar Tours, we offer the best flight and hotel bookings at the lowest prices, along with the best Umrah packages and a variety of travel packages to the most popular global destinations at exceptional prices.",
-    "quick_links": "Quick Links",
-    "pages": "Pages",
-    "contact_us": "Contact Us",
-    "flight_offers": "Flight Offers",
-    "hajj_offers": "Hajj and Umrah Offers",
-    "tourism_offers": "Tourism Offers",
-    "discord": "Discord",
-    "privacy_policy": "Privacy Policy",
-    "terms_conditions": "Terms & Conditions",
-    "all_rights_reserved": "All Rights Reserved at Al-Jewar Tours © 2023.",
-    "facebook": "Facebook page",
-    "discord_community": "Discord community",
-    "twitter": "Twitter page",
-    "github_account": "GitHub account"
-  },    
-  "offers_title": "ِAl-Jewar Offers",
-  "headers": [
-    "Elhag and ElUmrah Offers",
-    "Domestic Tourism Offers",
-    "International Tourism Offers"
-],
+
   "labels": [
     "Enjoy the best Hajj experience this year with our exclusive offers that combine quality and value. We offer you a distinguished Hajj journey at unmatched prices, including all the services you need for an unforgettable spiritual experience.",
     "Emaar Grand Hotel is located on the bustling Ibrahim Khalil Street in Mecca, just 750 meters from the Grand Mosque. It features elegantly decorated rooms and a restaurant that offers room service around the clock.",
@@ -170,7 +147,32 @@
     "paymentsDesc": "Discover a world of savings with Misq Travels, exclusive offers and discounts year-round.",
     "customerServiceTitle": "24/7 Customer Service and Support",
     "customerServiceDesc": "Discover a world of savings with Misq Travels, exclusive offers and discounts year-round."
-  }
+  },
+ "footer": {
+    "company_name":"Al-Jewar Tours",
+    "logo_alt": "Al-Jewar Tours Logo",
+    "description": "Al-Jawwar Tours, we offer the best flight and hotel bookings at the lowest prices, along with the best Umrah packages and a variety of travel packages to the most popular global destinations at exceptional prices.",
+    "quick_links": "Quick Links",
+    "pages": "Pages",
+    "contact_us": "Contact Us",
+    "flight_offers": "Flight Offers",
+    "hajj_offers": "Hajj and Umrah Offers",
+    "tourism_offers": "Tourism Offers",
+    "discord": "Discord",
+    "privacy_policy": "Privacy Policy",
+    "terms_conditions": "Terms & Conditions",
+    "all_rights_reserved": "All Rights Reserved at Al-Jewar Tours © 2023.",
+    "facebook": "Facebook page",
+    "discord_community": "Discord community",
+    "twitter": "Twitter page",
+    "contact": "Contact us"
+  },    
+  "offers_title": "ِAl-Jewar Offers",
+  "headers": [
+    "Elhag and ElUmrah Offers",
+    "Domestic Tourism Offers",
+    "International Tourism Offers"
+]
 
  
 

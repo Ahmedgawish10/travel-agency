@@ -6,7 +6,12 @@ import { FaFacebookF } from "react-icons/fa";
 import { LuInstagram } from "react-icons/lu";
 import { IoLogoTwitter } from "react-icons/io";
 import { FaWhatsapp, FaPhoneAlt } from 'react-icons/fa';
+import {
+  Ripple,
+  initTWE,
+} from "tw-elements";
 
+initTWE({ Ripple });
 
 function Footer({lng}) {
           const { t } = useTranslation(lng, 'home')
@@ -23,8 +28,8 @@ return (
                   className="h-8 me-3"
                   alt={t('footer.logo_alt')}
                 />
-                <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                  Al-Jewar Tours
+                <span className="self-center pb-2 text-2xl sm:text-[1.3rem] font-semibold whitespace-nowrap dark:text-white">
+                {t('footer.company_name')}
                 </span>
               </a>
               <div className="self-center xmd:w-[80%] xsm:w-[100%] sm:text-[14px] font-semibold dark:text-white md:w-[80%] pt-2 md:pl-4">
@@ -60,17 +65,18 @@ return (
                   {t('footer.pages')}
                 </h2>
                 <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                  <li className="mb-4">
+                  <li className="mb-2">
                     <a href="https://github.com/themesberg/flowbite" className="hover:underline">
-                      {t('footer.github')}
+                      {t('footer.contact')}
                     </a>
                   </li>
                   <li>
                     <a href="https://discord.gg/4eeurUVvTy" className="hover:underline">
-                      {t('footer.discord')}
+                      {t('footer.terms_conditions')}
                     </a>
                   </li>
                 </ul>
+  
               </div>
               <div>
                 <h2 className="mb-6 text-sm font-semibold uppercase dark:text-white">
@@ -86,10 +92,16 @@ return (
                                    
                            <a  className={`slider-nav-item ${lng=="ar"?"after:right-[100%]":"after:left-[100%]"}  w-[30px] h-[30px] xmd:w-[50px]  xmd:h-[50px] flex justify-center text-[#311f9b] items-center  hover:before:bg-[#3f345f] hover:bg-[#6CA0C8] hover:text-white`}><IoLogoTwitter /></a>
                                    </div>
-                                    <a   href="tel:+01094487922" className={`text-white ${lng=="ar"?"flex-row-reverse justify-end":""} flex gap-2 items-center`}> 
+                                                 <button
+  type="button"
+  data-twe-ripple-init
+  data-twe-ripple-color="light"
+  class="inline-block rounded bg-primary md:ml-[-10px] lg:ml-0  px-2   pb-2 pt-2 text-sm font-medium uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2 motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong">
+   <a   href="tel:+01094487922" className={`text-white ${lng=="ar"?"flex-row-reverse justify-end":""} flex gap-2 items-center`}> 
                                      <span>    <FaPhoneAlt /> </span>
                                     <span>01064880594</span>
                                     </a>
+</button>
                                 
                               </div>
         </div>

@@ -18,7 +18,7 @@ return (
       <div className="flex justify-center mt-10 text-3xl font-regular pb-6">
         {t('Whyus.whyUs')}
       </div>
-      <div className="content lg:p-9">
+      <div className="content ">
         <div className="w-[90%] py-12 mx-auto">
           <div className="grid xmd:gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 text-center md:justify-around lg:justify-center md:gap-5 lg:gap-3">
             <div className=" ">

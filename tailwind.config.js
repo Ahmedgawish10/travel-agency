@@ -15,7 +15,7 @@ module.exports = {
   theme: {
     extend: {
         screens: {         
-            'xmd': {'max': '768px'},// Custom sm breakpoint (default is 640px)
+            'xmd': {'max': '767px'},// Custom sm breakpoint (default is 640px)
            'sm': {'max': '500px'},// Custom sm breakpoint (default is 640px)
             'xsm': {'max': '400px'}// Custom sm breakpoint (default is 640px)
 

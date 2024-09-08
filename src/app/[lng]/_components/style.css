@@ -302,7 +302,7 @@ background-size: cover;
 */
 /*why*/
 .why-us .content{
-        background-image: url("../../../../public/imgs/xc.avif");
+        background-image: url("../../../../public/imgs/why-us-overlay.avif");
 background-size: cover;
     background-position: center;
 }

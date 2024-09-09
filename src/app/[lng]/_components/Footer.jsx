@@ -1,22 +1,17 @@
-"use client"
-
-import React from 'react'
-import { useTranslation } from '../../i18n/clinet'
-import { FaFacebookF } from "react-icons/fa";
+'use client';
+import React from 'react';
+import { useTranslation } from '../../i18n/clinet';
+import { FaFacebookF, FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
 import { LuInstagram } from "react-icons/lu";
 import { IoLogoTwitter } from "react-icons/io";
-import { FaWhatsapp, FaPhoneAlt } from 'react-icons/fa';
-import {
-  Ripple,
-  initTWE,
-} from "tw-elements";
+import { Ripple, initTWE } from "tw-elements";
 
 initTWE({ Ripple });
 
-function Footer({lng}) {
-          const { t } = useTranslation(lng, 'home')
+function Footer({ lng }) {
+  const { t } = useTranslation(lng, 'home');
 
-return (
+  return (
     <div>
       <footer className="bg-[#03245A] dark:bg-gray-900 text-white">
         <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
@@ -29,14 +24,16 @@ return (
                   alt={t('footer.logo_alt')}
                 />
                 <span className="self-center pb-2 text-2xl sm:text-[1.3rem] font-semibold whitespace-nowrap dark:text-white">
-                {t('footer.company_name')}
+                  {t('footer.company_name')}
                 </span>
               </a>
               <div className="self-center xmd:w-[80%] xsm:w-[100%] sm:text-[14px] font-semibold dark:text-white md:w-[80%] pt-2 md:pl-4">
                 {t('footer.description')}
               </div>
             </div>
+
             <div className="flex-1 grid grid-cols-2 gap-2 sm:gap-2 md:grid-cols-3 xsm:grid-cols-1">
+              {/* Quick Links */}
               <div>
                 <h2 className="mb-6 text-sm font-semibold uppercase dark:text-white">
                   {t('footer.quick_links')}
@@ -44,7 +41,7 @@ return (
                 <ul className="text-gray-500 dark:text-gray-400 font-medium">
                   <li className="pb-2">
                     <a href="https://flowbite.com/" className="hover:underline">
-                                   {t('footer.flight_offers')}
+                      {t('footer.flight_offers')}
                     </a>
                   </li>
                   <li className="pb-2">
@@ -57,9 +54,10 @@ return (
                       {t('footer.tourism_offers')}
                     </a>
                   </li>
-                  
                 </ul>
               </div>
+
+              {/* Pages */}
               <div>
                 <h2 className="mb-6 text-sm font-semibold uppercase dark:text-white">
                   {t('footer.pages')}
@@ -76,76 +74,90 @@ return (
                     </a>
                   </li>
                 </ul>
-  
               </div>
+
+              {/* Contact Us */}
               <div>
                 <h2 className="mb-6 text-sm font-semibold uppercase dark:text-white">
                   {t('footer.contact_us')}
                 </h2>
-                <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                            <div className="social-overlap process-scetion ">
-
-                       <div className="icons">  
-                                 <div className="social-icons flex mb-3 iconpad text-center xmd:gap-3 lg:gap-3">
-                                  <a href="https://www.facebook.com/profile.php?id=100090367776829&mibextid=ZbWKwL" target="_blank"  className={`slider-nav-item ${lng=="ar"?"after:right-[100%]":"after:left-[100%]"}    w-[30px] h-[30px] xmd:w-[50px]  xmd:h-[50px] flex justify-center text-[#311f9b] items-center  hover:before:bg-[#3f345f] hover:bg-[#3f345f] hover:text-white`}><FaFacebookF /></a>
-                                    <a  className={`slider-nav-item ${lng=="ar"?"after:right-[100%]":"after:left-[100%]"}  w-[30px] h-[30px] xmd:w-[50px]  xmd:h-[50px] flex justify-center text-[#311f9b] items-center  hover:before:bg-[#3f345f] hover:bg-[#3f345f] hover:text-white`}><LuInstagram /></a>
-                                   
-                           <a  className={`slider-nav-item ${lng=="ar"?"after:right-[100%]":"after:left-[100%]"}  w-[30px] h-[30px] xmd:w-[50px]  xmd:h-[50px] flex justify-center text-[#311f9b] items-center  hover:before:bg-[#3f345f] hover:bg-[#6CA0C8] hover:text-white`}><IoLogoTwitter /></a>
-                                   </div>
-                                                 <button
-  type="button"
-  data-twe-ripple-init
-  data-twe-ripple-color="light"
-  class="inline-block rounded bg-primary md:ml-[-10px] lg:ml-0  px-2   pb-2 pt-2 text-sm font-medium uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2 motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong">
-   <a   href="tel:+01094487922" className={`text-white ${lng=="ar"?"flex-row-reverse justify-end":""} flex gap-2 items-center`}> 
-                                     <span>    <FaPhoneAlt /> </span>
-                                    <span>01064880594</span>
-                                    </a>
-</button>
-                                
-                              </div>
-        </div>
-                </ul>
+                <div className="social-overlap process-scetion">
+                  <div className="social-icons flex mb-3 iconpad text-center xmd:gap-3 lg:gap-3">
+                    <a
+                      href="https://www.facebook.com/profile.php?id=100090367776829&mibextid=ZbWKwL"
+                      target="_blank"
+                      className={`slider-nav-item ${lng == "ar" ? "after:right-[100%]" : "after:left-[100%]"} w-[30px] h-[30px] xmd:w-[50px]  xmd:h-[50px] flex justify-center text-[#311f9b] items-center hover:before:bg-[#3f345f] hover:bg-[#3f345f] hover:text-white`}
+                    >
+                      <FaFacebookF />
+                    </a>
+                    <a
+                      className={`slider-nav-item ${lng == "ar" ? "after:right-[100%]" : "after:left-[100%]"} w-[30px] h-[30px] xmd:w-[50px]  xmd:h-[50px] flex justify-center text-[#311f9b] items-center hover:before:bg-[#3f345f] hover:bg-[#3f345f] hover:text-white`}
+                    >
+                      <LuInstagram />
+                    </a>
+                    <a
+                      className={`slider-nav-item ${lng == "ar" ? "after:right-[100%]" : "after:left-[100%]"} w-[30px] h-[30px] xmd:w-[50px]  xmd:h-[50px] flex justify-center text-[#311f9b] items-center hover:before:bg-[#3f345f] hover:bg-[#6CA0C8] hover:text-white`}
+                    >
+                      <IoLogoTwitter />
+                    </a>
+                  </div>
+                  <button
+                    type="button"
+                    data-twe-ripple-init
+                    data-twe-ripple-color="light"
+                    className="inline-block rounded bg-primary md:ml-[-10px] lg:ml-0 px-2 pb-2 pt-2 text-sm font-medium uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2 motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
+                  >
+                    <a
+                      href="tel:+01094487922"
+                      className={`text-white ${lng == "ar" ? "flex-row-reverse justify-end" : ""} flex gap-2 items-center`}
+                    >
+                      <FaPhoneAlt />
+                      <span>01094487922</span>
+                    </a>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
+
           <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+
           <div className="flex sm:block items-center justify-between">
             <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
               {t('footer.all_rights_reserved')}
             </span>
-            <div className={`flex ${lng=="ar"?"flex-row-reverse":""}  sm:mt-4`}>
-              <span className="px-2 ">Develop By</span>
-                 <a href="" className="text-white"> Ahmed Gawish</a>
+            <div className={`flex ${lng == "ar" ? "flex-row-reverse" : ""} sm:mt-4`}>
+              <span className="px-2">Develop By</span>
+              <a href="" className="text-white">Ahmed Gawish</a>
             </div>
           </div>
         </div>
       </footer>
-      {/*contact phones*/}
-     <div className="icons-contact  z-20 fixed">
-           <a 
-        href="https://wa.me/+0201094487922" 
-        className="fixed bottom-10 right-4 bg-green-500 text-white p-3 rounded-full shadow-lg animate-pulse hover:animate-none"
-        target="_blank" 
-        rel="noopener noreferrer"
-        style={{
-          animationDelay: '5s',
-        }}
-      >
-        <FaWhatsapp size={30} />
-      </a>
 
-      {/* Phone Icon */}
-      <a 
-        href="tel:+01094487922" 
-        className="fixed bottom-24 right-4 bg-blue-500 text-white p-3 rounded-full shadow-lg animate-pulse hover:animate-none"
-      >
-        <FaPhoneAlt size={30} />
-      </a>
+      {/* Contact Icons */}
+      <div className="icons-contact z-20 fixed">
+        {/* WhatsApp Icon */}
+        <a
+          href="https://wa.me/+0201094487922"
+          className="fixed bottom-10 right-4 bg-green-500 text-white p-3 rounded-full shadow-lg animate-pulse hover:animate-none"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ animationDelay: '5s' }}
+        >
+          <FaWhatsapp size={30} />
+        </a>
+
+        {/* Phone Icon */}
+        <a
+          href="tel:+01094487922"
+          className="fixed bottom-24 right-4 bg-blue-500 text-white p-3 rounded-full shadow-lg animate-pulse hover:animate-none"
+        >
+          <FaPhoneAlt size={30} />
+        </a>
       </div>
-       
     </div>
   );
 }
 
-export default Footer
+export default Footer;
+

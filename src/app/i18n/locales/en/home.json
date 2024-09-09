@@ -65,7 +65,10 @@
     "typeTravel": "Type of travel is required.",
     "phone": "Phone number is required and must be valid.",
     "date": "Date is required.",
-    "sendMsg":"Send for Reservation"
+    "sendMsg":"Send for Reservation",
+    "helloPeople":"Welcome to Al-Jewar for Tourism.",
+    "bookingInfo":"After submitting your information, our team will contact you directly via WhatsApp or the mobile number you provided to inform you of the price and other details.",
+    "acceptModel":"I accept"    
   },
     "BookTicketTitle":"Booking Now",
     "countries": {
@@ -151,7 +154,7 @@
  "footer": {
     "company_name":"Al-Jewar Tours",
     "logo_alt": "Al-Jewar Tours Logo",
-    "description": "Al-Jawwar Tours, we offer the best flight and hotel bookings at the lowest prices, along with the best Umrah packages and a variety of travel packages to the most popular global destinations at exceptional prices.",
+    "description": "We offer the best flight and hotel bookings at the lowest prices, along with the best Umrah packages and a variety of travel packages to the most popular global destinations at exceptional prices.",
     "quick_links": "Quick Links",
     "pages": "Pages",
     "contact_us": "Contact Us",

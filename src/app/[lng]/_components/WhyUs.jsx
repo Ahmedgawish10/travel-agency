@@ -15,7 +15,7 @@ return (
     <div>
      
       <section className="why-us text-gray-700 body-font">
-      <div className="flex justify-center mt-10 text-3xl font-regular pb-6 text-[#03245a]">
+      <div className="flex justify-center mt-10 text-3xl font-extrabold pb-6 text-[#03245a]">
         {t('Whyus.whyUs')}
       </div>
       <div className="content bg-no-repeat sm:bg-cover md:bg-cover md:bg-center ">

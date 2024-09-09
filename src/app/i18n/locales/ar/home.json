@@ -149,6 +149,27 @@
     "customerServiceTitle": "خدمة عملاء ودعم على مدار الساعة",
     "customerServiceDesc": "خدمة عملاء متاحة علي مدار اليوم لتلبية جميع احتياجاتك تواصل معنا في أي وقت."
   },
+    
+  "ourlocation": {
+    "title": "مقر الشركة",
+    "description": "تجربة رحلات لا تُنسى مع الجوار.",
+    "address-title":"العنوان",
+    "address": "كفر الشيخ - دسوق - السجل المدني - اعلي اسواق الدمرداش",
+    "hours": {
+                "time-work":"أيام العمل",
+
+      "saturday_to_thursday": "من السبت إلى الخميس: 9ص - 8م",
+      "friday": "الجمعة: مغلق"
+    },
+    "contact": {
+                "contact":"تواصل معنا",
+      "email": "Al-Jewar@gmail.com",
+      "phone": "01094487922"
+    }
+  }
+
+
+    ,
  "footer": {
      "company_name":"الجوار للسياحه والسفر",
     "logo_alt": "شعار جواهر تورز",

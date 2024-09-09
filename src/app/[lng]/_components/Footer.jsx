@@ -6,9 +6,7 @@ import { useTranslation } from '../../i18n/clinet';
 import { LuInstagram } from "react-icons/lu";
 import { IoLogoTwitter } from "react-icons/io";
 
-//import { Ripple, initTWE } from "tw-elements";
 
-//initTWE({ Ripple });
 
 function Footer({ lng }) {
   const { t } = useTranslation(lng, 'home');

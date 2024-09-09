@@ -151,6 +151,26 @@
     "customerServiceTitle": "24/7 Customer Service and Support",
     "customerServiceDesc": "Discover a world of savings with Misq Travels, exclusive offers and discounts year-round."
   },
+    
+  "ourlocation": {
+    "title": "Visit Our Location",
+    "description": "Experience unforgettable journeys with Al-Jewar.",
+      "address-title":"Address",
+    "address": "Kafr El Sheikh - Desouk - Civil Registry - Above Al-Damerdash Markets",
+    "hours": {
+        "time-work":"Business Days",
+      "saturday_to_thursday": "Saturday - Thursday: 9am - 8pm",
+      "friday": "Friday: Closed"
+    },
+    "contact": {
+        "contact":"Contact us",
+      "email": "Al-Jewar@gmail.com",
+      "phone": "01094487922"
+    }
+  }
+
+
+    ,
  "footer": {
     "company_name":"Al-Jewar Tours",
     "logo_alt": "Al-Jewar Tours Logo",

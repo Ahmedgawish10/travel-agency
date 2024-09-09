@@ -1,17 +1,20 @@
 'use client';
-import React from 'react';
-import { useTranslation } from '../../i18n/clinet';
+import React,{Suspense} from 'react';
 import { FaFacebookF, FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
+import { useTranslation } from '../../i18n/clinet';
+
 import { LuInstagram } from "react-icons/lu";
 import { IoLogoTwitter } from "react-icons/io";
-import { Ripple, initTWE } from "tw-elements";
 
-initTWE({ Ripple });
+//import { Ripple, initTWE } from "tw-elements";
+
+//initTWE({ Ripple });
 
 function Footer({ lng }) {
   const { t } = useTranslation(lng, 'home');
 
   return (
+      <Suspense  fallback="loading">
     <div>
       <footer className="bg-[#03245A] dark:bg-gray-900 text-white">
         <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
@@ -156,6 +159,7 @@ function Footer({ lng }) {
         </a>
       </div>
     </div>
+      </Suspense>
   );
 }
 

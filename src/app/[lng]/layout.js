@@ -2,8 +2,9 @@ import { Cairo } from "next/font/google";
 import "./globals.css";
 import Header from "./_components/Header";
 import Footer from "./_components/Footer";
-<script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+import Location from "./_components/OurLocation";
 
+<script src="../path/to/flowbite/dist/flowbite.min.js"></script>
 const inter = Cairo({ subsets: ["latin"] });
 
 export const metadata = {
@@ -26,6 +27,8 @@ export default function RootLayout({
       <body className={inter.className} suppressHydrationWarning={true}>
         <Header lng={lng}/>
         {children}
+        <Location lng={lng}/>
+
         <Footer lng={lng}/>
             
       </body>

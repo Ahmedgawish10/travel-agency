@@ -32,8 +32,8 @@ export default function Offers({ lng }) {
   return (
     <>
       <div className="w-[90%] mx-auto pt-10 lg:w-[70%]">
-        <h2 className="text-center text-3xl font-semibold pt-8 pb-4">{t('offers_title')}</h2>
-        <h2 className="text-center text-xl  font-semibold pb-8">
+        <h2 className="text-center text-3xl text-[#03245a]  font-extrabold pt-8 pb-4">{t('offers_title')}</h2>
+        <h2 className="text-center text-xl  text-[#03245a] font-semibold pb-8">
           {headers[activeIndex]}
         </h2>
 
@@ -106,7 +106,7 @@ export default function Offers({ lng }) {
           ))}
         </Swiper>
       </div>
-
+    
       
     </>
   );

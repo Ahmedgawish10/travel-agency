@@ -264,7 +264,7 @@ function DropdownForm({ lng, ticket }) {
     return (
         <div className="booking1">
            <div className="booking-title pb-5 flex gap-3 justify-center items-center">
-            <div className="text-center text-3xl  ">{t(`BookTicketTitle`)}</div>
+            <div className="text-center text-3xl font-extrabold text-[#03245a] ">{t(`BookTicketTitle`)}</div>
 
              <div>    <ModelBookingInfo lng={lng}/></div>
 

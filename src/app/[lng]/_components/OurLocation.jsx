@@ -1,13 +1,14 @@
 "use client";
 import React from 'react';
-import { useTranslation } from '../../i18n/clinet'
+import { useTranslation } from '../../i18n/clinet';
 import { FaLocationDot } from "react-icons/fa6";
 import { FaCalendarDays } from "react-icons/fa6";
 import { CgMail } from "react-icons/cg";
 import { FaPhoneAlt } from "react-icons/fa";
+import { FaPhoneFlip } from "react-icons/fa6";
 
 export default function OurLocaton({lng}) {
-  const { t } = useTranslation(lng,'home');
+  const { t } = useTranslation(lng, 'home');
 
   return (
     <section className="mt-12">
@@ -43,7 +44,7 @@ export default function OurLocaton({lng}) {
                     {t('ourlocation.address-title')}
                   </h3>
                   <p className="mt-1 text-gray-600 flex items-center gap-2 md:pl-2">
-                  <div>                  <FaLocationDot className="sm:text-[20px] md:text-[20px]"/></div>
+                    <FaLocationDot className="sm:text-[20px] md:text-[20px]" />
                     {t('ourlocation.address')}
                   </p>
                 </div>
@@ -52,7 +53,7 @@ export default function OurLocaton({lng}) {
                     {t('ourlocation.hours.time-work')}
                   </h3>
                   <p className="mt-1 text-gray-600 flex items-center gap-2 md:pl-2">
-                  <div>                  <FaCalendarDays className="sm:text-[20px]"/></div>
+                    <FaCalendarDays className="sm:text-[20px]" />
                     {t('ourlocation.hours.saturday_to_thursday')}
                   </p>
                   <p className="mt-1 text-gray-600 md:pl-2">
@@ -64,17 +65,17 @@ export default function OurLocaton({lng}) {
                     {t('ourlocation.contact.contact')}
                   </h3>
                   <p className="mt-1 text-gray-600 flex items-center gap-2 md:pl-2">
-                   <a  href="mailto:ahmdgawish44@gmail.com" className={`  gap-2 text- font-medium inline-flex items-center  py-0.5  dark:bg-gray-700 dark:text-blue-400  `}> 
-                  <div>             <CgMail className="sm:text-[20px] text-[20px] "/></div>
-                                    <span> {t('ourlocation.contact.email')}</span>
-                                    </a>
-                   
+                    <a href="mailto:aljewargawish@gmail.com" className="gap-2 text-sm font-medium inline-flex items-center py-0.5 dark:bg-gray-700 dark:text-blue-400">
+                      <CgMail className="sm:text-[20px] text-[20px]" />
+                      <span>{t('ourlocation.contact.email')}</span>
+                    </a>
                   </p>
-                  <p className="mt-1  text-gray-600 flex items-center gap-2 md:pl-2">
-                 <a  href="tel:+201094487922" className={`  gap-2  text-sm font-medium inline-flex items-center  py-0.5 rounded dark:bg-gray-700 dark:text-blue-400`}> 
-                  <div>                  <FaPhoneAlt className="sm:text-[20px] text-[16px]"/></div>
-                                    <span>    {t('ourlocation.contact.phone')}</span>
-                                    </a>
+                  <p className="mt-1 text-gray-600 flex items-center gap-2 md:pl-2">
+                    <a href="tel:+201094487922" className="gap-2 text-sm font-medium inline-flex items-center py-0.5 rounded dark:bg-gray-700 dark:text-blue-400">
+                       {lng=="ar"?(<FaPhoneFlip className="sm:text-[20px] text-[16px]"/>):
+                        (                      <FaPhoneAlt className="sm:text-[20px] text-[16px]" />
+                         )}                      <span>{t('ourlocation.contact.phone')}</span>
+                    </a>
                   </p>
                 </div>
               </div>
@@ -85,5 +86,3 @@ export default function OurLocaton({lng}) {
     </section>
   );
 }
-
-  

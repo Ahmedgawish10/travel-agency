@@ -129,7 +129,7 @@ function Footer({ lng }) {
             </span>
             <div className={`flex ${lng == "ar" ? "flex-row-reverse" : ""} sm:mt-4`}>
               <span className="px-2">Develop By</span>
-              <a href="" className="text-white">Ahmed Gawish</a>
+              <a href="https://portfolio-react-1-mauve.vercel.app/" target="_blank" className="text-white">Ahmed Gawish</a>
             </div>
           </div>
         </div>

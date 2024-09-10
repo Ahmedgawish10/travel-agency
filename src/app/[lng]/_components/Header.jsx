@@ -36,9 +36,9 @@ import Headers from "../_components/HeaderS"
                                     <span>01094487922</span>
                                     </a>
            </div>
-           <a  href="mailto:ahmdgawish44@gmail.com" className={` ${lng=="ar"?"flex-row-reverse justify-end":""} bg-blue-100 gap-2 text-blue-800 text-sm font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-blue-400 border border-blue-400 sm:hidden`}> 
+           <a  href="mailto:aljewargawish@gmail.com" className={` ${lng=="ar"?"flex-row-reverse justify-end":""} bg-blue-100 gap-2 text-blue-800 text-sm font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-blue-400 border border-blue-400 sm:hidden`}> 
                                      <span>    <CgMail className="text-xl"/> </span>
-                                    <span>AljewarTours@gmail.com</span>
+                                    <span>Al-JewarTours@gmail.com</span>
                                     </a>
           </div>
      

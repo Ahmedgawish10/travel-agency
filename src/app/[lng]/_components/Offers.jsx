@@ -8,8 +8,14 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Pagination, Navigation } from 'swiper/modules';
 import { LuCalendarDays } from "react-icons/lu";
+import { motion } from "framer-motion";
 
 export default function Offers({ lng }) {
+    const AnimationHeading = {
+    hidden: { opacity: 0, x: "-25vw" },
+    visible: { opacity: 1, x: 0 },
+    right: { opacity: 0, x: "25vw" },
+  };
   const { t } = useTranslation(lng, "home");
 
   // Get translations for the current language
@@ -32,10 +38,16 @@ export default function Offers({ lng }) {
   return (
     <>
       <div className="w-[90%] mx-auto pt-10 lg:w-[70%]">
-        <h2 className="text-center text-3xl text-[#03245a]  font-extrabold pt-8 pb-4">{t('offers_title')}</h2>
-        <h2 className="text-center text-xl  text-[#03245a] font-semibold pb-8">
-          {headers[activeIndex]}
-        </h2>
+       
+       <motion.h2
+        initial="hidden"
+        whileInView="visible"  
+        viewport={{ once: false }}
+        variants={AnimationHeading}
+        transition={{ duration: 1 }} 
+        className="text-center text-3xl text-[#03245a]  font-extrabold pt-8 pb-4">{t('offers_title')}</motion.h2>
+        <h2 className="text-center text-xl  text-[#03245a] font-semibold pb-8">{headers[activeIndex]} </h2>
+        
 
         <Swiper
           slidesPerView={2}

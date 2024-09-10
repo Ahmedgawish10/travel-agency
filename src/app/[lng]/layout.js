@@ -17,7 +17,6 @@ import languages from "../i18n/settings";
 export async function generationStatic(){
     return languages.map((lng)=>{lng})
 }
-console.log(1);
 export default function RootLayout({ 
     children,
     params:{ lng} 

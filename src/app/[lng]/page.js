@@ -3,6 +3,7 @@ import BookingSystem from "../[lng]/_components/BookingSystem";
 import ElgiwarFeatures from "../[lng]/_components/ElgiwarFeatures";
 import Offers from "../[lng]/_components/Offers";
 import WhyUs from "../[lng]/_components/WhyUs";
+import Xtest from "../[lng]/_components/Xtest";
 
 import { useTranslation } from '../i18n'
 import { MdOutlineLanguage } from "react-icons/md";
@@ -24,7 +25,7 @@ import Link from 'next/link';
               <BookingSystem lng={lng} ticket="ticket"/>
                <Offers lng={lng}/>
                <WhyUs lng={lng}/>
-
+               <Xtest lng={lng}/>
              <div className={`home-langSwitcher  fixed top-[8px] z-20 ${lng=="ar"?"left-[5%] ":"right-[5%]"} `}>
             <Link href={`/${lng=="en"?"ar":"en"}`} className="text-[black] flex items-center gap-2 text-[20px]">
                          <span> {lng=="en"?"العربية":"English"}</span>

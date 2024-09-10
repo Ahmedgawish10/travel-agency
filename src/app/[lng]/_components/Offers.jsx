@@ -37,7 +37,7 @@ export default function Offers({ lng }) {
 
   return (
     <>
-      <div className="w-[90%] mx-auto pt-10 lg:w-[70%]">
+      <div className="w-[90%] overflow-hidden mx-auto pt-10 lg:w-[70%]">
        
        <motion.h2
         initial="hidden"

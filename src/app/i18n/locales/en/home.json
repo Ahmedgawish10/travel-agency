@@ -155,7 +155,7 @@
   "ourlocation": {
     "title": "Visit Our Location",
     "description": "Experience unforgettable journeys with Al-Jewar.",
-      "address-title":"Address",
+    "address-title":"Address",
     "address": "Kafr El Sheikh - Desouk - Civil Registry - Above Al-Damerdash Markets",
     "hours": {
         "time-work":"Business Days",
@@ -164,7 +164,7 @@
     },
     "contact": {
         "contact":"Contact us",
-      "email": "Al-Jewar@gmail.com",
+      "email": "Al-JewarTours@gmail.com",
       "phone": "01094487922"
     }
   }

@@ -10,7 +10,7 @@ export default function OurLocaton({lng}) {
   const { t } = useTranslation(lng,'home');
 
   return (
-    <section className="mt-12 pb-10">
+    <section className="mt-12">
       <div className="ourloaction w-[80%] mx-auto text-center pb-3"> 
         <h2 className="text-3xl font-extrabold text-[#03245a]">
           {t('ourlocation.title')}
@@ -20,7 +20,7 @@ export default function OurLocaton({lng}) {
         </p>
       </div>
       <div className="overlay bg-gray-100">
-        <div className="w-[90%] mx-auto">
+        <div className="w-[90%] mx-auto pb-10">
           <div className="max-w-2xl lg:max-w-4xl mx-auto text-center">
             {/* Optional content */}
           </div>
@@ -42,8 +42,8 @@ export default function OurLocaton({lng}) {
                   <h3 className="text-lg font-medium text-gray-900">
                     {t('ourlocation.address-title')}
                   </h3>
-                  <p className="mt-1 text-gray-600 flex items-center gap-2">
-                  <div>                  <FaLocationDot className="sm:text-[20px]"/></div>
+                  <p className="mt-1 text-gray-600 flex items-center gap-2 md:pl-2">
+                  <div>                  <FaLocationDot className="sm:text-[20px] md:text-[20px]"/></div>
                     {t('ourlocation.address')}
                   </p>
                 </div>
@@ -51,11 +51,11 @@ export default function OurLocaton({lng}) {
                   <h3 className="text-lg font-medium text-gray-900">
                     {t('ourlocation.hours.time-work')}
                   </h3>
-                  <p className="mt-1 text-gray-600 flex items-center gap-2">
+                  <p className="mt-1 text-gray-600 flex items-center gap-2 md:pl-2">
                   <div>                  <FaCalendarDays className="sm:text-[20px]"/></div>
                     {t('ourlocation.hours.saturday_to_thursday')}
                   </p>
-                  <p className="mt-1 text-gray-600">
+                  <p className="mt-1 text-gray-600 md:pl-2">
                     {t('ourlocation.hours.friday')}
                   </p>
                 </div>
@@ -63,16 +63,16 @@ export default function OurLocaton({lng}) {
                   <h3 className="text-lg font-medium text-gray-900">
                     {t('ourlocation.contact.contact')}
                   </h3>
-                  <p className="mt-1 text-gray-600 flex items-center gap-2">
-                   <a  href="mailto:ahmdgawish44@gmail.com" className={` ${lng=="ar"?"flex-row-reverse justify-end":""} gap-2 text- font-medium inline-flex items-center  py-0.5  dark:bg-gray-700 dark:text-blue-400  `}> 
-                  <div>             <CgMail className="sm:text-[20px]"/></div>
+                  <p className="mt-1 text-gray-600 flex items-center gap-2 md:pl-2">
+                   <a  href="mailto:ahmdgawish44@gmail.com" className={`  gap-2 text- font-medium inline-flex items-center  py-0.5  dark:bg-gray-700 dark:text-blue-400  `}> 
+                  <div>             <CgMail className="sm:text-[20px] text-[20px] "/></div>
                                     <span> {t('ourlocation.contact.email')}</span>
                                     </a>
                    
                   </p>
-                  <p className="mt-1  text-gray-600 flex items-center gap-2">
-                 <a  href="tel:+201094487922" className={` ${lng=="ar"?"flex-row-reverse justify-end":""} gap-2  text-sm font-medium inline-flex items-center  py-0.5 rounded dark:bg-gray-700 dark:text-blue-400`}> 
-                  <div>                  <FaPhoneAlt className="sm:text-[20px]"/></div>
+                  <p className="mt-1  text-gray-600 flex items-center gap-2 md:pl-2">
+                 <a  href="tel:+201094487922" className={`  gap-2  text-sm font-medium inline-flex items-center  py-0.5 rounded dark:bg-gray-700 dark:text-blue-400`}> 
+                  <div>                  <FaPhoneAlt className="sm:text-[20px] text-[16px]"/></div>
                                     <span>    {t('ourlocation.contact.phone')}</span>
                                     </a>
                   </p>

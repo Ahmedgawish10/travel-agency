@@ -45,8 +45,16 @@ export default function Offers({ lng }) {
         viewport={{ once: false }}
         variants={AnimationHeading}
         transition={{ duration: 1 }} 
-        className="text-center text-3xl text-[#03245a]  font-extrabold pt-8 pb-4">{t('offers_title')}</motion.h2>
-        <h2 className="text-center text-xl  text-[#03245a] font-semibold pb-8">{headers[activeIndex]} </h2>
+        className="text-center text-3xl text-[#03245a]  font-extrabold pt-8 pb-4">{t('offers_title')}
+        </motion.h2>
+        < motion.h2   
+         initial="right"
+        whileInView="visible"  
+        viewport={{ once: false }} 
+        variants={AnimationHeading}
+        transition={{ duration: 1 }} 
+        className="text-center text-xl  text-[#03245a] font-semibold pb-8">{headers[activeIndex]} 
+           </motion.h2>
         
 
         <Swiper

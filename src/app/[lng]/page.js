@@ -25,7 +25,6 @@ import Link from 'next/link';
               <BookingSystem lng={lng} ticket="ticket"/>
                <Offers lng={lng}/>
                <WhyUs lng={lng}/>
-               <Xtest lng={lng}/>
              <div className={`home-langSwitcher  fixed top-[8px] z-20 ${lng=="ar"?"left-[5%] ":"right-[5%]"} `}>
             <Link href={`/${lng=="en"?"ar":"en"}`} className="text-[black] flex items-center gap-2 text-[20px]">
                          <span> {lng=="en"?"العربية":"English"}</span>

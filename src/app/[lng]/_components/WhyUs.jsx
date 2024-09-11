@@ -42,7 +42,7 @@ function WhyUs({ lng }) {
         {t('Whyus.whyUs')}
       </motion.div>
       <div className="content bg-no-repeat sm:bg-cover md:bg-cover md:bg-center">
-        <div className="w-[90%] py-12 mx-auto grid xmd:gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 text-center md:justify-around lg:justify-center md:gap-5 lg:gap-3">
+        <div className="w-[90%] overflow-hidden py-12 mx-auto grid xmd:gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 text-center md:justify-around lg:justify-center md:gap-5 lg:gap-3">
           {items.map(({ Icon, title, desc }, index) => (
                 <motion.div
   initial={{ opacity: 0, x: `${(index * 50) + 60}px` }}

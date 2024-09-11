@@ -30,7 +30,7 @@ function WhyUs({ lng }) {
   ];
 
   return (
-    <section className="why-us text-gray-700 body-font">
+    <section className="why-us text-gray-700 body-font overflow-hidden">
       <motion.div
         initial="hidden"
         whileInView="visible"

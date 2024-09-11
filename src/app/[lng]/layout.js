@@ -23,7 +23,7 @@ async function delay(ms) {
 }
 
 async function DelayedContent() {
-  await delay(130000);
+  await delay(6000);
 }
 
 export default async function RootLayout({ children, params: { lng } }) {

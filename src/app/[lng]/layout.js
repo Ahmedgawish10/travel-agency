@@ -23,18 +23,26 @@ async function delay(ms) {
 }
 
 async function DelayedContent() {
-  await delay(6000);
+  await delay(130000);
 }
 
 export default async function RootLayout({ children, params: { lng } }) {
   return (
     <html lang={lng} dir={dir(lng)} suppressHydrationWarning={true}>
       <body className={inter.className} suppressHydrationWarning={true}>
-        <Suspense fallback={<div className="layout-loader flex items-center justify-center overflow-hidden">
-                           <div class="loader flex justify-center items-center">
+        <Suspense fallback={
+            <div className="layout-loader bg-[#213d52] flex items-center justify-center overflow-hidden">
+            <div className="containerr flex flex-col items-center gap-3">
+            
+             <div class="loader flex justify-center items-center">
                             <div className="company-logo  z-20"></div>
 
                             </div>
+                            <div class="loader2"></div>
+            
+            </div>
+                          
+
                             </div>}>
            <DelayedContent />
           <Header lng={lng} />

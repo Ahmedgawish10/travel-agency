@@ -75,18 +75,22 @@ const childVariants = {
                         <span>{restOfText}</span>
                     </motion.div>
 
-                  <motion.div
-      variants={containerVariants}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: false, amount: 0.2 }} 
+                  <div
      className="elgiwar-works grid gap-4 mb-10 mt-12">
                     <div className="box1 grid grid-cols-[repeat(auto-fit,minmax(0,1fr))] gap-4">
                         {Featuers.OurFeatures?.map((feature, index) => (
-                            <motion.div
-            key={index}
-            variants={childVariants}
-          className="relative h-[250px]" key={index}>
+<motion.div
+  initial={{ opacity: 0, x: `${(index * 50) + 60}px` }}
+  whileInView={{ opacity: 1, x: 0 }}
+  viewport={{ once: true}} // Adjust 'amount' to trigger earlier
+  transition={{
+    delay: index *0.6,
+    duration: 0.3,
+    ease: "easeInOut"
+  }}
+  key={index}
+  className="relative h-[250px]"
+>
                                 <div className="ping absolute right-0 z-10 text-red text-[#0ABB0A]"></div>
                                 <Link href="#" className="hover:opacity-80 transition-opacity duration-300">
                                     <div className={`img${index + 1} h-[80%] relative`}>
@@ -103,7 +107,7 @@ const childVariants = {
                             </motion.div>
                         ))}
                     </div>
-                </motion.div>
+                </div>0
             </div>
         </div>
     );

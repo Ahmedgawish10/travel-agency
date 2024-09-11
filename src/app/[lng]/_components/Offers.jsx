@@ -42,7 +42,7 @@ export default function Offers({ lng }) {
        <motion.h2
         initial="hidden"
         whileInView="visible"  
-        viewport={{ once: false }}
+        viewport={{ once: true }}
         variants={AnimationHeading}
         transition={{ duration: 1 }} 
         className="text-center text-3xl text-[#03245a]  font-extrabold pt-8 pb-4">{t('offers_title')}
@@ -50,7 +50,7 @@ export default function Offers({ lng }) {
         < motion.h2   
          initial="right"
         whileInView="visible"  
-        viewport={{ once: false }} 
+        viewport={{ once: true }} 
         variants={AnimationHeading}
         transition={{ duration: 1 }} 
         className="text-center text-xl  text-[#03245a] font-semibold pb-8">{headers[activeIndex]} 

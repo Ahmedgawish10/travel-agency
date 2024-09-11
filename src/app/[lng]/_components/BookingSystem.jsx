@@ -3,8 +3,12 @@ import { useState, useRef } from 'react';
 import { useTranslation } from '../../i18n/clinet'
 import { IoIosArrowDown } from "react-icons/io";
 import ModelBookingInfo from "./ModelBookingInfo";
+import { motion } from "framer-motion";
 
 function DropdownForm({ lng, ticket }) {
+    
+    
+    
     const { t } = useTranslation(lng, 'home')
     const [isOpen1, setIsOpen1] = useState(false);
     const [isOpen2, setIsOpen2] = useState(false);
@@ -403,7 +407,7 @@ function DropdownForm({ lng, ticket }) {
                             type="number"
                             value={phone}
                             onChange={(e) => handleItemClick5(e.target.value)}
-                            className={`w-[100%] mt-2 ${errors.phone ? 'border-2 border-red-500 ' : 'border-gray-300'} text-white bg-[#03245a]  hover:bg-[#02183D] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5  inline-flex items-center dark:bg-blue-600 dark:hover:bg-[#03245a]  dark:focus:ring-blue-800`}
+                            className={`w-[100%] mt-2 ${errors.phone ? 'border-2 border-red-500 ' : 'border-gray-300'} text-white bg-[#03245a]  hover:bg-[#02183D] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5  inline-flex items-center dark:bg-blue-600 dark:hover:bg-[#03245a]  dark:focus:ring-blue-800 text-white placeholder-white`}
                             min="0"
                             placeholder={t(`phone.writePhone`)}
                         />

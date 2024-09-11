@@ -84,7 +84,7 @@ const childVariants = {
   whileInView={{ opacity: 1, x: 0 }}
   viewport={{ once: true}} // Adjust 'amount' to trigger earlier
   transition={{
-    delay: index *0.6,
+    delay: index *0.2,
     duration: 0.3,
     ease: "easeInOut"
   }}
@@ -107,7 +107,7 @@ const childVariants = {
                             </motion.div>
                         ))}
                     </div>
-                </div>0
+                </div>
             </div>
         </div>
     );

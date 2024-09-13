@@ -7,7 +7,8 @@ import { motion } from "framer-motion";
 
 function DropdownForm({ lng, ticket }) {
     
-    
+      const AnimationHeading = { visibleTitle: { opacity: 1, x: 0 }, hiddenTitle: { opacity: 0, x: "85vw" } };
+
     
     const { t } = useTranslation(lng, 'home')
     const [isOpen1, setIsOpen1] = useState(false);
@@ -266,14 +267,38 @@ function DropdownForm({ lng, ticket }) {
         alert(`Selected values: ${departureCountry}, ${arrivalCountry}, ${typeTravel}, ${phone}, ${selectedDate}, Adults: ${numberOfAdults}, Children: ${numberOfChilds}`);
     };
     return (
-        <div className="booking1">
-           <div className="booking-title pb-5 flex gap-3 justify-center items-center">
-            <div className="text-center text-3xl font-extrabold text-[#03245a] ">{t(`BookTicketTitle`)}</div>
+        <div className="booking1 overflow-hidden">
+               <motion.div
+initial={{ opacity: 0, x: `${ 25}vw` }}
+       whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+          transition={{
+    delay:  0.1,
+    duration: 0.2,
+    ease: "easeInOut"
+  }}
+        transition={{ duration: 1 }} className="1 pb-5 ">
+           <div
+             className="text-center text-3xl flex gap-2 justify-center items-center font-extrabold text-[#03245a]">
+             <span className="icon-booking">   <ModelBookingInfo lng={lng}/> </span>
+             <span className="heading-booking">       {t(`BookTicketTitle`)}</span>
 
-             <div>    <ModelBookingInfo lng={lng}/></div>
+             
+            </div>
 
-           </div>
-            <div className="containerr w-[90%] bg-blue-100 md:w-[90%]  lg:w-[70%] mx-auto  ">
+           </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: `${ 25}vw`,y:"100px" }}
+       whileInView={{ opacity: 1, x: 0 ,y:0}}
+        viewport={{ once: true }}
+          transition={{
+    delay:  0.1,
+    duration: 0.2,
+    ease: "easeInOut"
+  }}
+               
+                
+                  className="containerr w-[90%] bg-blue-100 md:w-[90%]  lg:w-[70%] mx-auto  ">
                
                 <form htmlFor="Booking" onSubmit={handleSubmit} className="p-6  grid grid-cols-1 md:grid-cols-2  md:gap-x-5">
                     <div className="relative col-span-1 text-left mb-4" ref={dropdownRef1}>
@@ -505,7 +530,7 @@ function DropdownForm({ lng, ticket }) {
                         </button>
                     </div>
                 </form>
-            </div>
+            </motion.div>
 
 
 

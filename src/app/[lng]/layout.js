@@ -23,7 +23,7 @@ async function delay(ms) {
 }
 
 async function DelayedContent() {
-  await delay(5000);
+  await delay(3000);
 }
 
 export default async function RootLayout({ children, params: { lng } }) {
@@ -47,7 +47,6 @@ export default async function RootLayout({ children, params: { lng } }) {
            <DelayedContent />
           <Header lng={lng} />
           {children}
-          <Location lng={lng} />
           <Footer lng={lng} />
         </Suspense>
       </body>

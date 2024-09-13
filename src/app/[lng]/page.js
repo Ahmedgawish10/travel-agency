@@ -3,6 +3,8 @@ import BookingSystem from "../[lng]/_components/BookingSystem";
 import ElgiwarFeatures from "../[lng]/_components/ElgiwarFeatures";
 import Offers from "../[lng]/_components/Offers";
 import WhyUs from "../[lng]/_components/WhyUs";
+import OurLocation from "../[lng]/_components/OurLocation";
+
 import Xtest from "../[lng]/_components/Xtest";
 
 import { useTranslation } from '../i18n'
@@ -22,6 +24,8 @@ import Link from 'next/link';
               <BookingSystem lng={lng} ticket="ticket"/>
                <Offers lng={lng}/>
                <WhyUs lng={lng}/>
+                <OurLocation lng={lng} />
+
    {/*    <div>
            <Link href={`/${lng}/sec`} className="text-[red]">Sec</Link><br/>
             <Link href={`/${lng}/pages`} className="text-[red]">Error(Pages)</Link>

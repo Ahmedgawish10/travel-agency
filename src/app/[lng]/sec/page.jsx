@@ -8,12 +8,12 @@ export default  async function  page({ params: { lng } }) {
        console.log(lng);
   return (
       <>
-    <div>
+    <div className="mt-[200px]">
       hi from sec page
-
+rrrrrrrrrr
     </div>
              
-    <h1>{t('terms')}</h1>
+    <h1>{t('header.HomePage')}</h1>
         <div className={`home-langSwitcher fixed top-[8px] z-20 ${lng=="ar"?"left-[5%] ":"right-[5%]"} `}>
             <Link href={`/${lng=="en"?"ar":"en"}/sec`} className="text-[red]">{lng=="en"?"العربية":"English"}</Link>
            </div> 

@@ -1,0 +1,37 @@
+{
+  "contact": {
+    "form": {
+      "name": {
+        "label": "Name",
+        "placeholder": "Enter your name"
+      },
+      "email": {
+        "label": "Email address",
+        "placeholder": "Enter your email"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Write your message"
+      },
+        "send":"Send"
+    },
+    "support": {
+      "technicalSupport": "Technical support",
+      "email": "Al-JewarTours@gmail.com",
+      "phone": "01097897600"
+    },
+    "address": {
+      "label": "Address",
+      "details": "Desouk - Civil Registry - Above Al-Damerdash Markets"
+    },
+    "landline": {
+      "label": "Land Line",
+      "number": "(0472) 550244"
+    },
+    "mobile": {
+      "label": "Mobile",
+      "number": "01094487922"
+    }
+  }
+
+}

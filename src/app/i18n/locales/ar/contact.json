@@ -1,0 +1,37 @@
+{
+  "contact": {
+    "form": {
+      "name": {
+        "label": "الاسم",
+        "placeholder": "أدخل اسمك"
+      },
+      "email": {
+        "label": "عنوان البريد الإلكتروني",
+        "placeholder": "أدخل بريدك الإلكتروني"
+      },
+      "message": {
+        "label": "الرسالة",
+        "placeholder": "اكتب رسالتك"
+      },
+        "send":"أرسل"
+    },
+    "support": {
+      "technicalSupport": "الدعم الفني",
+      "email": "Al-JewarTours@gmail.com",
+      "phone": "01097897600"
+    },
+    "address": {
+      "label": "العنوان",
+      "details": "دسوق - السجل المدني - فوق أسواق الدمرداش"
+    },
+    "landline": {
+      "label": "الارضي",
+      "number": "(0472) 550244"
+    },
+    "mobile": {
+      "label": "الهاتف المحمول",
+      "number": "01094487922"
+    }
+  }
+}
+

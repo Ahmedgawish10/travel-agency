@@ -5,18 +5,28 @@ import { TbDeviceLandlinePhone } from "react-icons/tb";
 import { MdPhoneIphone } from "react-icons/md";
 import { FaLocationDot, FaPhoneVolume } from "react-icons/fa6";
 import { useTranslation } from '../../../i18n'
+import Link from 'next/link';
+import { MdOutlineLanguage } from "react-icons/md";
 
 async function  Contact({ params: { lng } }) {
   const { t } =await useTranslation(lng, "contact");
 
   return (
           <div className="ElgiwarFeatures pt-16">
+                       <div className={`home-langSwitcher  fixed top-[8px] z-20 ${lng=="ar"?"left-[5%] ":"right-[5%]"} `}>
+            <Link href={`/${lng=="en"?"ar":"en"}/contact`} className="text-[black] flex items-center gap-2 text-[20px]">
+                                   
+                         <span> {lng=="en"?"العربية":"English"}</span>
+                         <MdOutlineLanguage/>
+            </Link>
+
+           </div>
 <section className="mb-32">
-  <div id="map" className="relative h-[300px] overflow-hidden bg-cover bg-[50%] bg-no-repeat">
+  <div id="map" className="relative h-[400px] overflow-hidden bg-cover bg-[50%] bg-no-repeat">
      <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3391.016018329415!2d30.656121!3d31.138207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDA4JzE4LjAiTiAzMMKwMzknMjIuMCJF!5e0!3m2!1sen!2sus!4v1694179730921!5m2!1sen!2sus"
                 width="100%" 
-                height="300px" 
+                height="400px" 
                 style={{ border: "5px" }} 
                 allowFullScreen="" 
                 loading="lazy" 
@@ -36,7 +46,7 @@ async function  Contact({ params: { lng } }) {
                   id="exampleInput90" />
               <label
                   className="pointer-events-none absolute bg-[#fffc] top-0 mt-[2px] px-2 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[1rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none "
-                  for="exampleInput90">                           {t('contact.form.name.label')}
+                  htmlFor="exampleInput90">                           {t('contact.form.name.label')}
 
                 </label>
             </div>
@@ -46,14 +56,14 @@ async function  Contact({ params: { lng } }) {
                   id="exampleInput91" />
               <label
                  className="pointer-events-none absolute bg-white top-0 mt-[2px] px-2 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[1rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none "
-                  for="exampleInput91"> {t('contact.form.email.label')}
+                  htmlFor="exampleInput91"> {t('contact.form.email.label')}
                 </label>
             </div>
             <div className="relative mb-6" data-te-input-wrapper-init>
               <textarea
                   className="peer block min-h-[auto] w-full rounded border-2 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none "
                   id="exampleFormControlTextarea1" rows="3"></textarea>
-              <label for="exampleFormControlTextarea1"
+              <label htmlFor="exampleFormControlTextarea1"
                  className="pointer-events-none absolute bg-white top-0 mt-[2px] px-2 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[1rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none "> {t('contact.form.message.label')}</label>
             </div>
           

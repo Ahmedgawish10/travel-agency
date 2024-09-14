@@ -1,24 +1,44 @@
-"use client";
+"use client"
 import React from 'react';
-import { useTranslation } from '../../i18n/clinet';
+import { useTranslation } from '../../i18n/clinet'
 import { FaLocationDot } from "react-icons/fa6";
 import { FaCalendarDays } from "react-icons/fa6";
 import { CgMail } from "react-icons/cg";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaPhoneFlip } from "react-icons/fa6";
+import { motion } from "framer-motion";
 
-export default function OurLocaton({lng}) {
+export default  function OurLocaton({lng}) {
   const { t } = useTranslation(lng, 'home');
 
   return (
-    <section className="mt-12">
+    <section className="mt-12 overflow-hidden">
       <div className="ourloaction w-[80%] mx-auto text-center pb-3"> 
-        <h2 className="text-3xl font-extrabold text-[#03245a]">
+        <motion.h2 
+          initial={{ opacity: 0, x: `-25vw` }}
+  whileInView={{ opacity: 1, x: 0 }}
+  viewport={{ once: true}} // Adjust 'amount' to trigger earlier
+  transition={{
+    delay:  0.2,
+    duration: 0.3,
+    ease: "easeInOut"
+  }}
+         className="text-3xl font-extrabold text-[#03245a]">
           {t('ourlocation.title')}
-        </h2>
-        <p className="text-xl text-gray-500">
+        </motion.h2>
+       <motion.p 
+          initial={{ opacity: 0, x: `25vw` }}
+  whileInView={{ opacity: 1, x: 0 }}
+  viewport={{ once: true}} // Adjust 'amount' to trigger earlier
+  transition={{
+    delay:  0.2,
+    duration: 0.3,
+    ease: "easeInOut"
+  }}
+         
+         className="text-xl text-gray-500">
           {t('ourlocation.description')}
-        </p>
+        </motion.p>
       </div>
       <div className="overlay bg-gray-100">
         <div className="w-[90%] mx-auto pb-10">

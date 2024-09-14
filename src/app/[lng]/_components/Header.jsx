@@ -63,27 +63,27 @@ import Headers from "../_components/HeaderS"
               <nav aria-label="Global">
                 <ul className="flex items-center gap-6 text-sm">
                   <li className={` ${lng=="en"?"hover:pl-5":"hover:pr-5"}`}>
-                    <Link className="relative  inline cursor-pointer   before:bg-teal-600 hover:rounded-b-none before:absolute before:-bottom-0 before:-left-0  before:block before:h-[4px] before:w-full before:origin-bottom-right before:scale-x-0 before:transition before:duration-300 before:ease-in-out hover:before:origin-bottom-left hover:before:scale-x-100
+                    <Link className="relative xmd:text-[16px]  inline cursor-pointer   before:bg-teal-600 hover:rounded-b-none before:absolute before:-bottom-0 before:-left-0  before:block before:h-[4px] before:w-full before:origin-bottom-right before:scale-x-0 before:transition before:duration-300 before:ease-in-out hover:before:origin-bottom-left hover:before:scale-x-100
                     text-[#130f40] lg:text-[18px]  md:text-[16px] pb-1 font-semibold transition " href={`/${lng}`} >{t("header.HomePage")}</Link>
 
                   </li>
 
                   <li className={` ${lng=="en"?"hover:pl-5":"hover:pr-5"}`}>
-                    <Link className="relative  inline cursor-pointer   before:bg-teal-600 hover:rounded-b-none before:absolute before:-bottom-0 before:-left-0  before:block before:h-[4px] before:w-full before:origin-bottom-right before:scale-x-0 before:transition before:duration-300 before:ease-in-out hover:before:origin-bottom-left hover:before:scale-x-100
+                    <Link className="relative xmd:text-[16px]  inline cursor-pointer   before:bg-teal-600 hover:rounded-b-none before:absolute before:-bottom-0 before:-left-0  before:block before:h-[4px] before:w-full before:origin-bottom-right before:scale-x-0 before:transition before:duration-300 before:ease-in-out hover:before:origin-bottom-left hover:before:scale-x-100
                     text-[#130f40] lg:text-[18px]  md:text-[16px] pb-1 font-semibold transition hover:text-black" href="/"  > {t("header.Elhag&Elumrah")}</Link>
                   </li>
 
                   <li className={` ${lng=="en"?"hover:pl-5":"hover:pr-5"}`}>
-                    <Link className="relative  inline cursor-pointer   before:bg-teal-600 hover:rounded-b-none before:absolute before:-bottom-0 before:-left-0  before:block before:h-[4px] before:w-full before:origin-bottom-right before:scale-x-0 before:transition before:duration-300 before:ease-in-out hover:before:origin-bottom-left hover:before:scale-x-100
+                    <Link className="relative  xmd:text-[16px] inline cursor-pointer   before:bg-teal-600 hover:rounded-b-none before:absolute before:-bottom-0 before:-left-0  before:block before:h-[4px] before:w-full before:origin-bottom-right before:scale-x-0 before:transition before:duration-300 before:ease-in-out hover:before:origin-bottom-left hover:before:scale-x-100
                     text-[#130f40] lg:text-[18px]  md:text-[16px] pb-1 font-semibold transition hover:text-black" href="/" > {t("header.Hotels")}</Link>
                   </li>
 
-                  <li>
-                    <Link className="relative  inline cursor-pointer   before:bg-teal-600 hover:rounded-b-none before:absolute before:-bottom-0 before:-left-0  before:block before:h-[4px] before:w-full before:origin-bottom-right before:scale-x-0 before:transition before:duration-300 before:ease-in-out hover:before:origin-bottom-left hover:before:scale-x-100
+                  <li className={` ${lng=="en"?"hover:pl-5":"hover:pr-5"}`}>
+                    <Link className="relative xmd:text-[16px]  inline cursor-pointer   before:bg-teal-600 hover:rounded-b-none before:absolute before:-bottom-0 before:-left-0  before:block before:h-[4px] before:w-full before:origin-bottom-right before:scale-x-0 before:transition before:duration-300 before:ease-in-out hover:before:origin-bottom-left hover:before:scale-x-100
                     text-[#130f40] lg:text-[18px]  md:text-[16px] pb-1 font-semibold transition hover:text-black" href="/" > {t("header.Flights")}</Link>
                   </li>
                   <li className={` ${lng=="en"?"hover:pl-5":"hover:pr-5"}`}>
-                    <Link className="relative  inline cursor-pointer   before:bg-teal-600 hover:rounded-b-none before:absolute before:-bottom-0 before:-left-0  before:block before:h-[4px] before:w-full before:origin-bottom-right before:scale-x-0 before:transition before:duration-300 before:ease-in-out hover:before:origin-bottom-left hover:before:scale-x-100
+                    <Link className="relative  xmd:text-[16px] inline cursor-pointer   before:bg-teal-600 hover:rounded-b-none before:absolute before:-bottom-0 before:-left-0  before:block before:h-[4px] before:w-full before:origin-bottom-right before:scale-x-0 before:transition before:duration-300 before:ease-in-out hover:before:origin-bottom-left hover:before:scale-x-100
                     text-[#130f40] lg:text-[18px] md:text-[16px] pb-1 font-semibold transition hover:text-black" href={`/contact`} >  {t("header.Contact")}     </Link>
                   </li>
                   <li>

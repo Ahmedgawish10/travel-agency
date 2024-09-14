@@ -23,7 +23,7 @@ async function delay(ms) {
 }
 
 async function DelayedContent() {
-  await delay(3000);
+  await delay(0);
 }
 
 export default async function RootLayout({ children, params: { lng } }) {
@@ -34,11 +34,11 @@ export default async function RootLayout({ children, params: { lng } }) {
             <div className="layout-loader bg-[#213d52] flex items-center justify-center overflow-hidden">
             <div className="containerr flex flex-col items-center gap-3">
             
-             <div class="loader flex justify-center items-center">
+             <div className="loader flex justify-center items-center">
                             <div className="company-logo  z-20"></div>
 
                             </div>
-                            <div class="loader2"></div>
+                            <div className="loader2"></div>
             
             </div>
                           

@@ -70,7 +70,7 @@ export default function App({ lng }  ) {
                   {item.description}  
                 </div>
                       <div className="button-reserv pt-2 mt-4 sm:mt-0 text-white">
-        <a   href="https://wa.me/+0201094487922" target="_blank" rel="noopener noreferrer" className="xsm:text-[18px]   button-92" role="button">
+        <a   href="https://wa.me/+0201094487922" target="_blank" rel="noopener noreferrer" className="xsm:text-[18px] bg-[#03245a]  button-92" role="button">
                 {item.Contact}
                  </a>
                 

@@ -5,7 +5,7 @@ import { useTranslation } from '../../i18n/clinet';
 
 import { LuInstagram } from "react-icons/lu";
 import { IoLogoTwitter } from "react-icons/io";
-
+import Link from 'next/link';
 
 
 function Footer({ lng }) {
@@ -65,9 +65,9 @@ function Footer({ lng }) {
                 </h2>
                 <ul className="text-gray-500 dark:text-gray-400 font-medium">
                   <li className="mb-2">
-                    <a href="https://github.com/themesberg/flowbite" className="hover:underline">
+                    <Link href={`/${lng}/contact`} className="hover:underline">
                       {t('footer.contact')}
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <a href="https://discord.gg/4eeurUVvTy" className="hover:underline">
@@ -112,7 +112,7 @@ function Footer({ lng }) {
                       href="tel:+01094487922"
                       className={`text-white ${lng == "ar" ? "flex-row-reverse justify-end" : ""} flex gap-2 items-center`}
                     >
-                      <FaPhoneAlt />
+                      <FaPhoneAlt/>
                       <span>01094487922</span>
                     </a>
                   </button>

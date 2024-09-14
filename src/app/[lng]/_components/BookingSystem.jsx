@@ -280,8 +280,8 @@ initial={{ opacity: 0, x: `${ 25}vw` }}
         transition={{ duration: 1 }} className="1 pb-5 ">
            <div
              className="text-center text-3xl flex gap-2 justify-center items-center font-extrabold text-[#03245a]">
-             <span className="icon-booking">   <ModelBookingInfo lng={lng}/> </span>
              <span className="heading-booking">       {t(`BookTicketTitle`)}</span>
+             <span className="icon-booking">   <ModelBookingInfo lng={lng}/> </span>
 
              
             </div>

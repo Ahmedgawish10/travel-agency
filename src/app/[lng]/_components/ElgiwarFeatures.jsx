@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import "./style.css";
 
 function ElgiwarFeatures({ lng }) {
+    const elgiwarFeaturesRouts=["elhag&elumrah","demosticTravels","internationalTravels","hotelBookings","flightTickets"]
     const AnimationHeading = {
         hidden: { opacity: 0, x: "-25vw" },
         visible: { opacity: 1, x: 0 },
@@ -92,7 +93,7 @@ const childVariants = {
   className="relative h-[250px]"
 >
                                 <div className="ping absolute right-0 z-10 text-red text-[#0ABB0A]"></div>
-                                <Link href="#" className="hover:opacity-80 transition-opacity duration-300">
+                                <Link href={`${elgiwarFeaturesRouts[index]}`} className="hover:opacity-80 transition-opacity duration-300">
                                     <div className={`img${index + 1} h-[80%] relative`}>
                                         <div className="work1 text-[#03245a] absolute right-[12%] top-[60%] font-bold text-xl text-center">
                                             {feature.Feat1.split(' ').map((word, i, arr) => (

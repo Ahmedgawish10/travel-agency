@@ -12,7 +12,7 @@ async function  Contact({ params: { lng } }) {
   return (
           <section className="section-elhag ] mb-32 overflow-hidden">
                        <div className={`elhag-langSwitcher  fixed top-[8px] z-20 ${lng=="ar"?"left-[5%] ":"right-[5%]"} `}>
-            <Link href={`/${lng=="en"?"ar":"en"}/demosticTravels`} className="text-[black] flex items-center gap-2 text-[20px]">
+            <Link href={`/${lng=="en"?"ar":"en"}/demosticTourism`} className="text-[black] flex items-center gap-2 text-[20px]">
                                    
                          <span> {lng=="en"?"العربية":"English"}</span>
                          <MdOutlineLanguage/>

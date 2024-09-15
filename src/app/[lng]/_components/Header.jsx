@@ -25,7 +25,6 @@ import Headers from "../_components/HeaderS"
 
 
 
-
   return (<Suspense  fallback="loading">
       <header className="header bg-white border-b  w-[100%] fixed top-0 z-20 shadow-bottom pb-2">
        <div className="cont1 flex justify-between  w-[90%] m-auto  z-10 pt-2 pb-2">
@@ -52,7 +51,7 @@ import Headers from "../_components/HeaderS"
          
           <div className={`flex h-10  ${lng=="en"?"":"flex-row-reverse"}   items-center justify-between overflow-hidden `}>
             <div className="md:flex md:items-center md:gap-12">
-              <Link href="" className="block text-teal-600" href="/">
+              <Link href="" className="block text-teal-600" href={`/${lng}`}>
                 <span className="sr-only">Home</span>
 <Image src={X} className="w-[40px] h-[40px]  md:w-[40px] md:h-[40px]" alt='logo' /> 
               </Link>
@@ -70,21 +69,25 @@ import Headers from "../_components/HeaderS"
 
                   <li className={` ${lng=="en"?"hover:pl-5":"hover:pr-5"}`}>
                     <Link className="relative xmd:text-[16px]  inline cursor-pointer   before:bg-teal-600 hover:rounded-b-none before:absolute before:-bottom-0 before:-left-0  before:block before:h-[4px] before:w-full before:origin-bottom-right before:scale-x-0 before:transition before:duration-300 before:ease-in-out hover:before:origin-bottom-left hover:before:scale-x-100
-                    text-[#130f40] lg:text-[18px]  md:text-[16px] pb-1 font-semibold transition hover:text-black" href="/"  > {t("header.Elhag&Elumrah")}</Link>
+                    text-[#130f40] lg:text-[18px]  md:text-[16px] pb-1 font-semibold transition hover:text-black" 
+                    href={`/${lng}/elhag&elumrah`}  > {t("header.Elhag&Elumrah")}</Link>
                   </li>
 
                   <li className={` ${lng=="en"?"hover:pl-5":"hover:pr-5"}`}>
                     <Link className="relative  xmd:text-[16px] inline cursor-pointer   before:bg-teal-600 hover:rounded-b-none before:absolute before:-bottom-0 before:-left-0  before:block before:h-[4px] before:w-full before:origin-bottom-right before:scale-x-0 before:transition before:duration-300 before:ease-in-out hover:before:origin-bottom-left hover:before:scale-x-100
-                    text-[#130f40] lg:text-[18px]  md:text-[16px] pb-1 font-semibold transition hover:text-black" href="/" > {t("header.Hotels")}</Link>
+                    text-[#130f40] lg:text-[18px]  md:text-[16px] pb-1 font-semibold transition hover:text-black" 
+                     href={`/${lng}/hotelBookings`} > {t("header.Hotels")}</Link>
                   </li>
 
                   <li className={` ${lng=="en"?"hover:pl-5":"hover:pr-5"}`}>
                     <Link className="relative xmd:text-[16px]  inline cursor-pointer   before:bg-teal-600 hover:rounded-b-none before:absolute before:-bottom-0 before:-left-0  before:block before:h-[4px] before:w-full before:origin-bottom-right before:scale-x-0 before:transition before:duration-300 before:ease-in-out hover:before:origin-bottom-left hover:before:scale-x-100
-                    text-[#130f40] lg:text-[18px]  md:text-[16px] pb-1 font-semibold transition hover:text-black" href="/" > {t("header.Flights")}</Link>
+                    text-[#130f40] lg:text-[18px]  md:text-[16px] pb-1 font-semibold transition hover:text-black" 
+                     href={`/${lng}/flightTickets`}> {t("header.Flights")}</Link>
                   </li>
                   <li className={` ${lng=="en"?"hover:pl-5":"hover:pr-5"}`}>
                     <Link className="relative  xmd:text-[16px] inline cursor-pointer   before:bg-teal-600 hover:rounded-b-none before:absolute before:-bottom-0 before:-left-0  before:block before:h-[4px] before:w-full before:origin-bottom-right before:scale-x-0 before:transition before:duration-300 before:ease-in-out hover:before:origin-bottom-left hover:before:scale-x-100
-                    text-[#130f40] lg:text-[18px] md:text-[16px] pb-1 font-semibold transition hover:text-black" href={`/contact`} >  {t("header.Contact")}     </Link>
+                    text-[#130f40] lg:text-[18px] md:text-[16px] pb-1 font-semibold transition hover:text-black" 
+                    href={`/${lng}/contact`} >  {t("header.Contact")}     </Link>
                   </li>
                   <li>
                

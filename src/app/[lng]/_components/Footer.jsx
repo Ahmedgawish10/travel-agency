@@ -14,7 +14,7 @@ function Footer({ lng }) {
   return (
       <Suspense  fallback="loading">
     <div>
-      <footer className="bg-[#03245A] dark:bg-gray-900 text-white">
+      <footer className="bg-[#0a1931] dark:bg-gray-900 text-white">
         <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
           <div className="md:flex md:justify-between gap-3">
             <div className="mb-6 md:mb-0 flex-1">
@@ -28,7 +28,7 @@ function Footer({ lng }) {
                   {t('footer.company_name')}
                 </span>
               </a>
-              <div className="self-center xmd:w-[80%] xsm:w-[100%] sm:text-[14px] font-semibold dark:text-white md:w-[80%] pt-2 md:pl-4">
+              <div className="self-center xmd:w-[80%] text-gray-500 xsm:w-[100%] sm:text-[14px] font-semibold dark:text-white md:w-[80%] pt-2 md:pl-4">
                 {t('footer.description')}
               </div>
             </div>
@@ -127,7 +127,7 @@ function Footer({ lng }) {
             <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
               {t('footer.all_rights_reserved')}
             </span>
-            <div className={`flex ${lng == "ar" ? "flex-row-reverse" : ""} sm:mt-4`}>
+            <div className={`flex ${lng == "ar" ? "flex-row-reverse" : ""} text-gray-500 sm:mt-4`}>
               <span className="px-2">Develop By</span>
               <a href="https://portfolio-react-1-mauve.vercel.app/" target="_blank" className="text-white">Ahmed Gawish</a>
             </div>

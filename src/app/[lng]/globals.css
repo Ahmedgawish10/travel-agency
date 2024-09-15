@@ -137,7 +137,12 @@ body{
 }
 
 
-
+.bg-img{
+    background-image: url("../../../public/imgs/jj.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center
+}
 
 
 
@@ -492,9 +497,8 @@ background: white;
   0%, 80%, 100% { box-shadow: 0 2.5em 0 -1.3em }
   40% { box-shadow: 0 2.5em 0 0 }
 }
-    
+/*    ******/
 
-
-
+  
 
 

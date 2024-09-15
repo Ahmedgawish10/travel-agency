@@ -1,159 +1,76 @@
 
 
 import React from 'react';
-import { TbDeviceLandlinePhone } from "react-icons/tb";
-import { MdPhoneIphone } from "react-icons/md";
-import { FaLocationDot, FaPhoneVolume } from "react-icons/fa6";
 import { useTranslation } from '../../../i18n'
 import Link from 'next/link';
 import { MdOutlineLanguage } from "react-icons/md";
+import { TiHome } from "react-icons/ti";
 
 async function  Contact({ params: { lng } }) {
-  const { t } =await useTranslation(lng, "contact");
+  const { t } =await useTranslation(lng, "hotelBooking");
 
   return (
-          <div className="ElgiwarFeatures pt-16">
-                       <div className={`home-langSwitcher  fixed top-[8px] z-20 ${lng=="ar"?"left-[5%] ":"right-[5%]"} `}>
-            <Link href={`/${lng=="en"?"ar":"en"}/contact`} className="text-[black] flex items-center gap-2 text-[20px]">
+          <section className="section-elhag ] mb-32 overflow-hidden">
+                       <div className={`elhag-langSwitcher  fixed top-[8px] z-20 ${lng=="ar"?"left-[5%] ":"right-[5%]"} `}>
+            <Link href={`/${lng=="en"?"ar":"en"}/hotelBookings`} className="text-[black] flex items-center gap-2 text-[20px]">
                                    
                          <span> {lng=="en"?"العربية":"English"}</span>
                          <MdOutlineLanguage/>
             </Link>
 
            </div>
-<section className="mb-32">
-  <div id="map" className="relative h-[400px] overflow-hidden bg-cover bg-[50%] bg-no-repeat">
-     <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3391.016018329415!2d30.656121!3d31.138207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDA4JzE4LjAiTiAzMMKwMzknMjIuMCJF!5e0!3m2!1sen!2sus!4v1694179730921!5m2!1sen!2sus"
-                width="100%" 
-                height="400px" 
-                style={{ border: "5px" }} 
-                allowFullScreen="" 
-                loading="lazy" 
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
-  </div>
-  <div className="w-[90%] mx-auto px-2 md:px-12">
-    <div
-      className="block rounded-lg bg-[white] px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]  md:py-16 md:px-12 -mt-[100px] backdrop-blur-[30px] border border-gray-300">
-      <div className="flex flex-wrap">
-        <div className="mb-12 w-full shrink-0 grow-0 basis-auto md:px-3 lg:mb-0 lg:w-5/12 lg:px-6">
-          <form>
-            <div className="relative mb-6" data-te-input-wrapper-init>
-              <input type="text"
-                  className="peer block min-h-[auto] w-full rounded border-2 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary 
-                  peer-focus:bg-black data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none "
-                  id="exampleInput90" />
-              <label
-                  className="pointer-events-none absolute bg-[#fffc] top-0 mt-[2px] px-2 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[1rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none "
-                  htmlFor="exampleInput90">                           {t('contact.form.name.label')}
+<div className="bg-img pt-[200px]">
+ <div className=" elhag-overlay w-[100%]  xmd:h-[200px] md:h-[300px] t flex items-center justify-center text-white bg-[#2121217a]">
 
-                </label>
-            </div>
-            <div className="relative mb-6" data-te-input-wrapper-init>
-              <input type="email"
-                  className="peer block min-h-[auto] w-full rounded border-2 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none "
-                  id="exampleInput91" />
-              <label
-                 className="pointer-events-none absolute bg-white top-0 mt-[2px] px-2 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[1rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none "
-                  htmlFor="exampleInput91"> {t('contact.form.email.label')}
-                </label>
-            </div>
-            <div className="relative mb-6" data-te-input-wrapper-init>
-              <textarea
-                  className="peer block min-h-[auto] w-full rounded border-2 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none "
-                  id="exampleFormControlTextarea1" rows="3"></textarea>
-              <label htmlFor="exampleFormControlTextarea1"
-                 className="pointer-events-none absolute bg-white top-0 mt-[2px] px-2 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[1rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none "> {t('contact.form.message.label')}</label>
-            </div>
-          
-            <button type="button"
-                className="mb-6 w-full rounded bg-sky-500 text-white px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal   lg:mb-0">
-                {t('contact.form.send')}
-              </button>
-          </form>
-        </div>
-        <div className="w-full shrink-0 grow-0 basis-auto lg:w-7/12">
-          <div className="flex flex-wrap">
-            <div className="mb-12 w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:w-full lg:px-6 xl:w-6/12">
-              <div className="flex items-start">
-                <div className="shrink-0">
-                     <div className="inline-block rounded-md bg-sky-200 p-3 text-3xl text-primary">
-                   < FaPhoneVolume/>
-                  </div>
-                </div>
-                <div className={` ${lng=="en"?"ml-6":"mr-6"}  grow`}>
-                  <p className="mb-2 font-bold ">
-                           {t('contact.support.technicalSupport')}
+       <div className=" containerr text-center">
+        <span className="text-4xl text-white font-bold">           {t('breadcrumb.title')}</span>
+<nav class="flex pt-5 justify-center" aria-label="Breadcrumb ">
 
-                  </p>
-                  <p className="text-sm text-neutral-500">
-                           {t('contact.support.email')}
-                  </p>
-                  <p className="text-sm text-neutral-500">
-                                               {t('contact.support.phone')}
+  <ol class="inline-flex px-2 items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+    <li class="inline-flex items-cente ">
+      <Link href={`/${lng}`} class="flex gap-2 items-center text-xl font-medium text-white hover:text-blue-200 dark:text-gray-400 dark:hover:text-white">
+     <TiHome/>
+          {t('breadcrumb.home')}
 
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="mb-12 w-full shrink-0 grow-0 basis-auto md:w-6/12 lg:w-full lg:px-6 xl:w-6/12">
-              <div className="flex items-start">
-                <div className="srink-0">
-                   <div className="inline-block rounded-md bg-sky-200 p-3 text-3xl text-primary">
-                   < FaLocationDot/>
-                  </div>
-                </div>
-                <div className={` ${lng=="en"?"ml-6":"mr-6"}  grow`}>
-                  <p className="mb-2 font-bold ">
-                   {t('contact.address.label')}
-
-                  </p>
-                  <p>                 {t('contact.address.details')}</p>
-                  
-                </div>
-              </div>
-            </div>
-            <div
-              className="mb-12 w-full shrink-0 grow-0 basis-auto md:mb-0 md:w-6/12  lg:mb-12 lg:w-full lg:px-6 xl:w-6/12">
-              <div className="align-start flex">
-                <div className="shrink-0">
-                  <div className="inline-block rounded-md bg-sky-200 p-3 text-3xl text-primary">
-                                  < TbDeviceLandlinePhone/>
-
-
-                  </div>
-                </div>
-                <div className={` ${lng=="en"?"ml-6":"mr-6"}  grow`}>
-                  <p className="mb-2 font-bold ">{t('contact.landline.label')}</p>
-                  <p className="text-neutral-500"> {t('contact.landline.number')}
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:w-full lg:px-6 xl:mb-12 xl:w-6/12">
-              <div className="align-start flex">
-                <div className="shrink-0">
-                  <div className="inline-block rounded-md bg-sky-200 p-3 text-3xl text-primary">
-                   < MdPhoneIphone/>
-                  </div>
-                </div>
-                <div className={` ${lng=="en"?"ml-6":"mr-6"}  grow`}>
-                  <p className="mb-2 font-bold ">{t('contact.mobile.label')}</p>
-                  <p className="text-neutral-500"> 
-                  {t('contact.mobile.number')}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      </Link>
+    </li>
+    <li>
+      <div class="flex items-center">
+        <svg class="rtl:rotate-180 w-3 h-3  mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+        </svg>
+        <a href="#" class="ms-1 text-xl font-medium text-white hover:text-blue-200  md:ms-2 dark:text-gray-400 dark:hover:text-white">          {t('breadcrumb.hotelBooking')}</a>
       </div>
-    </div>
+    </li>
+ 
+  </ol>
+</nav>
+
   </div>
-</section>
+    </div>
+  
+</div>
    
-                   </div>
+       <div className="elhag-content pt-6">
+            <div className="w-[90%] mx-auto">
+                
+                <div className="boxs">
+                ...
+                </div>
+                
+            </div>   
+        
+           
+           
+       </div>           
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                   </section>
   );
 }
 

@@ -46,12 +46,12 @@ export default function App({ lng }  ) {
         }}
         navigation={true}
        loop={true}
-           autoplay={{ delay: 4000, disableOnInteraction: false }}
+           autoplay={{ delay: 8000, disableOnInteraction: false }}
 
-        modules={[Pagination, Navigation]}
+        modules={[Pagination, Navigation,Autoplay]}
         className="mySwiper h-[200px] main-slider text-white"
       >
-         {serv.map((item, index) => (
+         {serv?.map((item, index) => (
          <SwiperSlide key={index} className={`ele${index+1}-slide f`}
           
           >

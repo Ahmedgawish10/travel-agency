@@ -6,12 +6,12 @@ import { RiStarSFill } from "react-icons/ri";
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { Pagination, Navigation } from 'swiper/modules';
+import { Pagination, Navigation, Autoplay } from 'swiper/modules'; // Autoplay imported here
 import { LuCalendarDays } from "react-icons/lu";
 import { motion } from "framer-motion";
 
 export default function Offers({ lng }) {
-    const AnimationHeading = {
+  const AnimationHeading = {
     hidden: { opacity: 0, x: "-25vw" },
     visible: { opacity: 1, x: 0 },
     right: { opacity: 0, x: "25vw" },
@@ -38,24 +38,26 @@ export default function Offers({ lng }) {
   return (
     <>
       <div className="w-[90%] overflow-hidden mx-auto pt-10 lg:w-[70%]">
-       
-       <motion.h2
-        initial="hidden"
-        whileInView="visible"  
-        viewport={{ once: true }}
-        variants={AnimationHeading}
-        transition={{ duration: 1 }} 
-        className="text-center text-3xl text-[#03245a]  font-extrabold pt-8 pb-4">{t('offers_title')}
+        <motion.h2
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={AnimationHeading}
+          transition={{ duration: 1 }}
+          className="text-center text-3xl text-[#03245a] font-extrabold pt-8 pb-4"
+        >
+          {t('offers_title')}
         </motion.h2>
-        < motion.h2   
-         initial="right"
-        whileInView="visible"  
-        viewport={{ once: true }} 
-        variants={AnimationHeading}
-        transition={{ duration: 1 }} 
-        className="text-center text-xl  text-[#03245a] font-semibold pb-8">{headers[activeIndex]} 
-           </motion.h2>
-        
+        <motion.h2
+          initial="right"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={AnimationHeading}
+          transition={{ duration: 1 }}
+          className="text-center text-xl text-[#03245a] font-semibold pb-8"
+        >
+          {headers[activeIndex]}
+        </motion.h2>
 
         <Swiper
           slidesPerView={2}
@@ -63,7 +65,8 @@ export default function Offers({ lng }) {
           slidesPerGroup={2}
           pagination={{ clickable: true }}
           navigation={true}
-          modules={[Pagination, Navigation]}
+          autoplay={{ delay: 8000, disableOnInteraction: false }} 
+          modules={[Pagination, Navigation, Autoplay]} 
           className="mySwiper swiper-offer"
           onSlideChange={handleSlideChange}
           breakpoints={{
@@ -74,7 +77,7 @@ export default function Offers({ lng }) {
             630: {
               slidesPerView: 2,
               slidesPerGroup: 2,
-            }
+            },
           }}
         >
           {sliderOffers.map((offer, index) => (
@@ -82,8 +85,14 @@ export default function Offers({ lng }) {
               {/* Slide Content */}
               <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <a href="#">
-                  <div className={`h-[200px] md:h-[260px] rounded-tl-lg rounded-tr-lg img-offer${index + 1} rounded-t-lg relative text-center`}>
-                    <span className="offer-title w-[100%] font-bold  absolute top-0 left-0 bg-white text-black p-3 rounded-tl-lg rounded-tr-lg">{offer}</span>
+                  <div
+                    className={`h-[200px] md:h-[260px] rounded-tl-lg rounded-tr-lg img-offer${
+                      index + 1
+                    } rounded-t-lg relative text-center`}
+                  >
+                    <span className="offer-title w-[100%] font-bold absolute top-0 left-0 bg-white text-black p-3 rounded-tl-lg rounded-tr-lg">
+                      {offer}
+                    </span>
                   </div>
                 </a>
                 <div className="px-5 pb-5">
@@ -104,13 +113,11 @@ export default function Offers({ lng }) {
                     </span>
                   </div>
                   <div className="days-offer flex items-center gap-2 pb-2">
-                                                      <LuCalendarDays/>
-
-                                              {daysOffer[index]}
-
+                    <LuCalendarDays />
+                    {daysOffer[index]}
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="bg-green-100  text-green-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded-full">
+                    <span className="bg-green-100 text-green-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded-full">
                       {t('special_price')}
                     </span>
                     <a
@@ -126,8 +133,6 @@ export default function Offers({ lng }) {
           ))}
         </Swiper>
       </div>
-    
-      
     </>
   );
 }

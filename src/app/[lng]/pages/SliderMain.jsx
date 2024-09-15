@@ -7,7 +7,6 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Pagination, Navigation } from 'swiper/modules';
-import HeaderS from "../../[lng]/_components/HeaderS"
 import { useTranslation } from '../../i18n/clinet'
 import { Autoplay } from 'swiper/modules';
 

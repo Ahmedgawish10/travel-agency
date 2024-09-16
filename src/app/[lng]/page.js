@@ -1,4 +1,4 @@
-import SliderMain from "../[lng]/pages/SliderMain";
+import SliderMain from "../[lng]/_components/SliderMain";
 import BookingSystem from "../[lng]/_components/BookingSystem";
 import ElgiwarFeatures from "../[lng]/_components/ElgiwarFeatures";
 import Offers from "../[lng]/_components/Offers";
@@ -18,7 +18,13 @@ import Link from 'next/link';
   return (
      
       <main className="main-content ">
-          
+           <div className={`home-langSwitcher  fixed top-[8px] z-20 ${lng=="ar"?"left-[5%] ":"right-[5%]"} `}>
+            <Link href={`/${lng=="en"?"ar":"en"}`} className="text-[black] flex items-center gap-2 text-[20px]">
+                         <span> {lng=="en"?"العربية":"English"}</span>
+                         <MdOutlineLanguage/>
+            </Link>
+
+           </div>
               <SliderMain lng={lng}/>
               <ElgiwarFeatures lng={lng}/>
               <BookingSystem lng={lng} ticket="ticket"/>
@@ -26,18 +32,7 @@ import Link from 'next/link';
                <WhyUs lng={lng}/>
                 <OurLocation lng={lng} />
 
-   {/*    <div>
-           <Link href={`/${lng}/sec`} className="text-[red]">Sec</Link><br/>
-            <Link href={`/${lng}/pages`} className="text-[red]">Error(Pages)</Link>
-            </div>
-      <Xtest/>*/}
-            <div className={`home-langSwitcher  fixed top-[8px] z-20 ${lng=="ar"?"left-[5%] ":"right-[5%]"} `}>
-            <Link href={`/${lng=="en"?"ar":"en"}`} className="text-[black] flex items-center gap-2 text-[20px]">
-                         <span> {lng=="en"?"العربية":"English"}</span>
-                         <MdOutlineLanguage/>
-            </Link>
-
-           </div>
+           
 
       </main>
   );

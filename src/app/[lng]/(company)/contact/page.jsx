@@ -35,7 +35,7 @@ async function  Contact({ params: { lng } }) {
     <div
       className="block rounded-lg bg-[white] px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]  md:py-16 md:px-12 -mt-[100px] backdrop-blur-[30px] border border-gray-300">
       <div className="flex flex-wrap">
-        <div className="mb-12 w-full shrink-0 grow-0 basis-auto md:px-3 lg:mb-0 lg:w-5/12 lg:px-6">
+        <div className="mb-12 w-full shrink-0 grow-0 basis-auto lg:mb-0 lg:w-5/12 lg:px-6">
           <form>
             <div className="relative mb-6" data-te-input-wrapper-init>
               <input type="text"
@@ -73,7 +73,7 @@ async function  Contact({ params: { lng } }) {
         </div>
         <div className="w-full shrink-0 grow-0 basis-auto lg:w-7/12">
           <div className="flex flex-wrap">
-            <div className="mb-12 w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:w-full lg:px-6 xl:w-6/12">
+            <div className="mb-12 w-full shrink-0 grow-0 basis-auto md:w-6/12  lg:w-full lg:px-6 xl:w-6/12">
               <div className="flex items-start">
                 <div className="shrink-0">
                      <div className="inline-block rounded-md bg-sky-200 p-3 text-3xl text-primary">
@@ -129,7 +129,7 @@ async function  Contact({ params: { lng } }) {
                 </div>
               </div>
             </div>
-            <div className="w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:w-full lg:px-6 xl:mb-12 xl:w-6/12">
+            <div className="w-full shrink-0 grow-0 basis-auto md:w-6/12  lg:w-full lg:px-6 xl:mb-12 xl:w-6/12">
               <div className="align-start flex">
                 <div className="shrink-0">
                   <div className="inline-block rounded-md bg-sky-200 p-3 text-3xl text-primary">
@@ -139,7 +139,7 @@ async function  Contact({ params: { lng } }) {
                 <div className={` ${lng=="en"?"ml-6":"mr-6"}  grow`}>
                   <p className="mb-2 font-bold ">{t('contact.mobile.label')}</p>
                   <p className="text-neutral-500"> 
-                  {t('contact.mobile.number')}
+                  {t('contact.mobile.number')}ffffff
                   </p>
                 </div>
               </div>

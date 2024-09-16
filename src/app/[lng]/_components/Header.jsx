@@ -6,13 +6,12 @@ import { MdOndemandVideo } from "react-icons/md";
 import { useRouter, usePathname } from 'next/navigation'
 import Link from 'next/link';
 import { useTranslation } from '../../i18n/clinet'
-import "./style.css"
 import { FaPhoneAlt } from "react-icons/fa";
 import { CgMail } from "react-icons/cg";
-import X from "../../../../public/imgs/eljewar-logo.jpg"
 import Image from "next/image"
+import CompanyLogo from "../../../../public/imgs/eljewar-logo.jpg"
+import "./style.css"
 
-import Headers from "../_components/HeaderS"
  const  Header=({lng})=> {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { t } = useTranslation(lng, 'home')
@@ -53,7 +52,7 @@ import Headers from "../_components/HeaderS"
             <div className="md:flex md:items-center md:gap-12">
               <Link href="" className="block text-teal-600" href={`/${lng}`}>
                 <span className="sr-only">Home</span>
-<Image src={X} className="w-[40px] h-[40px]  md:w-[40px] md:h-[40px]" alt='logo' /> 
+<Image src={CompanyLogo} className="w-[40px] h-[40px]  md:w-[40px] md:h-[40px]" alt='logo' /> 
               </Link>
             </div>
             {/* <div className="call">01064880594</div> */}

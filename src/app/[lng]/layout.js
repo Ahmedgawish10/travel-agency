@@ -4,7 +4,6 @@ import Header from "./_components/Header";
 import Footer from "./_components/Footer";
 import Location from "./_components/OurLocation";
 import React, { Suspense } from "react";
-import Loading from "./_components/cc";
 import Image from "next/image"
 import X from "../../../public/imgs/spiner.jpg"
 

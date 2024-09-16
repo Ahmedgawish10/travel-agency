@@ -83,23 +83,23 @@ function Footer({ lng }) {
                   {t('footer.contact_us')}
                 </h2>
                 <div className="social-overlap process-scetion">
-                  <div className="social-icons flex mb-3 iconpad text-center xmd:gap-3 lg:gap-3">
+                  <div className="social-icons flex mb-3 w-[100%] text-center xmd:gap-3 lg:gap-3">
                     <a
                       href="https://www.facebook.com/profile.php?id=100090367776829&mibextid=ZbWKwL"
                       target="_blank"
-                      className={`slider-nav-item ${lng == "ar" ? "after:right-[100%]" : "after:left-[100%]"} w-[30px] h-[30px] xmd:w-[50px]  xmd:h-[50px] flex justify-center text-[#311f9b] items-center hover:before:bg-[#3f345f] hover:bg-[#3f345f] hover:text-white`}
+                      className={`icon-up ${lng == "ar" ? "after:right-[100%]" : "after:left-[100%]"} w-[30px] h-[30px] xmd:w-[50px]  xmd:h-[50px] flex justify-center text-[#311f9b] items-center hover:before:bg-[#3f345f] hover:bg-[#3f345f] hover:text-white`}
                     >
                       <FaFacebookF />
                     </a>
                     <a
                   href="#"
-                      className={`slider-nav-item ${lng == "ar" ? "after:right-[100%]" : "after:left-[100%]"} w-[30px] h-[30px] xmd:w-[50px]  xmd:h-[50px] flex justify-center text-[#311f9b] items-center hover:before:bg-[#3f345f] hover:bg-[#3f345f] hover:text-white`}
+                      className={`icon-up ${lng == "ar" ? "after:right-[100%]" : "after:left-[100%]"}  w-[30px] h-[30px] xmd:w-[50px]  xmd:h-[50px] flex justify-center text-[#311f9b] items-center hover:before:bg-[#3f345f] hover:bg-[#3f345f] hover:text-white`}
                     >
                       <LuInstagram />
                     </a>
                     <a
                                        href="#"
-                      className={`slider-nav-item ${lng == "ar" ? "after:right-[100%]" : "after:left-[100%]"} w-[30px] h-[30px] xmd:w-[50px]  xmd:h-[50px] flex justify-center text-[#311f9b] items-center hover:before:bg-[#3f345f] hover:bg-[#6CA0C8] hover:text-white`}
+                      className={`icon-up ${lng == "ar" ? "after:right-[100%]" : "after:left-[100%]"} w-[30px] h-[30px] xmd:w-[50px]  xmd:h-[50px] flex justify-center text-[#311f9b] items-center hover:before:bg-[#3f345f] hover:bg-[#6CA0C8] hover:text-white`}
                     >
                       <IoLogoTwitter />
                     </a>

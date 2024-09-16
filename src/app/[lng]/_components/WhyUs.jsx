@@ -1,5 +1,4 @@
 "use client"
-
 import React from 'react'
 import { useTranslation } from '../../i18n/clinet'
 import { BiSolidOffer } from "react-icons/bi";
@@ -13,7 +12,7 @@ const IconWithTitle = ({ Icon, title, desc }) => (
     <div className="flex justify-center">
       <Icon className="text-8xl text-[#04293f]" />
     </div>
-    <h2 className="title-font font-regular text-2xl text-white">{title}</h2>
+    <h2 className="title-font font-regular text-2xl text-white ">{title}</h2>
     <span className="text-gray-300">{desc}</span>
   </div>
 );
@@ -37,7 +36,7 @@ function WhyUs({ lng }) {
         viewport={{ once: true }}
         variants={AnimationHeading}
         transition={{ duration: 1 }}
-        className="flex justify-center mt-10 text-3xl font-extrabold pb-6 text-[#03245a]"
+        className="flex text-center justify-center mt-10 text-3xl font-extrabold pb-6 text-[#03245a]"
       >
         {t('Whyus.whyUs')}
       </motion.div>

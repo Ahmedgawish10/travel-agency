@@ -1,12 +1,6 @@
-/* ------------------------Courses------------------------------------  */
-*{
-    box-sizing: border-box;
-  }
-body{
-/*    height: 3000px;*/
-/*    background: blue;*/
-}
-/* start elgiwar section works*/
+/* ------------------------Al-Jewar Tours------------------------------------  */
+
+/* start elgiwar section Features*/
 .elgiwar-works .box1 .img1{
     background-image: url("../../../../public/imgs/elhag2.png");
 }
@@ -29,7 +23,14 @@ body{
     border-radius: 6px;
 }
 
-/* end elgiwar section works*/
+/*section whyus*/
+.why-us .content{
+        background-image: url("../../../../public/imgs/why-us-overlay.avif");
+
+}
+/* end elgiwar section Features*/
+/*----------------------------Media queries -------------------------------------*/
+/*media for mm media*/
 @media screen and (max-width:768px){
     .elgiwar-works .box1 {
         grid-template-columns: repeat(2,1fr) !important;
@@ -38,7 +39,7 @@ body{
         height: 290px !important;
     }
 }
-
+/*media for xsm media*/
 @media screen and (max-width:550px){
     .elgiwar-works .box1 {
         grid-template-columns: repeat(1,1fr) !important;
@@ -57,6 +58,7 @@ body{
     }
            
 }
+/*media for xxsm media*/
 @media screen and (max-width:450px){
 .elgiwar-works .box1 .work1{
         top:50%;
@@ -76,7 +78,7 @@ body{
     }
 
 }
-      
+/*media for screen 500px to 700px */   
 @media screen and (min-width:550px) and (max-width:700px) {
    .elgiwar-works .box1 .img1,
 .elgiwar-works .box1 .img2,
@@ -87,13 +89,13 @@ body{
 }
 }
 
-
+/*media for md 768px screen and up  */   
 @media screen and (min-width:768px){
     .elgiwar-works .box1 {
         grid-template-columns: repeat(3,1fr) !important;
     }
 }
-
+/*media for xlg 1200 screen and up  */   
 @media screen and (min-width:1200px){
     .elgiwar-works .box1 .work1{
         right: 15%;
@@ -117,9 +119,7 @@ body{
 
 
 
-.button-send{
-    height: fit-content;
-}
+
 
 
 
@@ -128,137 +128,7 @@ body{
 
 
   /*start style footer*/
-  /*--------------------------footer-------------------*/
-  .footer-up{
-      background: #212121;
-      color: white;
-  }
-  .footer-up .cities{
-          display: grid;
-          grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-          gap: 10px;
-          border-bottom: 2px solid #424242;
-          padding-bottom: 30px;
-  
-  }
-  .footer-up .cities > .group-1 div{
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 100%;
-  color: #F5F5F5;
-  padding-top: 10px;
-  }
-  .footer-up h2{
-      padding-top: 40px;
-      padding-bottom: 20px;
-      font-style: normal;
-      font-weight: 700;
-      font-size: 22px;
-      line-height: 120%;
-  
-      /* color: #FFFFFF; */
-      
-      
-  }
-  
-  a{
-/*      color: #FFFFFF;*/
-  
-      text-decoration: none;
-  }
-  /*---------------part-2----------*/
-  
-  
-  .part-two-footer .two-section{
-      display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-          padding-top: 20px;
-          border-bottom: 1px solid hsl(0, 0%, 26%);
-          padding-bottom: 60px;
-          gap: 15px; 
-  
-  }
-  
-  
-  .part-two-footer .company {
-       display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(110px,1fr));
-          gap: 10px; 
-          
-  }
-  .part-two-footer .company .one p{
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 100%;
-  color: #F5F5F5;
-  padding-top: 10px;
-  
-  }
-  
-  
-  .part-two-footer h2{
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 120%;
-  /* identical to box height, or 22px */
-  
-  text-transform: uppercase;
-  
-  color: #F5F5F5;
-  
-  opacity: 0.6
-     
-  }
-  .form .sub{
-      padding-top: 20px !important;
-      padding-bottom: 20px;
-      padding-left: 10px !important;
-      
-  }
-  .form-up  .align{
-      padding: 30px 0px;
-      display: flex;
-      align-items:center;
-      flex-wrap:wrap ;
-  }
-  .form-up  .align >div input{
-      color: #FEFAF1;
-  }
-  
-  .part-two-footer .follow-us  p{
-      font-style: normal;
-      font-weight: 700;
-      font-size: 18px;
-      line-height: 140%;
-      padding-bottom: 30px;
-      color: #BBBBBB;
-  
-  }
-  
-  
-  .part-two-footer .follow-us  .sub a{
-      padding: 15px 24px;
-      
-      background: linear-gradient(92.84deg, #FFB800 -47.72%, #FF8A00 136.81%);
-      box-shadow: 0px 5px 8px rgba(222, 151, 0, 0.24), 0px 14px 32px rgba(255, 178, 14, 0.29);
-      border-radius: 8px;
-      
-      
-  
-  }
-  .part-two-footer .follow-us form input{
-      outline: none;
-      border: none;
-      padding: 15px 24px;
-      gap: 10px;
-     background: #424242;
-      border-radius: 8px;
-      
-      
-      
-  }
+
 
 .img-offer1{
         background-image: url("../../../../public/imgs/hag1.jpg");
@@ -295,87 +165,8 @@ background-size: cover;
     padding-bottom: 40px !important;
 }
 
-/*
-.swiper-offer .swiper-slide{
-    display: flex;
-}
-*/
-/*why*/
-.why-us .content{
-        background-image: url("../../../../public/imgs/why-us-overlay.avif");
-/*
-background-size: cover;
-    background-position: center;
-*/
-}
 
-  /*----------hero footer------------*/
-  .hero-footer{
-      display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-          gap: 10px;
-          padding-bottom: 50px;
-          padding-top: 20px;
-          background-color: #212121;
-  }
-  .hero-footer1{
-      background-color: #212121;
-  }
-  .part-two-footer{
-     background-color: #212121;
-  }
-  .hero-footer .left{
-  font-style: normal;
-  font-weight: 700;
-  font-size: 15px;
-  line-height: 120%;
-  color: #F5F5F5;
-  
-      }
-  .hero-footer .right{
-  display: flex;
-   justify-content: flex-end;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 15px;
-  line-height: 120%;
-  color: #F5F5F5;
-  
-      }
-      .form-center .subscribe{
-          padding: 20px 0;
-      }
-      .form-center .subscribe > div{
-         padding-left: 10px;
-          
-      }
-  @media screen and (max-width:700px){
-      .hero-footer .right{
-           justify-content: flex-start
-      }
-  }
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
   /* media for screens sm  */
   @media screen and (max-width:500px) {
       .container_courses{
@@ -395,7 +186,7 @@ background-size: cover;
    
       }
   }
-  /* /* media frm md  768px and less */
+  /*  media frm md  767px and less */
   @media screen and (max-width:767px) {
       .swiper-offer .swiper-slide{
     display: flex !important;
@@ -433,21 +224,6 @@ background-size: cover;
       }
   }
   
-/*  test*/
-.grid-container {
-  display: grid;
-  gap: 10px; /* Adjust as needed */
-}
-
-.item1, .item2, .item3, .item4 {
-  grid-column: span  1
-      ; /* Each item takes one column */
-}
-
-.item5 {
-  grid-column: 1 /  3;
-  grid-row: span  1; 
-}
 
   
   

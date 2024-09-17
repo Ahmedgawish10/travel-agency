@@ -22,7 +22,7 @@ async function  Contact({ params: { lng } }) {
 <section className="mb-32">
   <div id="map" className="relative h-[400px] overflow-hidden bg-cover bg-[50%] bg-no-repeat">
      <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3391.016018329415!2d30.656121!3d31.138207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDA4JzE4LjAiTiAzMMKwMzknMjIuMCJF!5e0!3m2!1sen!2sus!4v1694179730921!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d213.43583626708704!2d30.656243!3d31.138254!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f65b002f3d6351%3A0xe4382e4225cb418b!2z2KfZhNis2YjYp9ixINmE2YTYs9mK2KfYrdip!5e0!3m2!1sen!2sus!4v1726570170401!5m2!1sen!2sus"
                 width="100%" 
                 height="400px" 
                 style={{ border: "5px" }} 

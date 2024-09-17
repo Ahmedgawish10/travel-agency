@@ -117,32 +117,21 @@ body{
 /*55 main slider img  for home*/
 .ele1-slide{
     background-image: url("../../../public/imgs/elhag.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center
 }
 .ele2-slide{
     background-image: url("../../../public/imgs/fly.gif");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center
 }
 .ele3-slide{
     background-image: url("../../../public/imgs/hotels-reserv.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center
+    
 }
 .ele4-slide{
     background-image: url("../../../public/imgs/ggg.gif");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: right
 }
-
-
 .bg-img{
     background-image: url("../../../public/imgs/jj.jpg");
+}
+.ele1-slide,.ele2-slide,.ele3-slide,.ele4-slide{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center

@@ -1,29 +1,31 @@
-"use client";
+'use client'; // This ensures the component is treated as a Client Component
 
-import React from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/navigation';
-import { useTranslation } from '../../i18n/clinet';
-import { motion } from "framer-motion";
-import "./style.css";
-function Xtest({ lng }) {
- 
+import React, { useEffect, useState } from 'react';
 
-    return (
-        <div className="ElgiwarFeatures pt-16">
+export default function ClientComponent() {
+  // State to handle the display of the message
+  const [message, setMessage] = useState('ddddfddd');
 
-        </div>
-    );
+  // Use useEffect to handle the window load event
+  useEffect(() => {
+      setMessage("ll")
+      console.log("lkk");
+
+  }, []); 
+
+  return (
+        <div className={`  ${message=="ll"?"hidden":"flex"}  fixed z-[400] layout-loader bg-[#213d52]  items-center justify-center overflow-hidden`}>
+            <div className="containerr flex flex-col items-center gap-3">
+            
+             <div className="loader flex justify-center items-center">
+                            <div className="company-logo  z-20"></div>
+
+                            </div>
+                            <div className="loader2"></div>
+            
+            </div>
+                          
+
+                            </div>
+  );
 }
-
-export default Xtest;
-
-//     <video
-//        autoPlay
-//        loop
-//        muted
-//        playsInline
-//       className="video-background"
-//      >        <source src="../../../../public/vedio/bb.mp4" type="video/mp4" />
-//       Your browser does not support the video tag.
-//      </video>

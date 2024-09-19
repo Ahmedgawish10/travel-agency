@@ -7,6 +7,8 @@ import React, { Suspense } from "react";
 import Image from "next/image"
 import X from "../../../public/imgs/spiner.jpg"
 
+import Xtest from "./_components/Xtest";
+
 const inter = Cairo({ subsets: ["latin"] });
 
 export const metadata = {
@@ -18,13 +20,13 @@ import { dir } from "i18next";
 import languages from "../i18n/settings";
 
 async function delay(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
+//  return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 async function DelayedContent() {
-  await delay(3000);
+//  await delay(0);
 }
-
+  
 export default async function RootLayout({ children, params: { lng } }) {
   return (
     <html lang={lng} dir={dir(lng)} suppressHydrationWarning={true}>
@@ -45,6 +47,7 @@ export default async function RootLayout({ children, params: { lng } }) {
 
                             </div>}>
            <DelayedContent />
+            <Xtest/>
           <Header lng={lng} />
           {children}
           <Footer lng={lng} />

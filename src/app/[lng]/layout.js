@@ -31,7 +31,8 @@ export default async function RootLayout({ children, params: { lng } }) {
   return (
     <html lang={lng} dir={dir(lng)} suppressHydrationWarning={true}>
       <body className={inter.className} suppressHydrationWarning={true}>
-           
+                      <Xtest/>
+ 
         <Suspense fallback={
             <div className="layout-loader bg-[#213d52] flex items-center justify-center overflow-hidden">
             <div className="containerr flex flex-col items-center gap-3">
@@ -47,7 +48,6 @@ export default async function RootLayout({ children, params: { lng } }) {
 
                             </div>}>
            <DelayedContent />
-            <Xtest/>
           <Header lng={lng} />
           {children}
           <Footer lng={lng} />

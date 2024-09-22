@@ -11,7 +11,7 @@ import { motion } from "framer-motion";
 
 export default function OurLocaton({ lng }) {
   const { t } = useTranslation(lng, 'home');
-
+console.log(1);
   return (
     <section className="mt-12 overflow-hidden">
       <div className="ourloaction w-[80%] mx-auto text-center pb-3"> 

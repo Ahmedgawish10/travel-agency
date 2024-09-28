@@ -26,6 +26,7 @@ function DropdownForm({ lng, ticket }) {
     const [phone, setPhone] = useState("");
     const [selectedValue6, setSelectedValue6] = useState('Select number of adults');
     const [selectedValue7, setSelectedValue7] = useState('Select number of adults');
+    const [popupVisible, setPopupVisible] = useState(false); // State to manage popup visibility
 
     const [selectedDate, setSelectedDate] = useState(new Date().toISOString().split('T')[0]);
 
@@ -260,11 +261,16 @@ function DropdownForm({ lng, ticket }) {
 
         if (Object.keys(newErrors).length > 0) {
             setErrors(newErrors);
-            console.log(errors);
             return;
         }
         setErrors({});
-        alert(`Selected values: ${departureCountry}, ${arrivalCountry}, ${typeTravel}, ${phone}, ${selectedDate}, Adults: ${numberOfAdults}, Children: ${numberOfChilds}`);
+         setPopupVisible(true);
+        
+//        alert(`Selected values: ${departureCountry}, ${arrivalCountry}, ${typeTravel}, ${phone}, ${selectedDate}, Adults: ${numberOfAdults}, Children: ${numberOfChilds}`);
+    };
+     // Function to close the popup
+    const handleClosePopup = () => {
+        setPopupVisible(false);
     };
     return (
         <div className="booking1 overflow-hidden">
@@ -299,7 +305,19 @@ initial={{ opacity: 0, x: `${ 25}vw` }}
                
                 
                   className="containerr w-[90%] bg-blue-100 md:w-[90%]  lg:w-[70%] mx-auto  ">
-               
+                   {popupVisible && (
+                <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+                    <div className="bg-white p-8 rounded-md shadow-lg">
+                        <p className="text-xl">Your booking was successful!</p>
+                        <p>We will send you a message for confirmation shortly.</p>
+                        <button 
+                          className="mt-4 bg-blue-500 text-white py-2 px-4 rounded"
+                          onClick={handleClosePopup}>
+                          Close
+                        </button>
+                    </div>
+                </div>
+            )}
                 <form htmlFor="Booking" onSubmit={handleSubmit} className="p-6  grid grid-cols-1 md:grid-cols-2  md:gap-x-5">
                     <div className="relative col-span-1 text-left mb-4" ref={dropdownRef1}>
 

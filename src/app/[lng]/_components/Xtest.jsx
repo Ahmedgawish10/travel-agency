@@ -1,16 +1,14 @@
-'use client'; // This ensures the component is treated as a Client Component
+'use client'; 
 
 import React, { useEffect, useState } from 'react';
 
 export default function ClientComponent() {
-  // State to handle the display of the message
   const [loading, setLoading] = useState('false');
 
-  // Use useEffect to handle the window load event
     
   useEffect(() => {
       setLoading("true")
-       sessionStorage.setItem('isLoaded', 'true');
+//       sessionStorage.setItem('isLoaded', 'true');
  
 
   }, []); 

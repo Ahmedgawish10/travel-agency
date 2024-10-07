@@ -8,8 +8,16 @@ import 'swiper/css/navigation';
 import { Pagination, Navigation } from 'swiper/modules';
 import { useTranslation } from '../../i18n/clinet'
 import { Autoplay } from 'swiper/modules';
+import Img1 from "../../../../public/imgs/elhag.png";
+import Img2 from "../../../../public/imgs/fly.gif"
+import Img3 from "../../../../public/imgs/hotels-reserv.png"
+import Img4 from "../../../../public/imgs/outside-travels.gif"
+
+import Image from "next/image";
 
 export default function App({ lng }  ) {
+    const images = [Img1,Img2,Img3,Img4]; 
+
       const { t } = useTranslation(lng, 'home')
       const serv=t("Home.MainSlider",{returnObjects:true})
       const swiperRef = useRef(null);
@@ -46,14 +54,26 @@ export default function App({ lng }  ) {
        loop={true}
            autoplay={{ delay: 8000, disableOnInteraction: false }}
 
-        modules={[Pagination, Navigation,Autoplay]}
+        modules={[Pagination, Navigation]}
         className="mySwiper h-[200px] main-slider text-white"
       >
          {serv?.map((item, index) => (
-         <SwiperSlide key={index} className={`ele${index+1}-slide f`}
+         <SwiperSlide key={index} className={`SwiperSlide${index}`}
           
           >
-           <div className="content-box flex items-end w-[100%] h-[100%] ">
+          <div className="img-up relative top-2 w-[100%] h-[100%]">
+ 
+          <Image
+      key={index}     
+      src={images[index]} 
+      alt={`Image ${index + 1}`}
+      layout="fill" 
+      objectFit="cover" 
+    />
+                
+            
+          <div className="content-box flex items-end w-[100%] h-[100%] absolute left-0 top-0 ">
+           
             <div className="overlay py-5 sm:py-1 w-[100%] mb-[80px] bg-[#1E10104D]">
               <div className="content w-[90%] mx-auto ">
                 <div className={`title-company text-4xl pb-4 text-white sm:text-3xl xsm:pb-1 ${lng=="en"?" xsm:text-2xl":""}  `}> {item.CompanyName}</div>
@@ -76,13 +96,19 @@ export default function App({ lng }  ) {
               </div>
             </div>
           </div>
+          
+
+         
+         </div>
+          
+           
         </SwiperSlide> 
       ))}
       </Swiper>
 <>
       
   
-      
+
       
       </>
     </>

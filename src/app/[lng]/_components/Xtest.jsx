@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 
 export default function ClientComponent() {
   const [isLoading, setIsLoading] = useState(true);
-
   useEffect(() => {
     const handleContentLoaded = () => {
       setIsLoading(false); 
@@ -16,7 +15,6 @@ export default function ClientComponent() {
       window.addEventListener('load', handleContentLoaded);
     }
 
-    // Cleanup the event listener on unmount
     return () => {
       window.removeEventListener('load', handleContentLoaded);
     };
@@ -40,8 +38,6 @@ export default function ClientComponent() {
                             </div>
       ) : (
         <div>
-          <h1>All content loaded!</h1>
-          {/* Rest of your page content */}
         </div>
       )}
     </div>

@@ -105,14 +105,12 @@ function DropdownForm({ lng, ticket }) {
     };
     const handleItemClick4 = (value) => {
         setTypeTravel(value);
-                console.log(typeTravel);
 
         setIsOpen4(false);
         document.removeEventListener('mousedown', handleClickOutside2);
     };
     const handleItemClick5 = (value) => {
         setPhone(value);
-        console.log(value);
         setIsOpen5(false);
         //    document.removeEventListener('mousedown', handleClickOutside5);
     };
@@ -232,15 +230,14 @@ function DropdownForm({ lng, ticket }) {
 
               
     const handleSubmit = (event) => {
-        event.preventDefault();
+    event.preventDefault();
 
-        const newErrors = {};
+    const newErrors = {};
 
-        if (departureCountry === `${lng === "en" ? "Select Country" : "اختر الدوله"}`) {
+   if (departureCountry === `${lng === "en" ? "Select Country" : "اختر الدوله"}`) {
             newErrors.departureCountry = t('BookingValidation.departureCountry');
         }
-
-        if (arrivalCountry === `${lng === "en" ? "Select Country" : "اختر الدوله"}`) {
+       if (arrivalCountry === `${lng === "en" ? "Select Country" : "اختر الدوله"}`) {
             newErrors.arrivalCountry = t('BookingValidation.arrivalCountry');
         }
 
@@ -259,15 +256,43 @@ function DropdownForm({ lng, ticket }) {
             newErrors.phone = t('BookingValidation.phone');
         }
 
-        if (Object.keys(newErrors).length > 0) {
-            setErrors(newErrors);
-            return;
-        }
-        setErrors({});
-         setPopupVisible(true);
-        
-//        alert(`Selected values: ${departureCountry}, ${arrivalCountry}, ${typeTravel}, ${phone}, ${selectedDate}, Adults: ${numberOfAdults}, Children: ${numberOfChilds}`);
-    };
+    if (Object.keys(newErrors).length > 0) {
+        setErrors(newErrors);
+        return;
+    }
+
+    // Construct WhatsApp message
+    const message = `${lng=="en"?"Hello, I would like to know the details of this flight ticket price.":"السلام عليكم كنت عايز اعرف تفاصيل سعر تذكرة الطيران دي "}
+    From: ${departureCountry}
+    To: ${arrivalCountry}
+    Travel Type: ${typeTravel}
+    Number of Adults: ${numberOfAdults}
+    Number of Children: ${numberOfChilds}
+    Travel Date: ${selectedDate}`;
+
+    // Encode message for URL2
+    const encodedMessage = encodeURIComponent(message);
+
+    // Redirect to WhatsApp
+   window.open(`https://api.whatsapp.com/send?phone=+201094487922&text=${encodedMessage}`, '_blank');
+
+    // Reset the states to their default values
+    setdepartureCountry(`${lng == "en" ? "Select Country" : "اختر الدوله"}`);
+    setarrivalCountry(`${lng == "en" ? "Select Country" : "اختر الدوله"}`);
+    setHotel(`${lng == "en" ? "Select Ratings" : "اختر عدد نجوم الفندق"}`);
+    setTypeTravel(`${lng == "en" ? "Select Travel Type" : "اختر وسيله السفر"}`);
+    setPhone("");
+    setSelectedDate(new Date().toISOString().split('T')[0]);
+    setNumberOfAdults(1);
+    setNumberOfChilds(0);
+    setSelectedValue6('Select number of adults');
+    setSelectedValue7('Select number of children');
+    setErrors({});
+
+//    setPopupVisible(true);
+};
+
+
      // Function to close the popup
     const handleClosePopup = () => {
         setPopupVisible(false);

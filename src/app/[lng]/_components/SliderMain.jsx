@@ -69,6 +69,8 @@ export default function App({ lng }  ) {
       alt={`Image ${index + 1}`}
       layout="fill" 
       objectFit="cover" 
+    lazy="loading"
+
     />
                 
             

@@ -1,28 +1,4 @@
 /* ------------------------Al-Jewar Tours------------------------------------  */
-
-/* start elgiwar section Features*/
-.elgiwar-works .box1 .img1{
-    background-image: url("../../../../public/imgs/elhag2.png");
-}
-.elgiwar-works .box1 .img2{
-    background-image: url("../../../../public/imgs/demostic.jpeg");
-}.elgiwar-works .box1 .img3{
-    background-image: url("../../../../public/imgs/outside-travels.png");
-}.elgiwar-works .box1 .img4{
-    background-image: url("../../../../public/imgs/booking.png");
-}.elgiwar-works .box1 .img5{
-    background-image: url("../../../../public/imgs/fly-tickets.png");
-}
-.elgiwar-works .box1 .img1,
-.elgiwar-works .box1 .img2,
-.elgiwar-works .box1 .img3,
-.elgiwar-works .box1 .img4,
-.elgiwar-works .box1 .img5{
-    background-size: cover;
-    background-position: top;
-    border-radius: 6px;
-}
-
 /*section whyus*/
 .why-us .content{
         background-image: url("../../../../public/imgs/why-us-overlay.avif");
@@ -36,7 +12,7 @@
         grid-template-columns: repeat(2,1fr) !important;
     }
     .elgiwar-works .box1 > div{
-        height: 290px !important;
+/*        height: 290px !important;*/
     }
 }
 /*media for xsm media*/
@@ -60,9 +36,7 @@
 }
 /*media for xxsm media*/
 @media screen and (max-width:450px){
-.elgiwar-works .box1 .work1{
-        top:50%;
-    } 
+
   
     .elgiwar-works .box1 .img1,
 .elgiwar-works .box1 .img2,
@@ -73,9 +47,7 @@
     height: 100%
 
 }
-        .elgiwar-works .box1 > div {
-        height: 200px !important;
-    }
+
 
 }
 /*media for screen 500px to 700px */   
@@ -96,40 +68,15 @@
     }
 }
 /*media for xlg 1200 screen and up  */   
-@media screen and (min-width:1200px){
+/*
+@media screen and (min-width:1000px){
     .elgiwar-works .box1 .work1{
         right: 15%;
     }
 }
+*/
 
-@media screen and (max-width:400px){
-   
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  /*start style footer*/
-
-
+/*offers*/
 .img-offer1{
         background-image: url("../../../../public/imgs/hag1.jpg");
 background-size: cover;
@@ -224,8 +171,12 @@ background-size: cover;
       }
   }
   
-
-  
+.elgiwar-works .box1 .work1{
+        top:60%;
+    } 
+   .elgiwar-works .box1 .work1{
+        right: 14%;
+    }
   
   
   

@@ -9,8 +9,19 @@ import 'swiper/css/navigation';
 import { Pagination, Navigation, Autoplay } from 'swiper/modules'; // Autoplay imported here
 import { LuCalendarDays } from "react-icons/lu";
 import { motion } from "framer-motion";
+import Img1 from "../../../../public/imgs/hag1.jpg";
+import Img2 from "../../../../public/imgs/grand1.jpg"
+import Img3 from "../../../../public/imgs/gharda.jpg"
+import Img4 from "../../../../public/imgs/northcoast.jpg"
+import Img5 from "../../../../public/imgs/dubai.jpg"
+import Img6 from "../../../../public/imgs/paris.jpg"
+
+import Image from "next/image";
 
 export default function Offers({ lng }) {
+        const imagesOffers = [Img1,Img2,Img3,Img4,Img5,Img6]; 
+           const altImages=["elhagOffers","elumrahOffers","ghardaOffers","northcoastOffers","dubaiOffers","oarisOffers"]
+
   const AnimationHeading = {
     hidden: { opacity: 0, x: "-25vw" },
     visible: { opacity: 1, x: 0 },
@@ -66,7 +77,7 @@ export default function Offers({ lng }) {
           pagination={{ clickable: true }}
           navigation={true}
           autoplay={{ delay: 8000, disableOnInteraction: false }} 
-          modules={[Pagination, Navigation, Autoplay]} 
+          modules={[Pagination, Navigation]} 
           className="mySwiper swiper-offer"
           onSlideChange={handleSlideChange}
           breakpoints={{
@@ -86,10 +97,21 @@ export default function Offers({ lng }) {
               <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <a href="#">
                   <div
-                    className={`h-[200px] md:h-[260px] rounded-tl-lg rounded-tr-lg img-offer${
-                      index + 1
-                    } rounded-t-lg relative text-center`}
+                    className={`h-[200px] md:h-[260px] rounded-tl-lg rounded-tr-lg rounded-t-lg relative text-center`}
                   >
+                          <Image
+                          className="rounded-[10px]"
+      key={index}     
+      src={imagesOffers[index]} 
+      alt={`Image ${index + 1}`}
+      
+      className="h-[100%] w-[100%] rounded-[10px]"
+    lazy="loading"
+    alt={altImages[index]}
+    
+
+    />
+
                     <span className="offer-title w-[100%] font-bold absolute top-0 left-0 bg-white text-black p-3 rounded-tl-lg rounded-tr-lg">
                       {offer}
                     </span>
@@ -110,6 +132,7 @@ export default function Offers({ lng }) {
                     </div>
                     <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded ms-3">
                       {t('rating')}
+
                     </span>
                   </div>
                   <div className="days-offer flex items-center gap-2 pb-2">
@@ -133,6 +156,7 @@ export default function Offers({ lng }) {
           ))}
         </Swiper>
       </div>
+
     </>
   );
 }

@@ -36,9 +36,7 @@
 }
 /*media for xxsm media*/
 @media screen and (max-width:450px){
-
-  
-    .elgiwar-works .box1 .img1,
+.elgiwar-works .box1 .img1,
 .elgiwar-works .box1 .img2,
 .elgiwar-works .box1 .img3,
 .elgiwar-works .box1 .img4,
@@ -47,8 +45,6 @@
     height: 100%
 
 }
-
-
 }
 /*media for screen 500px to 700px */   
 @media screen and (min-width:550px) and (max-width:700px) {
@@ -67,53 +63,11 @@
         grid-template-columns: repeat(3,1fr) !important;
     }
 }
-/*media for xlg 1200 screen and up  */   
-/*
-@media screen and (min-width:1000px){
-    .elgiwar-works .box1 .work1{
-        right: 15%;
-    }
-}
-*/
-
 /*offers*/
-.img-offer1{
-        background-image: url("../../../../public/imgs/hag1.jpg");
-background-size: cover;
-    background-position: top;
-}
-.img-offer2{
-        background-image: url("../../../../public/imgs/grand1.jpg");
-background-size: cover;
-    background-position: top;
-}
-.img-offer3{
-        background-image: url("../../../../public/imgs/gharda.jpg");
-background-size: cover;
-    background-position: top;
-}
-.img-offer4{
-        background-image: url("../../../../public/imgs/northcoast.jpg");
-background-size: cover;
-    background-position: top;
-}
-.img-offer5{
-        background-image: url("../../../../public/imgs/dubai.jpg");
-background-size: cover;
-    background-position: top;
-}
-.img-offer6{
-        background-image: url("../../../../public/imgs/paris.jpg");
-background-size: cover;
-    background-position: top;
-}
 .swiper-offer{
     height: initial !important;
     padding-bottom: 40px !important;
 }
-
-
-
   /* media for screens sm  */
   @media screen and (max-width:500px) {
       .container_courses{

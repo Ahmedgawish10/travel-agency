@@ -41,14 +41,14 @@ function Footer({ lng }) {
                 </h2>
                 <ul className="text-gray-500 dark:text-gray-400 font-medium">
                   <li className="pb-2">
-                    <a href="#" className="hover:underline">
+                    <Link href={`/${lng}/flightTickets`} className="hover:underline">
                       {t('footer.flight_offers')}
-                    </a>
+                    </Link>
                   </li>
                   <li className="pb-2">
-                    <a href="#" className="hover:underline">
+                    <Link href={`/${lng}/elhag&elumrah`} className="hover:underline">
                       {t('footer.hajj_offers')}
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <a href="#" className="hover:underline">

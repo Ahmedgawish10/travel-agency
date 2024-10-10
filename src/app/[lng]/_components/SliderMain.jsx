@@ -25,22 +25,8 @@ export default function App({ lng }  ) {
 
   // Handler for date selection
   const handleDateChange = (date) => {
-      console.log(date);
     setSelectedDate(date);
   };
-
-    const handleMouseEnter = () => {
-        if (swiperRef.current) {
-            swiperRef.current.swiper.autoplay.stop();
-            console.log("22");
-        }
-    };
-
-    const handleMouseLeave = () => {
-        if (swiperRef.current) {
-            swiperRef.current.swiper.autoplay.start();
-        }
-    };
   return (
     <>
       <Swiper

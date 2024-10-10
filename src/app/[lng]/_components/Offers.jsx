@@ -77,7 +77,7 @@ export default function Offers({ lng }) {
           pagination={{ clickable: true }}
           navigation={true}
           autoplay={{ delay: 8000, disableOnInteraction: false }} 
-          modules={[Pagination, Navigation]} 
+          modules={[Pagination, Navigation,Autoplay]} 
           className="mySwiper swiper-offer"
           onSlideChange={handleSlideChange}
           breakpoints={{

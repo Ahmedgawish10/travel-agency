@@ -1,4 +1,5 @@
 "use client"
+
 import { Datepicker } from "flowbite-react";
 import React,{ useRef ,useState} from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -40,7 +41,7 @@ export default function App({ lng }  ) {
        loop={true}
            autoplay={{ delay: 8000, disableOnInteraction: false }}
 
-        modules={[Pagination, Navigation]}
+        modules={[Pagination, Navigation,Autoplay]}
         className="mySwiper h-[200px] main-slider text-white"
       >
          {serv?.map((item, index) => (

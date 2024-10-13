@@ -139,7 +139,7 @@ async function  Contact({ params: { lng } }) {
                 <div className={` ${lng=="en"?"ml-6":"mr-6"}  grow`}>
                   <p className="mb-2 font-bold ">{t('contact.mobile.label')}</p>
                   <p className="text-neutral-500"> 
-                  {t('contact.mobile.number')}ffffff
+                  {t('contact.mobile.number')}
                   </p>
                 </div>
               </div>

@@ -1,7 +1,7 @@
 'use client'; 
 import { useEffect, useState } from 'react';
 
-export default function ClientComponent() {
+export default function LoadingPage() {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     const handleContentLoaded = () => {

@@ -5,7 +5,7 @@ import Offers from "../[lng]/_components/Offers";
 import WhyUs from "../[lng]/_components/WhyUs";
 import OurLocation from "../[lng]/_components/OurLocation";
 
-import Xtest from "../[lng]/_components/Xtest";
+import LoadingPage from "../[lng]/_components/LoadingPage";
 
 import { useTranslation } from '../i18n'
 import { MdOutlineLanguage } from "react-icons/md";

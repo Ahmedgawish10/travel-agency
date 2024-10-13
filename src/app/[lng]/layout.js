@@ -5,9 +5,9 @@ import Footer from "./_components/Footer";
 import Location from "./_components/OurLocation";
 import React, { Suspense } from "react";
 import Image from "next/image"
-import X from "../../../public/imgs/spiner.jpg"
+import LoadingImg from "../../../public/imgs/spiner.jpg"
 
-import Xtest from "./_components/Xtest";
+import LoadingPage from "./_components/LoadingPage";
 
 const inter = Cairo({ subsets: ["latin"] });
 
@@ -31,7 +31,7 @@ export default async function RootLayout({ children, params: { lng } }) {
   return (
     <html lang={lng} dir={dir(lng)} suppressHydrationWarning={true}>
       <body className={inter.className} suppressHydrationWarning={true}>
-                      <Xtest/>
+                      <LoadingPage/>
  
         <Suspense fallback={
             <div className="layout-loader bg-[#213d52] flex items-center justify-center overflow-hidden">

@@ -4,7 +4,8 @@ import Link from 'next/link';
 import { MdOutlineLanguage } from "react-icons/md";
 import { TiHome } from "react-icons/ti";
 import { IoIosArrowForward } from "react-icons/io";
-
+import Img5 from "../../../../../public/imgs/international-tourism.jpg";
+import Image from "next/image";
 async function InternationalTourism({ params: { lng } }) {
   const { t } = await useTranslation(lng, "internationalTourism");
 
@@ -17,8 +18,15 @@ async function InternationalTourism({ params: { lng } }) {
         </Link>
       </div>
 
-      <div className="bg-img pt-[200px]">
-        <div className="elhag-overlay w-full xmd:h-[200px] md:h-[300px] flex items-center justify-center text-white bg-[#2121217a]">
+         <div className="bg-img  mt-[100px] relative h-[400px]">
+                                           <Image
+                                            className="absolute left-0 top-0 w-[100%] h-[100%]"
+                                            src={Img5} 
+                                            alt={`demosticTourism`}
+                                         layout="fill"
+                                            objectFit="cover"                                            
+                                         />
+        <div className="elhag-overlay w-[100%] absolute top-[30%]  xmd:h-[200px] md:h-[230px] flex items-center justify-center text-white bg-[#2121217a]">
           <div className="containerr text-center">
             <span className="text-4xl text-white font-bold">{t('breadcrumb.title')}</span>
             <nav className="flex pt-5 justify-center" aria-label="Breadcrumb">

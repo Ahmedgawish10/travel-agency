@@ -12,6 +12,9 @@
 body{
     font-family: "Cairo", sans-serif;
 }
+html{
+    scroll-behavior: smooth
+}
 
 /**/
 .swiper {

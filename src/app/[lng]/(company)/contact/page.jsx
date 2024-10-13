@@ -6,6 +6,7 @@ import { useTranslation } from '../../../i18n'
 import Link from 'next/link';
 import { MdOutlineLanguage } from "react-icons/md";
 
+
 async function  Contact({ params: { lng } }) {
   const { t } =await useTranslation(lng, "contact");
 

@@ -41,7 +41,7 @@ export default function App({ lng }  ) {
        loop={true}
            autoplay={{ delay: 8000, disableOnInteraction: false }}
 
-        modules={[Pagination, Navigation,Autoplay]}
+        modules={[Pagination, Navigation]}
         className="mySwiper h-[200px] main-slider text-white"
       >
          {serv?.map((item, index) => (
@@ -54,9 +54,8 @@ export default function App({ lng }  ) {
       key={index}     
       src={images[index]} 
       alt={`Image ${index + 1}`}
-      layout="fill" 
-      objectFit="cover" 
-    lazy="loading"
+      className="w-[100%] h-[100%]"
+      
 
     />
                 

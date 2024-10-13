@@ -85,12 +85,11 @@ function ElgiwarFeatures({ lng }) {
                                 <Link href={`/${lng}/${elgiwarFeaturesRouts[index]}`} className="hover:opacity-80 transition-opacity duration-300">
                                     <div className=" feature-box relative sm:h-[220px] h-[200px]">
                                         <Image
-                                            className="absolute left-0 top-0"
+                                            className="absolute left-0 top-0 w-[100%] h-[100%]"
                                             key={index}
                                             src={images[index]} 
                                             alt={`Image ${index + 1}`}
-                                            layout="fill"
-                                            lazy="loading"
+                                            
                                         />
                                         <div className="work1 text-[#03245a] absolute right-[12%] top-[60%] font-bold text-xl text-center">
                                             {feature.Feat1.split(' ').map((word, i, arr) => (

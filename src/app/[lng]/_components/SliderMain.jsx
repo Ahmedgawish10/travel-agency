@@ -51,11 +51,11 @@ export default function App({ lng }  ) {
           <div className="img-up relative top-2 w-[100%] h-[100%]">
  
           <Image
+          
       key={index}     
       src={images[index]} 
       alt={`Image ${index + 1}`}
-      className="w-[100%] h-[100%]"
-      
+      className="w-[100%] h-[100%] object-cover"
 
     />
                 

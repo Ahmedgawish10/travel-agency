@@ -9,7 +9,6 @@ export default function LoadingPage() {
     };
 
     if (document.readyState === 'complete') {
-        console.log("hi");
       setIsLoading(false);
     } else {
       window.addEventListener('load', handleContentLoaded);

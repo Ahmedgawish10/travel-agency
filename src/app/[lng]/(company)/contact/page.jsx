@@ -1,15 +1,55 @@
-import React from 'react';
+"use client"
+import React,{useEffect,useState} from 'react';
 import { TbDeviceLandlinePhone } from "react-icons/tb";
 import { MdPhoneIphone } from "react-icons/md";
 import { FaLocationDot, FaPhoneVolume } from "react-icons/fa6";
-import { useTranslation } from '../../../i18n'
+import { useTranslation } from '../../../i18n/clinet'
 import Link from 'next/link';
 import { MdOutlineLanguage } from "react-icons/md";
 
+import { initFlowbite } from 'flowbite';
 
-async function  Contact({ params: { lng } }) {
-  const { t } =await useTranslation(lng, "contact");
+import { useForm } from 'react-hook-form';
+import { z } from 'zod';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { sendEmail } from '../../services/EmailJs';
 
+ const schema = z.object({
+  username: z.string().nonempty("username is required").min(3, "Username must be at least 3 characters long"),
+  email: z.string().nonempty("email is required").email("Invalid email address"),
+  message: z.string().nonempty(`message is required`).min(10, "message must be at least 10 characters long"),
+}); 
+
+
+
+
+ function  Contact({ params: { lng } }) {
+      useEffect(() => {
+    initFlowbite(); 
+  }, []);
+     
+   const [popupEmail,setpopupEmail]=useState(true)
+ const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm({
+    resolver: zodResolver(schema),
+  });
+  
+  const onSubmit = async (data) => {
+    const result = await sendEmail(data);
+    if (result.success) {
+        setpopupEmail(true)
+//      alert('Message sent successfully!');
+      reset(); // Reset form fields
+    } else {
+      alert('Failed to send message. Please try again later.');
+    }
+  };
+    
+ const { t } = useTranslation(lng, "contact");
   return (
           <div className="ElgiwarFeatures pt-16">
                        <div className={`home-langSwitcher  fixed top-[8px] z-20 ${lng=="ar"?"left-[5%] ":"right-[5%]"} `}>
@@ -20,6 +60,26 @@ async function  Contact({ params: { lng } }) {
             </Link>
 
            </div>
+           
+                  {popupEmail &&  <div id="alert-border-1" class={`popup-email  fixed top-[100px]  z-[100] flex items-center p-4 mb-4 text-blue-800 border-t-4 border-blue-300 bg-blue-50 dark:text-blue-400 dark:bg-gray-800 dark:border-blue-800" role="alert`} >
+    <svg class="flex-shrink-0 w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+      <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+    </svg>
+    <div class="ms-3 text-sm font-medium">
+     Your message was sent successfully,We will contact you soon!    
+   </div>
+    <button type="button" class="ms-auto -mx-1.5 -my-1.5 bg-blue-50 text-blue-500 rounded-lg focus:ring-2 focus:ring-blue-400 p-1.5 hover:bg-blue-200 inline-flex items-center justify-center h-8 w-8 dark:bg-gray-800 dark:text-blue-400 dark:hover:bg-gray-700" data-dismiss-target="#alert-border-1" aria-label="Close">
+      <span class="sr-only">Dismiss</span>
+      <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+      </svg>
+    </button>
+</div>
+           }
+           
+           
+           
+           
 <section className="mb-32">
   <div id="map" className="relative h-[400px] overflow-hidden bg-cover bg-[50%] bg-no-repeat">
      <iframe
@@ -37,36 +97,45 @@ async function  Contact({ params: { lng } }) {
       className="block rounded-lg bg-[white] px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]  md:py-16 md:px-12 -mt-[100px] backdrop-blur-[30px] border border-gray-300">
       <div className="flex flex-wrap">
         <div className="mb-12 w-full shrink-0 grow-0 basis-auto lg:mb-0 lg:w-5/12 lg:px-6">
-          <form>
+          <form onSubmit={handleSubmit(onSubmit)}>
             <div className="relative mb-6" data-te-input-wrapper-init>
-              <input type="text"
+               <label
+                  className=""
+                  htmlFor="exampleInput90">                       
+                      {t('contact.form.name.label')}
+
+                </label>
+              <input type="text" {...register("username")}
                   className="peer block min-h-[auto] w-full rounded border-2 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary 
                   peer-focus:bg-black data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none "
                   id="exampleInput90" />
-              <label
-                  className="pointer-events-none absolute bg-[#fffc] top-0 mt-[2px] px-2 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[1rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none "
-                  htmlFor="exampleInput90">                           {t('contact.form.name.label')}
+                   
+                    {errors.username && <p className="text-red-600 pt-2">{errors.username.message}</p>}
 
-                </label>
             </div>
             <div className="relative mb-6" data-te-input-wrapper-init>
-              <input type="email"
-                  className="peer block min-h-[auto] w-full rounded border-2 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none "
-                  id="exampleInput91" />
               <label
-                 className="pointer-events-none absolute bg-white top-0 mt-[2px] px-2 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[1rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none "
+                 className="pb-2"
                   htmlFor="exampleInput91"> {t('contact.form.email.label')}
                 </label>
+              <input type="email" {...register("email")}
+                  className="peer block min-h-[auto] w-full rounded border-2 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none "
+                  id="exampleInput91" />
+                     {errors.email && <p className="text-red-600 pt-2">{errors.email.message}</p>}
+
             </div>
             <div className="relative mb-6" data-te-input-wrapper-init>
-              <textarea
+                  <label htmlFor="exampleFormControlTextarea1"
+                 className=""> {t('contact.form.message.label')}</label>
+              <textarea {...register("message")} 
                   className="peer block min-h-[auto] w-full rounded border-2 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none "
                   id="exampleFormControlTextarea1" rows="3"></textarea>
-              <label htmlFor="exampleFormControlTextarea1"
-                 className="pointer-events-none absolute bg-white top-0 mt-[2px] px-2 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[1rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none "> {t('contact.form.message.label')}</label>
+                          {errors.message && <p className="text-red-600 pt-2">{errors.message.message}</p>}
+
+
             </div>
           
-            <button type="button"
+            <button type="submit"
                 className="mb-6 w-full rounded bg-sky-500 text-white px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal   lg:mb-0">
                 {t('contact.form.send')}
               </button>

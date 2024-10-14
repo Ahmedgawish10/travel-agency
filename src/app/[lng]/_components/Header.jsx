@@ -26,33 +26,32 @@ import "./style.css"
 
 
 
-
-
   return (<Suspense  fallback="loading">
       <header className="header bg-white border-b  w-[100%] fixed top-0 z-20 shadow-bottom pb-2">
         {/*social icons-fixed */}
                 <nav className="social-fixed z-[200]">
   
- 
+  
           <ul>
               <li className="bg-[#3b5998]">
-              <Link href="https://www.facebook.com/profile.php?id=100090367776829&mibextid=ZbWKwL" target="_blank" 
-              className="flex gap-3 items-center"> 
-              <div><FaFacebookF className="text-2xl text-[white]"/></div> 
-               <span className="text-white">Facebook</span> 
+              <Link href="https://www.facebook.com/profile.php?id=100090367776829&mibextid=ZbWKwL"
+                className={`flex gap-3 items-center ${lng=="en"?"justify-end":""}`}> 
+               <div className={`${lng=="en"?"order-last":""}`}><FaFacebookF className="text-2xl text-[white]"/></div> 
+               <span className="text-white">Instagram</span> 
               </Link>
               </li>
               
+              
               <li className="bg-[#bc2a8d]">
-              <Link href="#"  className="flex gap-3 items-center"> 
-              <div><FaInstagram className="text-2xl text-[white]"/></div> 
+              <Link href="#"  className={`flex gap-3 items-center ${lng=="en"?"justify-end":""}`}> 
+               <div className={`${lng=="en"?"order-last":""}`}><FaInstagram className="text-2xl text-[white]"/></div> 
                <span className="text-white">Instagram</span> 
               </Link>
               </li>
               
               <li className="bg-[#00aced]">
-              <Link href="#"  className="flex gap-3 items-center"> 
-              <div><FaTwitter className="text-2xl text-[white]"/></div> 
+              <Link href="#"  className={`flex gap-3 items-center ${lng=="en"?"justify-end":""}`}> 
+             <div className={`${lng=="en"?"order-last":""}`}><FaTwitter className="text-2xl text-[white]"/></div> 
                <span className="text-white">Twitter</span> 
               </Link>
               </li>

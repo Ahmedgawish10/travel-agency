@@ -28,7 +28,7 @@ import { sendEmail } from '../../services/EmailJs';
     initFlowbite(); 
   }, []);
      
-   const [popupEmail,setpopupEmail]=useState(true)
+   const [popupEmail,setpopupEmail]=useState(false)
  const {
     register,
     handleSubmit,

@@ -39,7 +39,7 @@ import "./style.css"
               <Link href="https://www.facebook.com/profile.php?id=100090367776829&mibextid=ZbWKwL"
                 className={`flex gap-3 items-center ${lng=="en"?"justify-end":""}`}> 
                <div className={`${lng=="en"?"order-last":""}`}><FaFacebookF className="text-2xl text-[white]"/></div> 
-               <span className="text-white">Instagram</span> 
+               <span className="text-white">Facebook</span> 
               </Link>
               </li>
               

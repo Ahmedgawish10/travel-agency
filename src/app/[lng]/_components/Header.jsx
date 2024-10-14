@@ -27,8 +27,10 @@ import "./style.css"
 
 
   return (<Suspense  fallback="loading">
-      <header className="header bg-white border-b  w-[100%] fixed top-0 z-20 shadow-bottom pb-2">
-        {/*social icons-fixed */}
+  
+     
+      <header className="header  bg-white border-b  w-[100%] fixed top-0 z-20 shadow-bottom pb-2">
+         {/*social icons-fixed */}
                 <nav className="social-fixed z-[200]">
   
   
@@ -57,7 +59,7 @@ import "./style.css"
               </li>
               
               </ul>
-      </nav>
+      </nav>  
        <div className="cont1 flex justify-between  w-[90%] m-auto  z-10 pt-2 pb-2">
           <div className="contact-info flex gap-2 mt-2">
            <div>

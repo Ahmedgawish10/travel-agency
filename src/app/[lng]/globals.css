@@ -19,9 +19,9 @@ a {
   text-decoration: none;
 }
 .social-fixed {
-  position: fixed;
+  position: absolute;
   top: 50%;
-    left: -41vh;
+    left: -260px;
 }
 .social-fixed ul {
   padding: 0px;
@@ -160,6 +160,11 @@ a {
   } 
 /*media for sm and less */
 @media screen and (max-width:500px){
+/*
+    .social-fixed {
+    left: -10%;
+}
+*/
     .swiper {
   width: 100%;
     height: 80vh;

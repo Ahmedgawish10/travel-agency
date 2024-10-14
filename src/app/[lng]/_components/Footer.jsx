@@ -71,7 +71,7 @@ function Footer({ lng }) {
                   </li>
                   <li>
                     <a href="#" className="hover:underline">
-                      {t('footer.terms_conditions')}
+                      {t('footer.terms_conditions')}11
                     </a>
                   </li>
                 </ul>

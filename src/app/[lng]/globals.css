@@ -8,15 +8,57 @@
     margin: 0;
     box-sizing: border-box;
   }
-
-body{
-    font-family: "Cairo", sans-serif;
-}
 html{
     scroll-behavior: smooth
 }
-
-/**/
+body{
+    font-family: "Cairo", sans-serif;
+}
+/*header social icons */
+a {
+  text-decoration: none;
+}
+.social-fixed {
+  position: fixed;
+  top: 50%;
+    left: 0%;
+}
+.social-fixed ul {
+  padding: 0px;
+  transform: translate(-270px, 0);
+}
+.social-fixed ul li {
+  display: block;
+  margin: 5px;
+  width: 300px;
+  text-align: right;
+  padding: 10px;
+  border-radius: 0 30px 30px 0;
+  transition: all 1s;
+}
+.social-fixed ul li:nth-child(1):hover {
+  transform: translate(110px, 0);
+}
+.social-fixed ul li:nth-child(1):hover svg {
+  color: white;
+}
+.social-fixed ul li:nth-child(2):hover {
+  transform: translate(110px, 0);
+}
+.social-fixed ul li:nth-child(2):hover svg {
+    color: white;
+}
+.social-fixed ul li:nth-child(3):hover {
+  transform: translate(110px, 0);
+  background: #00aced;
+}
+.social-fixed ul li:nth-child(3):hover svg {
+  color: white;
+}
+.social-fixed ul li:hover a {
+  color: #000;
+}
+/*slider*/
 .swiper {
   width: 100%;
     height: 95vh;
@@ -34,8 +76,12 @@ html{
     font-size: 30px !important;
     
 }
-
-
+.swiper-button-next,.swiper-button-prev{
+    top: 65% !important;
+}
+.swiper-button-next{
+    right: 97% !important;
+}
 /*medi  queries global*/
 /* start  style section of the header responsive in md screens and less  */
 @media screen and (min-width:1100px){
@@ -59,12 +105,15 @@ html{
         width: 80%;
         
     }
-
+.swiper-button-next{
+    right: 97% !important;
+}
 }
 @media screen and (min-width:767px){
     .nav-links ul li:hover{
         padding: 0 !important
     }
+
 }
 /*media for md and less */
 @media screen and (max-width:767px) {
@@ -105,6 +154,9 @@ html{
       color:orange  !important;
     
     }
+        .swiper-button-next{
+    right: 94% !important;
+}
   } 
 /*media for sm and less */
 @media screen and (max-width:500px){
@@ -126,6 +178,7 @@ html{
    .main-slider .swiper-pagination {
         margin-bottom: -5px !important;
     }
+    
 }
 
 

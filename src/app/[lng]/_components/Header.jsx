@@ -7,6 +7,10 @@ import { useRouter, usePathname } from 'next/navigation'
 import Link from 'next/link';
 import { useTranslation } from '../../i18n/clinet'
 import { FaPhoneAlt } from "react-icons/fa";
+import { FaFacebookF } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa6";
+import { FaTwitter } from "react-icons/fa";
+
 import { CgMail } from "react-icons/cg";
 import Image from "next/image"
 import CompanyLogo from "../../../../public/imgs/eljewar-logo.jpg"
@@ -26,6 +30,35 @@ import "./style.css"
 
   return (<Suspense  fallback="loading">
       <header className="header bg-white border-b  w-[100%] fixed top-0 z-20 shadow-bottom pb-2">
+        {/*social icons-fixed */}
+                <nav className="social-fixed z-[200]">
+  
+ 
+          <ul>
+              <li className="bg-[#3b5998]">
+              <Link href="https://www.facebook.com/profile.php?id=100090367776829&mibextid=ZbWKwL" target="_blank" 
+              className="flex gap-3 items-center"> 
+              <div><FaFacebookF className="text-2xl text-[white]"/></div> 
+               <span className="text-white">Facebook</span> 
+              </Link>
+              </li>
+              
+              <li className="bg-[#bc2a8d]">
+              <Link href="#"  className="flex gap-3 items-center"> 
+              <div><FaInstagram className="text-2xl text-[white]"/></div> 
+               <span className="text-white">Instagram</span> 
+              </Link>
+              </li>
+              
+              <li className="bg-[#00aced]">
+              <Link href="#"  className="flex gap-3 items-center"> 
+              <div><FaTwitter className="text-2xl text-[white]"/></div> 
+               <span className="text-white">Twitter</span> 
+              </Link>
+              </li>
+              
+              </ul>
+      </nav>
        <div className="cont1 flex justify-between  w-[90%] m-auto  z-10 pt-2 pb-2">
           <div className="contact-info flex gap-2 mt-2">
            <div>
@@ -59,7 +92,7 @@ import "./style.css"
 
             <div className={`hidden md:block nav-links ${isMenuOpen ? 'show ' : ''}`}>
               <nav aria-label="Global">
-                <ul className="flex items-center gap-6 text-sm">
+                <ul className="flex items-center gap-[1.4rem] text-sm">
                   <li className={` ${lng=="en"?"hover:pl-5":"hover:pr-5"}`}>
                     <Link className="relative xmd:text-[16px]  inline cursor-pointer   before:bg-teal-600 hover:rounded-b-none before:absolute before:-bottom-0 before:-left-0  before:block before:h-[4px] before:w-full before:origin-bottom-right before:scale-x-0 before:transition before:duration-300 before:ease-in-out hover:before:origin-bottom-left hover:before:scale-x-100
                     text-[#130f40] lg:text-[18px]  md:text-[16px] pb-1 font-semibold transition " href={`/${lng}`} >{t("header.HomePage")}</Link>
@@ -93,6 +126,11 @@ import "./style.css"
                   </li>
 
                 </ul>
+              
+                
+                
+                
+                
               </nav>
             </div>
 

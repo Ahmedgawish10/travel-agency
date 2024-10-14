@@ -14,6 +14,7 @@ function ModalBookingInfo({lng}) {
   return (
     <div>
       <button
+       name="information before send the booking from details"
         onClick={openModal}
         className="block text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm  text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
       >
@@ -35,6 +36,7 @@ function ModalBookingInfo({lng}) {
 
               </h3>
               <button
+               name="close info-model"
                 onClick={closeModal}
                 className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
               >
@@ -66,6 +68,8 @@ function ModalBookingInfo({lng}) {
             </div>
             <div className="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
               <button
+                              name="close confirm-model"
+
                 onClick={closeModal}
                 className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
               >

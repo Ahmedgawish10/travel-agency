@@ -21,11 +21,11 @@ a {
 .social-fixed {
   position: fixed;
   top: 50%;
-    left: 0%;
+    left: -41vh;
 }
 .social-fixed ul {
   padding: 0px;
-  transform: translate(-270px, 0);
+/*  transform: translate(-270px, 0);*/
 }
 .social-fixed ul li {
   display: block;

@@ -1,6 +1,5 @@
 "use client"
 
-import { Datepicker } from "flowbite-react";
 import React,{ useRef ,useState} from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -13,6 +12,8 @@ import Img1 from "../../../../public/imgs/elhag.png";
 import Img2 from "../../../../public/imgs/fly.gif"
 import Img3 from "../../../../public/imgs/hotels-reserv.png"
 import Img4 from "../../../../public/imgs/outside-travels.gif"
+import { GrNext } from "react-icons/gr";
+import { GrPrevious } from "react-icons/gr";
 
 import Image from "next/image";
 
@@ -37,12 +38,15 @@ export default function App({ lng }  ) {
           clickable: true,
           type: 'bullets',
         }}
-        navigation={true}
+        navigation={{
+        nextEl: '.custom-next',
+        prevEl: '.custom-prev',
+      }}
        loop={true}
            autoplay={{ delay: 8000, disableOnInteraction: false }}
 
-        modules={[Pagination, Navigation]}
-        className="mySwiper h-[200px] main-slider text-white"
+        modules={[Pagination, Navigation,Autoplay]}
+        className="mySwiper h-[200px] main-slider text-white relative"
       >
          {serv?.map((item, index) => (
          <SwiperSlide key={index} className={`SwiperSlide${index}`}
@@ -55,7 +59,7 @@ export default function App({ lng }  ) {
       key={index}     
       src={images[index]} 
       alt={`Image ${index + 1}`}
-      className="w-[100%] h-[100%] object-cover"
+      className="w-[100%] h-[100%] object-cover "
 
     />
                 
@@ -92,6 +96,13 @@ export default function App({ lng }  ) {
            
         </SwiperSlide> 
       ))}
+            <div className={`custom-next absolute  z-[300] top-[60%] cursor-pointer  ${lng=="en" ?'right-0' : ''}`}>
+            <GrNext className="text-3xl text-[orange]"/>
+            </div>
+            <div className={`custom-prev absolute  z-[300] top-[60%] cursor-pointer  ${lng=="en" ?'left-0' : 'left-0'}`}>
+            <GrPrevious className="text-3xl text-[orange]"/>
+            </div>
+
       </Swiper>
 <>
       

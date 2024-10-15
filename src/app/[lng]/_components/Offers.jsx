@@ -15,12 +15,13 @@ import Img3 from "../../../../public/imgs/gharda.jpg"
 import Img4 from "../../../../public/imgs/northcoast.jpg"
 import Img5 from "../../../../public/imgs/dubai.jpg"
 import Img6 from "../../../../public/imgs/paris.jpg"
-
+import { GrNext } from "react-icons/gr";
+import { GrPrevious } from "react-icons/gr";
 import Image from "next/image";
 
 export default function Offers({ lng }) {
         const imagesOffers = [Img1,Img2,Img3,Img4,Img5,Img6]; 
-           const altImages=["elhagOffers","elumrahOffers","ghardaOffers","northcoastOffers","dubaiOffers","oarisOffers"]
+        const altImages=["elhagOffers","elumrahOffers","ghardaOffers","northcoastOffers","dubaiOffers","oarisOffers"]
 
   const AnimationHeading = {
     hidden: { opacity: 0, x: "-25vw" },
@@ -75,11 +76,15 @@ export default function Offers({ lng }) {
           spaceBetween={30}
           slidesPerGroup={2}
           pagination={{ clickable: true }}
-          navigation={true}
+        navigation={{
+        nextEl: '.custom-next',
+        prevEl: '.custom-prev',
+      }}
           autoplay={{ delay: 8000, disableOnInteraction: false }} 
-          modules={[Pagination, Navigation,Autoplay]} 
+          modules={[Pagination, Navigation]} 
           className="mySwiper swiper-offer"
           onSlideChange={handleSlideChange}
+          loop={true}
           breakpoints={{
             0: {
               slidesPerView: 1,
@@ -154,6 +159,13 @@ export default function Offers({ lng }) {
               </div>
             </SwiperSlide>
           ))}
+           <div className={`custom-next absolute z-[300] top-[60%] cursor-pointer  ${lng=="en" ?'right-0' : ''}`}>
+            <GrNext className="text-3xl text-[orange]"/>
+            </div>
+            <div className={`custom-prev absolute  z-[300] top-[60%] cursor-pointer 
+                ${lng=="en" ?'left-0' : ' left-0 lg:left-[60px] 2xl:left-[10%]'}`}>
+            <GrPrevious className="text-3xl text-[orange]"/>
+            </div>
         </Swiper>
       </div>
 

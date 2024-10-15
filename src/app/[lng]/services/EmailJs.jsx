@@ -21,7 +21,6 @@ export const sendEmail = async ({ username, email, message }) => {
             from_email: email, 
             message:message
           },"lnCHV3fV8UOq4AorD");
-    console.log('SUCCESS!', response.status, response.text);
     return { success: true };
   } catch (error) {
     console.error('FAILED...', error);

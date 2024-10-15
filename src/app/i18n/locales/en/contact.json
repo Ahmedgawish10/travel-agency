@@ -31,7 +31,25 @@
     "mobile": {
       "label": "Mobile",
       "number": "01094487922"
+    },
+      "validation": {
+    "username": {
+      "required": "Username is required",
+      "min": "Username must be at least 3 characters long"
+    },
+    "email": {
+      "required": "Email is required",
+      "invalid": "Invalid email address"
+    },
+    "message": {
+      "required": "Message is required",
+      "min": "Message must be at least 10 characters long"
     }
   }
+      
+      
+  }
+
+    
 
 }

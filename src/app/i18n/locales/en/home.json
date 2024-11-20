@@ -116,12 +116,12 @@
         }
         ,{
         "Adults": {
-    "Heading": "Select Adults Date"
+    "Heading": "Numbder of Adults "
   }
         }
            ,{
         "Childs": {
-    "Heading": "Select Childs Date"
+    "Heading": "Numbder of Childs "
   }
         }
             ,{

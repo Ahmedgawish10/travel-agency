@@ -1,15 +1,13 @@
-'use client';
 import React,{Suspense} from 'react';
 import { FaFacebookF, FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
-import { useTranslation } from '../../i18n/clinet';
-
+import { useTranslation } from '../../i18n';
 import { LuInstagram } from "react-icons/lu";
 import { IoLogoTwitter } from "react-icons/io";
 import Link from 'next/link';
 
 
-function Footer({ lng }) {
-  const { t } = useTranslation(lng, 'home');
+async function Footer({ lng }) {
+  const { t } = await useTranslation(lng, 'home');
 
   return (
       <Suspense  fallback="loading">
@@ -18,7 +16,7 @@ function Footer({ lng }) {
         <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
           <div className="md:flex md:justify-between gap-3">
             <div className="mb-6 md:mb-0 flex-1">
-              <a href="#" className="flex items-center w-fit">
+              <a href="#" className="flex items-center w-fit"  aria-label="Read more about  El Jewar">
                 <img
                   src="https://flowbite.com/docs/images/logo.svg"
                   className="h-8 me-3"

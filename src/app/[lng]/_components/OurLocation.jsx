@@ -50,7 +50,8 @@ export default function OurLocaton({ lng }) {
             <div className="rounded-lg overflow-hidden">
           
               <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d213.43583626708704!2d30.656243!3d31.138254!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f65b002f3d6351%3A0xe4382e4225cb418b!2z2KfZhNis2YjYp9ixINmE2YTYs9mK2KfYrdip!5e0!3m2!1sen!2sus!4v1726570170401!5m2!1sen!2sus" width="100%" 
-                height="300px" 
+                height="300px"
+                title="ourLoaction-maps" 
                 style={{ border: "5px" }} 
                 allowFullScreen="" 
                 loading="lazy" 

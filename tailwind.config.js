@@ -7,7 +7,6 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
     "./node_modules/tw-elements/js/**/*.js",
-    // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx}",
     "./node_modules/tw-elements/js/**/*.js",
       flowbite.content()
@@ -15,11 +14,10 @@ module.exports = {
   theme: {
     extend: {
         screens: {         
-            'xmd': {'max': '767px'},// Custom sm breakpoint (default is 640px)
-           'sm': {'max': '500px'},// Custom sm breakpoint (default is 640px)
-            'xsm': {'max': '400px'}// Custom sm breakpoint (default is 640px)
+            'xmd': {'max': '767px'},
+           'sm': {'max': '500px'},
+            'xsm': {'max': '400px'}
 
-        // Add other custom screen sizes if needed
       },
     },
   },
@@ -29,4 +27,3 @@ module.exports = {
              flowbite.plugin(),
            ]
 }
-//حي مكه - شارع السجل المدني - بجوار صيدلية الحجاز - اعلي اسواق الدمرداش

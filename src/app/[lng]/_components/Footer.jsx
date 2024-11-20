@@ -31,7 +31,7 @@ async function Footer({ lng }) {
               </div>
             </div>
 
-            <div className="flex-1 grid grid-cols-2 gap-2 sm:gap-2 md:grid-cols-3 xsm:grid-cols-1">
+            <div className="flex-1 flex sm:flex-col md:flex-row md:justify-end !xmd:justify-start   gap-2   ">
               {/* Quick Links */}
               <div>
                 <h2 className="mb-6 text-sm font-semibold uppercase dark:text-white">
@@ -83,6 +83,7 @@ async function Footer({ lng }) {
                 <div className="social-overlap process-scetion">
                   <div className="social-icons flex mb-3 w-[100%] text-center xmd:gap-3 lg:gap-3">
                     <a
+                     aria-label="tours facebook link"
                       href="https://www.facebook.com/profile.php?id=100090367776829&mibextid=ZbWKwL"
                       target="_blank"
                       className={`icon-up ${lng == "ar" ? "after:right-[100%]" : "after:left-[100%]"} w-[30px] h-[30px] xmd:w-[50px]  xmd:h-[50px] flex justify-center text-[#311f9b] items-center hover:before:bg-[#3f345f] hover:bg-[#3f345f] hover:text-white`}
@@ -90,32 +91,36 @@ async function Footer({ lng }) {
                       <FaFacebookF />
                     </a>
                     <a
+                     aria-label="tours Instagram link"
                   href="#"
                       className={`icon-up ${lng == "ar" ? "after:right-[100%]" : "after:left-[100%]"}  w-[30px] h-[30px] xmd:w-[50px]  xmd:h-[50px] flex justify-center text-[#311f9b] items-center hover:before:bg-[#3f345f] hover:bg-[#3f345f] hover:text-white`}
                     >
                       <LuInstagram />
                     </a>
                     <a
-                                       href="#"
+                     aria-label="tours Twitter link"          
+                                href="#"
                       className={`icon-up ${lng == "ar" ? "after:right-[100%]" : "after:left-[100%]"} w-[30px] h-[30px] xmd:w-[50px]  xmd:h-[50px] flex justify-center text-[#311f9b] items-center hover:before:bg-[#3f345f] hover:bg-[#6CA0C8] hover:text-white`}
                     >
                       <IoLogoTwitter />
                     </a>
                   </div>
-                  <button
-                    type="button"
-                    data-twe-ripple-init
-                    data-twe-ripple-color="light"
-                    className="inline-block rounded bg-primary md:ml-[-10px] lg:ml-0 px-2 pb-2 pt-2 text-sm font-medium uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2 motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
-                  >
-                    <a
-                      href="tel:+01094487922"
-                      className={`text-white ${lng == "ar" ? "flex-row-reverse justify-end" : ""} flex gap-2 items-center`}
-                    >
-                      <FaPhoneAlt/>
-                      <span>01094487922</span>
-                    </a>
-                  </button>
+               <button
+  type="button"
+  data-twe-ripple-init
+  data-twe-ripple-color="light"
+  className="inline-block rounded bg-primary px-4 py-2 text-sm font-medium uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2 motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
+>
+  <a
+    aria-label="tours call us"
+    href="tel:+01094487922"
+    className={`text-white ${lng == "ar" ? "flex-row-reverse justify-end" : ""} flex gap-3 items-center`}
+  >
+    <FaPhoneAlt />
+    <span>01094487922</span>
+  </a>
+</button>
+
                 </div>
               </div>
             </div>
@@ -127,9 +132,9 @@ async function Footer({ lng }) {
             <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
               {t('footer.all_rights_reserved')}
             </span>
-            <div className={`flex ${lng == "ar" ? "flex-row-reverse" : ""} text-gray-500 sm:mt-4`}>
+            <div className={`flex ${lng == "ar" ? "flex-row-reverse" : ""} text-gray-200 sm:mt-4`}>
               <span className="px-2">Develop By</span>
-              <a href="https://portfolio-react-1-mauve.vercel.app/" target="_blank" className="text-white">Ahmed Gawish</a>
+              <a aria-label="developer portfolio" href="https://portfolio-react-1-mauve.vercel.app/" target="_blank" className="text-white">Ahmed Gawish</a>
             </div>
           </div>
         </div>
@@ -139,6 +144,7 @@ async function Footer({ lng }) {
       <div className="icons-contact z-20 fixed">
         {/* WhatsApp Icon */}
         <a
+         aria-label="tours call us "
           href="https://wa.me/+0201094487922"
           className="fixed bottom-10 right-4 bg-green-500 text-white p-3 rounded-full shadow-lg animate-pulse hover:animate-none"
           target="_blank"
@@ -150,6 +156,7 @@ async function Footer({ lng }) {
 
         {/* Phone Icon */}
         <a
+         aria-label="tours call us now "
           href="tel:+01094487922"
           className="fixed bottom-24 right-4 bg-blue-500 text-white p-3 rounded-full shadow-lg animate-pulse hover:animate-none"
         >

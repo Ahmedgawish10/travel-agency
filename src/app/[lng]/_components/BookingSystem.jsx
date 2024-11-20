@@ -5,7 +5,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { motion } from "framer-motion";
 import ModelBookingInfo from "./ModelBookingInfo";
 
-const CustomDropdown = ({ lng }) => {
+const BookingForm = ({ lng }) => {
   const { t } = useTranslation(lng, "home");
   const BookingsData = t("Bookings", { returnObjects: true });
   const todayDate=new Date();
@@ -45,9 +45,9 @@ if (departureCountry==null) {
  if (phone==null ||phone=="") {
       newErrors.phone = (t('BookingValidation.phone')); 
     }
-console.log(new Date(),errors);
 
  if (Object.keys(newErrors).length > 0) {
+     console.log(newErrors);
      setErrors(newErrors);
         return;
     }
@@ -304,4 +304,4 @@ console.log(new Date(),errors);
   );
 };
 
-export default CustomDropdown;
+export default BookingForm;

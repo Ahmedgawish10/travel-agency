@@ -1,584 +1,307 @@
 "use client";
-import { useState, useRef } from 'react';
+import React, { useState } from "react";
 import { useTranslation } from '../../i18n/clinet'
 import { IoIosArrowDown } from "react-icons/io";
-import ModelBookingInfo from "./ModelBookingInfo";
 import { motion } from "framer-motion";
+import ModelBookingInfo from "./ModelBookingInfo";
 
-function DropdownForm({ lng, ticket }) {
-    
-      const AnimationHeading = { visibleTitle: { opacity: 1, x: 0 }, hiddenTitle: { opacity: 0, x: "85vw" } };
-
-    
-    const { t } = useTranslation(lng, 'home')
-    const [isOpen1, setIsOpen1] = useState(false);
-    const [isOpen2, setIsOpen2] = useState(false);
-    const [isOpen3, setIsOpen3] = useState(false);
-    const [isOpen4, setIsOpen4] = useState(false);
-    const [isOpen5, setIsOpen5] = useState(false);
-    const [isOpen6, setIsOpen6] = useState(false); // State for dropdown visibility
-
-
-    const [departureCountry, setdepartureCountry] = useState(`${lng == "en" ? "Select Country" : "اختر الدوله"}`)
-    const [arrivalCountry, setarrivalCountry] = useState(`${lng == "en" ? "Select Country" : "اختر الدوله"}`);
-    const [hotel, setHotel] = useState(`${lng == "en" ? "Select Ratings" : "اختر عدد نجوم الفندق"}`);
-    const [typeTravel, setTypeTravel] = useState(`${lng == "en" ? "Select Travel Type" : "اختر وسيله السفر"}`);
-    const [phone, setPhone] = useState("");
-    const [selectedValue6, setSelectedValue6] = useState('Select number of adults');
-    const [selectedValue7, setSelectedValue7] = useState('Select number of adults');
-    const [popupVisible, setPopupVisible] = useState(false); // State to manage popup visibility
-
-    const [selectedDate, setSelectedDate] = useState(new Date().toISOString().split('T')[0]);
-
-    const handleDateChange = (event) => {
-        setSelectedDate(event.target.value);
-    };
-    const [numberOfAdults, setNumberOfAdults] = useState(1); // State for number of adults
-    const [numberOfChilds, setNumberOfChilds] = useState(0);
-
-    const dropdownRef1 = useRef(null);
-    const dropdownRef2 = useRef(null);
-    const dropdownRef3 = useRef(null);
-    const dropdownRef4 = useRef(null);
-    const dropdownRef5 = useRef(null);
-    const dropdownRef6 = useRef(null);
-    const dropdownRef7 = useRef(null);
-
-    const toggleDropdown1 = () => {
-        setIsOpen1(!isOpen1);
-        setIsOpen2(false);
-        setIsOpen3(false);
-        setIsOpen4(false);
-        setIsOpen5(false);
-
-        document.addEventListener('click', handleClickOutside1);
-    };
-
-    const toggleDropdown2 = () => {
-        setIsOpen2(!isOpen2);
-        setIsOpen1(false);
-        setIsOpen3(false);
-        setIsOpen4(false);
-
-        document.addEventListener('click', handleClickOutside2);
-    };
-    const toggleDropdown3 = () => {
-        setIsOpen3(!isOpen3);
-        setIsOpen1(false); // Close dropdown 1 if it's open
-        setIsOpen2(false); // Close dropdown 1 if it's open
-        setIsOpen4(false); // Close dropdown 1 if it's open
-
-        document.addEventListener('click', handleClickOutside3);
-    };
-    const toggleDropdown4 = () => {
-        setIsOpen4(!isOpen4);
-        setIsOpen1(false); // Close dropdown 1 if it's open
-        setIsOpen2(false); // Close dropdown 2 if it's open
-        setIsOpen3(false); // Close dropdown 2 if it's open
-
-        document.addEventListener('click', handleClickOutside4);
-    };
-    const toggleDropdown5 = () => {
-        setIsOpen5(!isOpen5);
-        setIsOpen1(false); // Close dropdown 1 if it's open
-        setIsOpen2(false); // Close dropdown 2 if it's open
-        setIsOpen3(false); // Close dropdown 2 if it's open
-        setIsOpen4(false); // Close dropdown 2 if it's open
-
-        document.addEventListener('click', handleClickOutside5);
-    };
-    const handleItemClick1 = (value) => {
-        setdepartureCountry(value);
-        setIsOpen1(false);
-        document.removeEventListener('click', handleClickOutside1);
-    };
-
-    const handleItemClick2 = (value) => {
-        setarrivalCountry(value);
-        setIsOpen2(false);
-        document.removeEventListener('mousedown', handleClickOutside2);
-    };
-    const handleItemClick3 = (value) => {
-        setHotel(value);
-        setIsOpen3(false);
-        document.removeEventListener('mousedown', handleClickOutside3);
-    };
-    const handleItemClick4 = (value) => {
-        setTypeTravel(value);
-
-        setIsOpen4(false);
-        document.removeEventListener('mousedown', handleClickOutside2);
-    };
-    const handleItemClick5 = (value) => {
-        setPhone(value);
-        setIsOpen5(false);
-        //    document.removeEventListener('mousedown', handleClickOutside5);
-    };
-    const handleClickOutside1 = (event) => {
-        if (!dropdownRef1.current.contains(event.target)) {
-            setIsOpen1(false);
-            document.removeEventListener('click', handleClickOutside1);
-        }
-    };
-    const handleClickOutside2 = (event) => {
-        if (!dropdownRef2.current.contains(event.target)) {
-            setIsOpen2(false);
-            document.removeEventListener('click', handleClickOutside2);
-        }
-    };
-    const handleClickOutside3 = (event) => {
-        if (!dropdownRef3.current.contains(event.target)) {
-            setIsOpen3(false);
-            document.removeEventListener('click', handleClickOutside3);
-        }
-    };
-
-    const handleClickOutside4 = (event) => {
-        if (!dropdownRef4.current.contains(event.target)) {
-            setIsOpen4(false);
-            document.removeEventListener('click', handleClickOutside4);
-        }
-    };
-
-
-
-
-    const toggleDropdown6 = () => {
-        setIsOpen6(!isOpen6);
-        // Close other dropdowns if needed
-        setIsOpen1(false); // Ensure these are defined if used
-        setIsOpen2(false);
-        setIsOpen3(false);
-        setIsOpen4(false);
-
-        document.addEventListener('click', handleClickOutside6);
-    };
-
-    const handleClickOutside6 = (event) => {
-        if (!dropdownRef6.current.contains(event.target)) {
-            setIsOpen6(false);
-            document.removeEventListener('click', handleClickOutside6);
-        }
-    };
-
-    // Handler for incrementing the number of adults
-    const incrementAdults = () => {
-        setNumberOfAdults(prev => {
-            const newCount = prev + 1;
-            setSelectedValue6(`${newCount} `);
-            return newCount;
-        });
-    };
-
-    // Handler for decrementing the number of adults
-    const decrementAdults = () => {
-        setNumberOfAdults(prev => {
-            const newCount = Math.max(prev - 1, 1); // Prevent negative values
-            setSelectedValue6(`${newCount} 0`);
-            return newCount;
-        });
-    };
-    // Handler for incrementing the number of adults
-    const incrementChilds = () => {
-        setNumberOfChilds(prev => {
-            const newCount = prev + 1;
-            setSelectedValue7(`${newCount} `);
-            return newCount;
-        });
-    };
-
-    // Handler for decrementing the number of adults
-    const decrementChilds = () => {
-        setNumberOfChilds(prev => {
-            const newCount = Math.max(prev - 1, 0); // Prevent negative values
-            setSelectedValue7(`${newCount} 0`);
-            return newCount;
-        });
-    };
-
-
-
-
-
-
-    const countries = [
-        'egypt',
-        'saudi_arabia',
-        'united_arab_emirates',
-        'usa',
-        'france',
-        'germany'
-    ];
-    const starOptions = [
-        'one_star',
-        'two_stars',
-        'three_stars',
-        'four_stars',
-        'five_stars'
-    ];
-
-    const travelOptions = [
-        'sea',
-        'air',
-        'land'
-    ];
-
-
-
-
-    const [errors, setErrors] = useState({});
-
-              
-    const handleSubmit = (event) => {
+const CustomDropdown = ({ lng }) => {
+  const { t } = useTranslation(lng, "home");
+  const BookingsData = t("Bookings", { returnObjects: true });
+  const todayDate=new Date();
+  const [open, setOpen] = useState(null); 
+  const [departureCountry, setDepartureCountry] = useState(null);  
+  const [arrivalCountry,  setArrivalCountry] = useState(null);  
+  const [typeTravel, setTypeTravel] = useState(null);  
+  const [phone, setPhone] = useState(null); 
+  const [date, setDate] = useState(todayDate.toISOString().split('T')[0]);  
+  const [adults, setAdults] = useState(1);  
+  const [children, setChildren] = useState(0); 
+  const [errors, setErrors] = useState({});
+  // functions for incrementing&decrementing adults and children
+  const incrementAdults = () => setAdults(adults + 1);
+  const decrementAdults = () => { if (adults > 1) setAdults(adults - 1) };
+  const incrementChildren = () => setChildren(children + 1);
+  const decrementChildren = () => { if (children > 0) setChildren(children - 1); };
+  // function to toggle all dropdown
+  const toggleDropdown = (index) => { setOpen((prev) => (prev === index ? null : index))};
+  // functions to select options for different dropdowns
+  const handleDepartureCountry = (value) => { setDepartureCountry(value); setOpen(null); };
+  const handleArrivalCountry = (value) => {  setArrivalCountry(value); setOpen(null); };
+  const handleTypeTravel = (value) => { setTypeTravel(value); setOpen(null); };
+  // handle form submit
+   const handleSubmit = (event) => {
     event.preventDefault();
-
     const newErrors = {};
+if (departureCountry==null) {
+      newErrors.departureCountry = (t('BookingValidation.departureCountry')); 
+    }
+ if (arrivalCountry==null) {
+      newErrors.arrivalCountry = (t('BookingValidation.arrivalCountry')); 
+    }
+ if (typeTravel==null) {
+      newErrors.typeTravel = (t('BookingValidation.typeTravel')); 
+    }
+ if (phone==null ||phone=="") {
+      newErrors.phone = (t('BookingValidation.phone')); 
+    }
+console.log(new Date(),errors);
 
-   if (departureCountry === `${lng === "en" ? "Select Country" : "اختر الدوله"}`) {
-            newErrors.departureCountry = t('BookingValidation.departureCountry');
-        }
-       if (arrivalCountry === `${lng === "en" ? "Select Country" : "اختر الدوله"}`) {
-            newErrors.arrivalCountry = t('BookingValidation.arrivalCountry');
-        }
-
-        if (!ticket == "ticket") {
-            if (hotel === `${lng === "en" ? "Select Ratings" : "اختر عدد نجوم الفندق"}`) {
-                newErrors.hotel = t('BookingValidation.hotel');
-            }
-        }
-
-
-        if (typeTravel === `${lng === "en" ? "Select Travel Type" : "اختر وسيله السفر"}`) {
-            newErrors.typeTravel = t('BookingValidation.typeTravel');
-        }
-
-        if (phone === "") {
-            newErrors.phone = t('BookingValidation.phone');
-        }
-
-    if (Object.keys(newErrors).length > 0) {
-        setErrors(newErrors);
+ if (Object.keys(newErrors).length > 0) {
+     setErrors(newErrors);
         return;
     }
-
-    // Construct WhatsApp message
-    const message = `${lng=="en"?"Hello, I would like to know the details of this flight ticket price.":"السلام عليكم كنت عايز اعرف تفاصيل سعر تذكرة الطيران دي "}
-    From: ${departureCountry}
-    To: ${arrivalCountry}
-    Travel Type: ${typeTravel}
-    Number of Adults: ${numberOfAdults}
-    Number of Children: ${numberOfChilds}
-    Travel Date: ${selectedDate}`;
-
-    // Encode message for URL2
-    const encodedMessage = encodeURIComponent(message);
-
+    // sent WhatsApp message
+  const message = `${lng=="en"?"Hello, I would like to know the details of this flight ticket price.":"السلام عليكم كنت عايز اعرف تفاصيل سعر تذكرة الطيران. "}
+   From: ${departureCountry}
+   To: ${arrivalCountry}
+   Travel Type: ${typeTravel}
+   Number of Adults: ${adults}
+   Number of Children: ${children}
+   Travel Date: ${date}`;
+   const encodedMessage = encodeURIComponent(message);
     // Redirect to WhatsApp
    window.open(`https://api.whatsapp.com/send?phone=+201094487922&text=${encodedMessage}`, '_blank');
 
     // Reset the states to their default values
-    setdepartureCountry(`${lng == "en" ? "Select Country" : "اختر الدوله"}`);
-    setarrivalCountry(`${lng == "en" ? "Select Country" : "اختر الدوله"}`);
-    setHotel(`${lng == "en" ? "Select Ratings" : "اختر عدد نجوم الفندق"}`);
-    setTypeTravel(`${lng == "en" ? "Select Travel Type" : "اختر وسيله السفر"}`);
+   setDepartureCountry(null);
+    setArrivalCountry(null);
+   setTypeTravel(null);
     setPhone("");
-    setSelectedDate(new Date().toISOString().split('T')[0]);
-    setNumberOfAdults(1);
-    setNumberOfChilds(0);
-    setSelectedValue6('Select number of adults');
-    setSelectedValue7('Select number of children');
-    setErrors({});
-
-//    setPopupVisible(true);
+   setDate(new Date().toISOString().split('T')[0]);
+   setAdults(1);
+   setChildren(0);
+   setErrors({});
+    setPopupVisible(true);
 };
 
-
-     // Function to close the popup
-    const handleClosePopup = () => {
-        setPopupVisible(false);
-    };
-    return (
-        <div className="booking1 overflow-hidden">
-               <motion.div
-initial={{ opacity: 0, x: `${ 25}vw` }}
-       whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-          transition={{
-    delay:  0.1,
-    duration: 0.2,
-    ease: "easeInOut"
+  return (
+    <div className="mt-[20px] w-[90%] md:container mx-auto  overflow-hidden">
+<motion.div
+  initial={{ opacity: 0, x: "25vw" }}
+  whileInView={{ opacity: 1, x: 0 }}
+  viewport={{ once: true }}
+  transition={{
+    delay: 0.1,
+    duration: 1, 
+    ease: "easeInOut",
   }}
-        transition={{ duration: 1 }} className="1 pb-5 ">
-           <div
-             className="text-center text-3xl flex gap-2 justify-center items-center font-extrabold text-[#03245a]">
-             <span className="heading-booking">       {t(`BookTicketTitle`)}</span>
-             <span className="icon-booking">   <ModelBookingInfo lng={lng}/> </span>
+  className="1 pb-5"
+>
+  <div className="text-center text-3xl flex gap-2 justify-center items-center font-extrabold text-[#03245a]">
+    <span className="heading-booking">{t("BookTicketTitle")}</span>
+    <span className="icon-booking">
+      <ModelBookingInfo lng={lng} />
+    </span>
+  </div>
+</motion.div>
 
-             
-            </div>
-
-           </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: `${ 25}vw`,y:"100px" }}
-       whileInView={{ opacity: 1, x: 0 ,y:0}}
-        viewport={{ once: true }}
-          transition={{
-    delay:  0.1,
-    duration: 0.2,
-    ease: "easeInOut"
-  }}
-               
-                
-                  className="containerr w-[90%] bg-blue-100 md:w-[90%]  lg:w-[70%] mx-auto  ">
-                   {popupVisible && (
-                <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div className="bg-white p-8 rounded-md shadow-lg">
-                        <p className="text-xl">Your booking was successful!</p>
-                        <p>We will send you a message for confirmation shortly.</p>
-                        <button 
-                          className="mt-4 bg-blue-500 text-white py-2 px-4 rounded"
-                          onClick={handleClosePopup}>
-                          Close
-                        </button>
-                    </div>
-                </div>
-            )}
-                <form htmlFor="Booking" onSubmit={handleSubmit} className="p-6  grid grid-cols-1 md:grid-cols-2  md:gap-x-5">
-                    <div className="relative col-span-1 text-left mb-4" ref={dropdownRef1}>
-
-                        <div className={`block ${lng == "ar" ? "text-right" : ""}`}>{t(`countries.FromCountry`)}</div>
-                        <button
-                            id="dropdownCountry1"
-                            onClick={toggleDropdown1}
-                            className={`w-[100%] mt-2 ${errors.departureCountry ? 'border-2 border-red-500 ' : 'border-gray-300'} text-white bg-[#03245a]  hover:bg-[#02183D] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-[#03245a]  dark:focus:ring-blue-800`}
-                            type="button"
-                        >
-                            {departureCountry}
-                             <IoIosArrowDown className={`absolute ${lng == "en" ? "right-2" : "left-2"}  text-base`} />
-
-                        </button>
-                        <div id="dropdown1" className={`z-10 ${isOpen1 ? 'block' : 'hidden'}  absolute bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 overflow-y-auto max-h-40 w-[100%]`}>
-                            <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownCountry1">
-                                <li>
-                                    {countries.map((country) => (
-                                        <span key={country} onClick={() => handleItemClick1(t(`countries.${country}`))} value={country}
-                                            className={`block ${lng == "ar" ? "text-right" : ""} w-[100%] px-4 py-2 hover:bg-gray-100 dark:hover:bg-[#02183D] dark:hover:text-white cursor-pointer`}>
-                                            {t(`countries.${country}`)}
-                                        </span>
-                                    ))}
-                                </li>
-                            </ul>
-                        </div>
-                        {errors.departureCountry && <p className={`text-red-500 ${lng == "ar" ? "text-right " : ""} px-2 pt-1 text-[14px]`}>{errors.departureCountry}</p>}
-                    </div>
-
-                    <div className="relative col-span-1 text-left mb-4" ref={dropdownRef2}>
-                        <div className={`block ${lng == "ar" ? "text-right" : ""}`}>{t(`countries.ToCountry`)}</div>
-                        <button
-                            id="dropdownCountry2"
-                            onClick={toggleDropdown2}
-                            className={`w-[100%] mt-2 ${errors.arrivalCountry ? 'border-2 border-red-500 ' : 'border-gray-300'} text-white bg-[#03245a]  hover:bg-[#02183D] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-[#03245a]  dark:focus:ring-blue-800`}
-                            type="button"
-                        >
-                            {arrivalCountry}
-                            <IoIosArrowDown className={`absolute ${lng == "en" ? "right-2" : "left-2"}  text-base`} />
-                        </button>
-                        <div id="dropdown2" className={`z-10 ${isOpen2 ? 'block' : 'hidden'} absolute bg-white divide-y divide-gray-100 rounded-lg shadow w-[100%] dark:bg-gray-700 overflow-y-auto max-h-40`}>
-                            <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownCountry2">
-                                <li>
-
-                                    {countries.reverse().map((country) => (
-                                        <span key={country} onClick={() => handleItemClick2(t(`countries.${country}`))} value={country}
-                                            className={`block ${lng == "ar" ? "text-right" : ""} w-[100%] px-4 py-2 hover:bg-gray-100 dark:hover:bg-[#02183D] dark:hover:text-white cursor-pointer`}>
-                                            {t(`countries.${country}`)}
-                                        </span>
-                                    ))}
-                                </li>
-
-                            </ul>
-
-                        </div>
-                        {errors.arrivalCountry && <p className={`text-red-500 ${lng == "ar" ? "text-right " : ""} px-2 pt-1 text-[14px]`}>{errors.arrivalCountry}</p>}
-
-                    </div>
-                    {/*3Hotels star*/}
-                    {!ticket == "ticket" && (
-                        <div className="relative col-span-1 text-left mb-4" ref={dropdownRef3}>
-                            <div className={`block ${lng == "ar" ? "text-right" : ""}`}> {t(`hotel_stars.chooseHotelStar`)}   </div>
-                            <button
-                                id="dropdownCountry2"
-                                onClick={toggleDropdown3}
-                                className={`w-[100%] mt-2 ${errors.hotel ? 'border-2 border-red-500 ' : 'border-gray-300'} text-white bg-[#03245a]  hover:bg-[#02183D] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-[#03245a]  dark:focus:ring-blue-800`}
-                                type="button"
-                            >
-                                {hotel}
-                                 <IoIosArrowDown className={`absolute ${lng == "en" ? "right-2" : "left-2"}  text-base`} />
-
-                            </button>
-                            <div id="dropdown2" className={`z-10 ${isOpen3 ? 'block' : 'hidden'} absolute bg-white divide-y divide-gray-100 rounded-lg shadow w-[100%] dark:bg-gray-700 overflow-y-auto max-h-40`}>
-                                <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownCountry2">
-                                    <li>
-
-                                        {starOptions.map((star) => (
-
-                                            <span key={star} value={star} onClick={() => handleItemClick3(t(`hotel_stars.${star}`))}
-                                                className={`block ${lng == "ar" ? "text-right" : ""} w-[100%] px-4 py-2 hover:bg-gray-100 dark:hover:bg-[#02183D] dark:hover:text-white cursor-pointer`}>
-
-                                                {t(`hotel_stars.${star}`)}
-                                            </span>
-                                        ))}
-
-                                    </li>
-
-                                </ul>
-                            </div>
-                            {errors.hotel && <p className={`text-red-500 ${lng == "ar" ? "text-right " : ""} px-2 pt-1 text-[14px]`}>{errors.hotel}</p>}
-
-                        </div>
+<form onSubmit={handleSubmit}>
+  <motion.div
+    initial={{ opacity: 0, x: "25vw", y: "100px" }}
+    whileInView={{ opacity: 1, x: 0, y: 0 }}
+    viewport={{ once: true }}
+    transition={{
+      delay: 0.1,
+      duration: 0.2,
+      ease: "easeInOut",
+    }} className=" bg-[#e1effe] !px-5 !py-4 grid grid-cols-1 md:grid-cols-2 gap-5 lg:w-[60%] mx-auto px-4 md:px-0">
+          {/* loop on each booking items */}
+          {BookingsData?.map((booking, index) => (
+            (booking.DepartureCountry || booking.ArrivalCountry || booking.Travel ||
+              booking.Phone || booking.Date || booking.Adults || booking.Childs || booking.Send) && (
+              <div key={index} className="flex-1 ">
+                {/* Departure Country Dropdown */}
+                {booking.DepartureCountry && (
+                  <div className="relative">
+                    <div>{booking.DepartureCountry.Heading1}</div>
+                    <h3
+                      onClick={() => toggleDropdown(index)}
+                      className="w-full cursor-pointer mt-2 border-gray-300 text-white bg-[#03245a] hover:bg-[#02183D] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-[#03245a] dark:focus:ring-blue-800"
+                    >
+                      <span className="flex justify-between">
+                        {departureCountry ? departureCountry : booking.DepartureCountry.Heading2}
+                        <span>{open == index ? <IoIosArrowDown className="transform rotate-180" /> : <IoIosArrowDown />}</span>
+                      </span>
+                    </h3>
+                    {open === index && (
+                      <div className="absolute z-10 bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 overflow-y-auto max-h-40 w-full">
+                        {booking.DepartureCountry.options.map((option, idx) => (
+                          <div
+                            key={idx}
+                            className="cursor-pointer px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-600"
+                            onClick={() => handleDepartureCountry(option)}
+                          >
+                            <p>{option}</p>
+                          </div>
+                        ))}
+                      </div>
                     )}
+                    {errors.departureCountry && <p className={`text-red-500  px-2 pt-1 text-[14px]`}>{errors.departureCountry}</p>}
+                  </div>
+                )}
 
-                    {/*4 travel ways*/}
-                    <div className="relative col-span-1 text-left mb-4" ref={dropdownRef4}>
-                        <div className={`block ${lng == "ar" ? "text-right" : ""}`}> {t(`travel_types.chooseTravelType`)}   </div>
+                {/* Arrival Country Dropdown */}
+                {booking.ArrivalCountry && (
+                  <div className="relative">
+                    <div>{booking.ArrivalCountry.Heading1}</div>
+                    <h3
+                      onClick={() => toggleDropdown(index)}
+                      className="w-full mt-2 cursor-pointer border-gray-300 text-white bg-[#03245a] hover:bg-[#02183D] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-[#03245a] dark:focus:ring-blue-800"
+                    >
+                      <span className="flex justify-between">
+                        {arrivalCountry ? arrivalCountry : booking.ArrivalCountry.Heading2}
+                        <span>{open == index ? <IoIosArrowDown className="transform rotate-180" /> : <IoIosArrowDown />}</span>
+                      </span>
+                    </h3>
+                    {open === index && (
+                      <div className="absolute z-10 bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 overflow-y-auto max-h-40 w-full">
+                        {booking.ArrivalCountry.options.reverse().map((option, idx) => (
+                          <div
+                            key={idx}
+                            className="cursor-pointer px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-600"
+                            onClick={() =>  handleArrivalCountry(option)}
+                          >
+                            <p>{option}</p>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                 {errors.arrivalCountry && <p className={`text-red-500  px-2 pt-1 text-[14px]`}>{errors.arrivalCountry}</p>}
+                  </div>
+                )}
+
+                {/* Travel Type Dropdown */}
+                {booking.Travel && (
+                  <div className="relative">
+                    <div>{booking.Travel.Heading1}</div>
+                    <h3
+                      onClick={() => toggleDropdown(index)}
+                      className="w-full mt-2 cursor-pointer border-gray-300 text-white bg-[#03245a] hover:bg-[#02183D] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-[#03245a] dark:focus:ring-blue-800"
+                    >
+                      <span className="flex justify-between">
+                        {typeTravel ? typeTravel : booking.Travel.Heading2}
+                        <span>{open === index ? <IoIosArrowDown className="transform rotate-180" /> : <IoIosArrowDown />}</span>
+                      </span>
+                    </h3>
+                    {open === index && (
+                      <div className="absolute z-10 bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 overflow-y-auto max-h-40 w-full">
+                        {booking.Travel.options.map((option, idx) => (
+                          <div
+                            key={idx}
+                            className="cursor-pointer px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-600"
+                            onClick={() => handleTypeTravel(option)}
+                          >
+                            <p>{option}</p>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+             {errors.typeTravel && <p className={`text-red-500  px-2 pt-1 text-[14px]`}>{errors.typeTravel}</p>}
+
+                  </div>
+                )}
+
+                {/* Phone Input */}
+                {booking.Phone && (
+                  <div className="relative py-2">
+                    <label htmlFor="phone" className="block text-sm font-medium text-black dark:text-white">{booking.Phone.Heading}</label>
+                    <input
+                      id="phone"
+                      type="text"
+                      placeholder={booking.Phone.Heading}
+                      className="mt-1 block w-full bg-[#03245a] text-white px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white dark:border-gray-600"
+                      onChange={(e) => setPhone(e.target.value)}
+                    />
+             {errors.phone && <p className={`text-red-500  px-2 pt-1 text-[14px]`}>{errors.phone}</p>}
+
+                  </div>
+                )}
+
+                {/* Travel Date Input */}
+                {booking.Date && (
+                  <div className="relative">
+                    <label htmlFor="travel-date" className="block text-sm font-medium text-gray-700 dark:text-white">{booking.Date.Heading}</label>
+                    <input
+                      id="travel-date"
+                      value={date}
+                      type="date"
+                      className="mt-1 block w-full bg-[#03245a] text-white px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white dark:border-gray-600"
+                      onChange={(e) => setDate(e.target.value)}
+                    />
+                  </div>
+                )}
+
+                {/* Adults Increment/Decrement */}
+                {booking.Adults && (
+                  <div className="relative">
+                    <div className="relative col-span-1 text-left mb-4">
+                      <div className={`block pb-1 ${lng === "ar" ? "text-right" : ""}`}>{booking.Adults.Heading}</div>
+                      <div className="flex p-1 bg-[#03245a] overflow-hidden rounded-full justify-around items-center space-x-4 mb-4">
                         <button
-                            id="dropdownCountry2"
-                            onClick={toggleDropdown4}
-                            className={`w-[100%] mt-2 ${errors.typeTravel ? 'border-2 border-red-500 ' : 'border-gray-300'} text-white bg-[#03245a]  hover:bg-[#02183D] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-[#03245a]  dark:focus:ring-blue-800`}
-                            type="button"
+                          type="button"
+                          onClick={decrementAdults}
+                          className="text-white w-1/3 text-xl hover:bg-[#02183D] cursor-pointer"
                         >
-                            {typeTravel}
-                            <IoIosArrowDown className={`absolute ${lng == "en" ? "right-2" : "left-2"}  text-base`} />
-
+                          -
                         </button>
-                        <div id="dropdown2" className={`z-10 ${isOpen4 ? 'block' : 'hidden'} absolute bg-white divide-y divide-gray-100 rounded-lg shadow w-[100%] dark:bg-gray-700 overflow-y-auto max-h-40`}>
-                            <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownCountry2">
-                                <li>
-                                    {travelOptions.map((travelway) => (
-                                        <span key={travelway} onClick={() => handleItemClick4(t(`travel_types.${travelway}`))} 
-                                           value={travelway}
-                                            className={`block ${lng == "ar" ? "text-right" : ""} w-[100%] px-4 py-2 hover:bg-gray-100 dark:hover:bg-[#02183D] dark:hover:text-white cursor-pointer`}>
-                                            {t(`travel_types.${travelway}`)}
-                                        </span>
-                                    ))}
-
-                                </li>
-
-                            </ul>
-                        </div>
-                        {errors.typeTravel && <p className={`text-red-500 ${lng == "ar" ? "text-right " : ""} px-2 pt-1 text-[14px]`}>{errors.typeTravel}</p>}
-
-                    </div>
-                    {/*5 Phone*/}
-                    <div className={`relative col-span-1 ${ticket == "ticket" ? "" : "md:col-span-2"}  text-left mb-4`}>
-                        <div className={`block ${lng == "ar" ? "text-right" : ""}`}> {t(`phone.writePhone`)}   </div>
-                        <input
-                            type="number"
-                            value={phone}
-                            onChange={(e) => handleItemClick5(e.target.value)}
-                            className={`w-[100%] mt-2 ${errors.phone ? 'border-2 border-red-500 ' : 'border-gray-300'} text-white bg-[#03245a]  hover:bg-[#02183D] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5  inline-flex items-center dark:bg-blue-600 dark:hover:bg-[#03245a]  dark:focus:ring-blue-800 text-white placeholder-white`}
-                            min="0"
-                            placeholder={t(`phone.writePhone`)}
-                        />
-                        {errors.phone && <p className={`text-red-500 ${lng == "ar" ? "text-right " : ""} px-2 pt-1 text-[14px]`}>{errors.phone}</p>}
-
-                    </div>
-
-
-                    {/*6 Days of trip*/}
-                    {/*<div className="relative col-span-1 text-left mb-4" ref={dropdownRef6}>
-            <div>choose</div>
-            <div className="flex bg-[orange] overflow-hidden  rounded-full justify-around  items-center space-x-4 mb-4">
-              <div
-                onClick={decrementAdults}
-                className="cursor-pointer text-3xl text-white   rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-[#03245a]  dark:focus:ring-blue-800"
-              >
-                -
-              </div>
-              <span className=" font-medium text-xl">
-                {numberOfAdults}
-              </span>
-              <div
-                onClick={incrementAdults}
-                className="mt-2 cursor-pointer text-3xl text-white  rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-[#03245a]  dark:focus:ring-blue-800"
-              >
-                +
-              </div>
-            </div>
-          </div>*/}
-                    {/*7 Date for trip*/}
-                    <div className="relative col-span-1 text-left mb-4" ref={dropdownRef6}>
-                        <label htmlFor="dateInput" className={`block pb-2 text-[16px]  ${lng == "ar" ? "text-right" : ""} text-sm font-medium text-gray-700`}>{t(`date.chosedateticket`)} </label>
-
-                        <input
-                            id="dateInput"
-                            type="date"
-                            name="dateInput"
-                            className=" bg-[#03245a] text-white rounded-full p-[5px] cursor-pointer mt-1 block w-full  px-3 border border-gray-300  shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                            value={selectedDate}
-                            onChange={handleDateChange}
-                        />
-                    </div>
-                    {/*8 Adults*/}
-                    <div className="relative col-span-1 text-left mb-4" ref={dropdownRef6}>
-                        <div className={`block ${lng == "ar" ? "text-right" : ""}`}> {t(`persons.adults`)}   </div>
-                        <div className="flex bg-[#03245a] mt-2 overflow-hidden  rounded-full justify-around  items-center space-x-4 mb-4">
-                            <div
-                                onClick={decrementAdults}
-                                className="cursor-pointer text-3xl text-white   rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-[#03245a]  dark:focus:ring-blue-800"
-                            >
-                                -
-                            </div>
-                            <span className="font-medium text-xl text-white">
-                                {numberOfAdults}
-                            </span>
-                            <div
-                                onClick={incrementAdults}
-                                className="cursor-pointer text-3xl text-white  rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-[#03245a]  dark:focus:ring-blue-800"
-                            >
-                                +
-                            </div>
-                        </div>
-                    </div>
-                    {/*9 Childs*/}
-                    <div className="relative col-span-1 text-left mb-4" ref={dropdownRef7}>
-                        <div className={`block ${lng == "ar" ? "text-right" : ""}`}> {t(`persons.childs`)}   </div>
-                        <div className="flex bg-[#03245a] mt-2 overflow-hidden  rounded-full justify-around  items-center space-x-4 mb-4">
-                            <div
-                                onClick={decrementChilds}
-                                className="cursor-pointer text-3xl text-white   rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-[#03245a]  dark:focus:ring-blue-800"
-                            >
-                                -
-                            </div>
-                            <span className="  font-medium text-white">
-                                {numberOfChilds}
-                            </span>
-                            <div
-                                onClick={incrementChilds}
-                                className="cursor-pointer text-3xl text-white  rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-[#03245a]  dark:focus:ring-blue-800"
-                            >
-                                +
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-                    <div className={` relative flex flex-col justify-center col-span-1 ${ticket == "ticket" ? "" : "md:col-span-2"}  text-left `}>
+                        <span className="text-white">{adults}</span>
                         <button
-                            type="submit"
-                            className="button-send  col-span-1  w-full text-white bg-orange-500 hover:bg-orange-600  focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                          type="button"
+                          onClick={incrementAdults}
+                          className="text-white w-1/3 text-xl hover:bg-[#02183D] cursor-pointer"
                         >
-                            {t(`BookingValidation.sendMsg`)} 
+                          +
                         </button>
+                      </div>
                     </div>
-                </form>
-            </motion.div>
+                  </div>
+                )}
 
+                {/* Children Increment/Decrement */}
+                {booking.Childs && (
+                  <div className="relative">
+                    <div className={`block pb-1 ${lng === "ar" ? "text-right" : ""}`}>{booking.Childs.Heading}</div>
+                    <div className="flex p-1 bg-[#03245a]  mt-2 overflow-hidden rounded-full justify-around items-center space-x-4 mb-4">
+                      <button
+                        type="button"
+                        onClick={decrementChildren}
+                        className="text-white w-1/3 text-xl hover:bg-[#02183D] cursor-pointer"
+                      >
+                        -
+                      </button>
+                      <span className="text-white">{children}</span>
+                      <button
+                        type="button"
+                        onClick={incrementChildren}
+                        className="text-white w-1/3 text-xl hover:bg-[#02183D] cursor-pointer"
+                      >
+                        +
+                      </button>
+                    </div>
+                  </div>
+                )}
+                
+                            {booking.Send && (
+  <div className="relative  mx-auto  flex  flex-col justify-center text-left   md:!mt-[30px]">
+          <button
+            type="submit"
+            className="button-send  text-white bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+          >
+            {booking.Send.sendMsg}
+          </button>
+        </div>)}
+                
+                
+                
+                
+              </div>
+            )
+          ))}
+        </motion.div>
+      </form>
+    </div>
+  );
+};
 
-
-        </div>
-    );
-}
-
-export default DropdownForm;
+export default CustomDropdown;

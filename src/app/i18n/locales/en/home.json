@@ -65,51 +65,76 @@
     "typeTravel": "Type of travel is required.",
     "phone": "Phone number is required and must be valid.",
     "date": "Date is required.",
-    "sendMsg":"Send for Reservation",
     "helloPeople":"Welcome to Al-Jewar for Tourism.",
     "bookingInfo":"After submitting your information, our team will contact you directly via WhatsApp or the mobile number you provided to inform you of the price and other details.",
     "acceptModel":"I accept"    
   },
+        "Bookings": [
+    {
+      "DepartureCountry": {
+        "Heading1": " Choose Departure Country",
+        "Heading2": "Departure Country",
+        "options": [
+          "Egypt",
+          "Saudi Arabia",
+          "United States",
+          "Canada"
+        ]
+      }
+    },
+    {
+      "ArrivalCountry": {
+        "Heading1": " Choose Arrival Country",
+        "Heading2": "Arrival Country",
+        "options": [
+          "Egypt",
+          "Saudi Arabia",
+          "United States",
+          "Canada"
+        ]
+      }
+    },
+    {
+    "Travel": {
+     "Heading1": "Choose Travel Type",
+      "Heading2": "Travel Type",
+      "options": [
+        "Sea",
+        "Air",
+        "Land"
+      ]
+    }
+  },{
+   "Phone": {
+    "Heading": "Enter Phone Number"
+  }
+  }
+        ,{
+        "Date": {
+    "Heading": "Select Travel Date"
+  }
+        }
+        ,{
+        "Adults": {
+    "Heading": "Select Adults Date"
+  }
+        }
+           ,{
+        "Childs": {
+    "Heading": "Select Childs Date"
+  }
+        }
+            ,{
+        "Send": {
+    "sendMsg":"Send for Reservation"
+  }
+        }
+        
+        
+        
+  ]
+     ,
     "BookTicketTitle":"Booking Now",
-    "countries": {
-    "FromCountry":"Departure Country",
-    "ToCountry":"Arrival Country",
-    "egypt": "Egypt",
-    "saudi_arabia": "Saudi Arabia",
-    "united_arab_emirates": "United Arab Emirates",
-    "usa": "United States of America",
-    "france": "France",
-    "germany": "Germany"
-  },
-    "hotel_stars": {
-    "chooseHotelStar": "Hotel Star Number",
-    "one_star": "1 Star",
-    "two_stars": "2 Stars",
-    "three_stars": "3 Stars",
-    "four_stars": "4 Stars",
-    "five_stars": "5 Stars"
-  },
-     "travel_types": {
-      "chooseTravelType": "Choose Travel Type" ,
-    "sea": "Sea",
-    "air": "Air",
-    "land": "Land"
-  },
-   "phone": {
-      "writePhone": "Write Your Phone" 
-    
-  },
-     "date": {
-      "chosedateticket": "choose the date Departure " 
-    
-  }  ,
-    "persons": {
-      "adults": "choose Number of Adults" ,
-      "childs": "choose Number of Childs" 
-
-    
-  },
-
   "labels": [
     "Enjoy the best Hajj experience this year with our exclusive offers that combine quality and value. We offer you a distinguished Hajj journey at unmatched prices, including all the services you need for an unforgettable spiritual experience.",
     "Emaar Grand Hotel is located on the bustling Ibrahim Khalil Street in Mecca, just 750 meters from the Grand Mosque. It features elegantly decorated rooms and a restaurant that offers room service around the clock.",
@@ -198,8 +223,6 @@
 ]
 
  
-
-
 
 }
 

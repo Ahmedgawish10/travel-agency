@@ -25,12 +25,13 @@ import Link from 'next/link';
             </Link>
 
            </div>
-              <SliderMain lng={lng}/>
+              <SliderMain lng={lng}/> 
               <ElgiwarFeatures lng={lng}/>
+
               <BookingSystem lng={lng} ticket="ticket"/>
                <Offers lng={lng}/>
                <WhyUs lng={lng}/>
-                <OurLocation lng={lng} />
+                <OurLocation lng={lng} /> 
 
            
 

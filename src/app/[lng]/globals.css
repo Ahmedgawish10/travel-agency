@@ -519,6 +519,13 @@ background: white;
 }
 /*    -----------end loading layout-------------------------------*/
 
-  
+/*
+.swiper-slide-active ,.swiper-slide-next{
+    width: 50% !important;
+}
+.swiper-slide > div{
+    max-width: 100% !important;
+}
+*/
 
 

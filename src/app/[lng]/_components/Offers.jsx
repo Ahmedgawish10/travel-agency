@@ -82,7 +82,7 @@ export default function Offers({ lng }) {
       }}
           autoplay={{ delay: 8000, disableOnInteraction: false }} 
           modules={[Pagination, Navigation]} 
-          className="mySwiper swiper-offer"
+          className="mySwiper swiper-offer md:container max-auto"
           onSlideChange={handleSlideChange}
           loop={true}
           breakpoints={{
@@ -97,7 +97,7 @@ export default function Offers({ lng }) {
           }}
         >
           {sliderOffers.map((offer, index) => (
-            <SwiperSlide key={index} className="sm:flex hover:opacity-90">
+            <SwiperSlide key={index} className="sm:flex  hover:opacity-90">
               {/* Slide Content */}
               <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <a href="#">

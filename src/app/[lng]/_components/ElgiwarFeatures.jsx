@@ -67,7 +67,7 @@ function ElgiwarFeatures({ lng }) {
                 </motion.div>
                 
                 <div className="elgiwar-works grid gap-4 mb-10 mt-12">
-                    <div className="box1 grid grid-cols-[repeat(auto-fit,minmax(0,1fr))] gap-6">
+                    <div className="box1 w-full lg:w-none lg:container mx-auto grid grid-cols-[repeat(auto-fit,minmax(0,1fr))] gap-6">
                         {Featuers.OurFeatures?.map((feature, index) => (
                             <motion.div
                                 key={index}
@@ -83,9 +83,9 @@ function ElgiwarFeatures({ lng }) {
                             >
                                 <div className="ping absolute right-0 z-10 text-red text-[#0ABB0A]"></div>
                                 <Link href={`/${lng}/${elgiwarFeaturesRouts[index]}`} className="hover:opacity-80 transition-opacity duration-300">
-                                    <div className=" feature-box relative sm:h-[220px] h-[200px]">
+                                    <div className=" feature-box relative sm:h-[220px] h-[200px] lg:h-[230px]">
                                         <Image
-                                            className="absolute left-0 top-0 w-[100%] h-[100%]"
+                                            className="absolute left-0 top-0 w-full h-full md:object-cover"
                                             key={index}
                                             src={images[index]} 
                                             alt={`Image ${index + 1}`}

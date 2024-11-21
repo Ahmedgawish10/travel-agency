@@ -84,16 +84,16 @@ import { sendEmail } from '../../services/EmailJs';
            
 <section className="mb-32">
   <div id="map" className="relative h-[400px] overflow-hidden bg-cover bg-[50%] bg-no-repeat">
-     <iframe
-              title="company-map-location"
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d213.43583626708704!2d30.656243!3d31.138254!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f65b002f3d6351%3A0xe4382e4225cb418b!2z2KfZhNis2YjYp9ixINmE2YTYs9mK2KfYrdip!5e0!3m2!1sen!2sus!4v1726570170401!5m2!1sen!2sus"
-                width="100%" 
-                height="400px" 
-                style={{ border: "5px" }} 
-                allowFullScreen="" 
-                loading="lazy" 
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
+                <iframe 
+  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d213.43583626708704!2d30.656243!3d31.138254!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f65b002f3d6351%3A0xe4382e4225cb418b!2z2KfZhNis2YjYp9ixINmE2YTYs9mK2KfYrdip!5e0!3m2!1sen!2sus!4v1726570170401!5m2!1sen!2sus" 
+  width="100%" 
+  height="300px" 
+  title="ourLocation-maps" 
+  style={{border:"0px"}}
+  allowFullScreen="" 
+  loading="lazy" 
+  referrerPolicy="no-referrer">
+</iframe>
   </div>
   <div className="w-[90%] mx-auto px-2 md:px-12">
     <div

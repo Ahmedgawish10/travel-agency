@@ -13,7 +13,6 @@ export default function LoadingPage() {
     } else {
       window.addEventListener('load', handleContentLoaded);
     }
-
     return () => {
       window.removeEventListener('load', handleContentLoaded);
     };
@@ -22,19 +21,14 @@ export default function LoadingPage() {
   return (
     <div>
       {isLoading ? (
-         <div className={`  flex fixed z-[400] layout-loader bg-[#213d52]   items-center justify-center overflow-hidden`}>
+         <div className={` w-[100%] h-[100vh] flex fixed z-[400] layout-loader bg-[#213d52]   items-center justify-center overflow-hidden`}>
             <div className="containerr flex flex-col items-center gap-3">
-           
-             <div className="loader flex justify-center items-center">
+              <div className="loader flex justify-center items-center">
                           <div className="company-logo  z-20"></div>
-
-                           </div>
-                           <div className="loader2"></div>
-           
+               </div>
+               <div className="loader2"></div>
             </div>
-                         
-
-                            </div>
+         </div>
       ) : (
         <div>
         </div>

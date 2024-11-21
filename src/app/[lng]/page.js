@@ -19,7 +19,7 @@ const Home = async ({ params: { lng } }) => {
   return (
     <main className="main-content">
       {/* Language Switcher for home page */}
-      <div className={`home-langSwitcher fixed top-[8px] z-20 ${lng === "ar" ? "left-[5%]" : "right-[5%]"}`}>
+      <div className={`home-langSwitcher  min-h-[40px] min-w-[120px] flex justify-end fixed top-[8px] z-20 ${lng === "ar" ? "left-[5%]" : "right-[5%]"}`}>
         <Link href={`/${lng === "en" ? "ar" : "en"}`} className="text-[black] flex items-center gap-2 text-[20px]">
           <span>{lng === "en" ? "العربية" : "English"}</span>
           <MdOutlineLanguage />

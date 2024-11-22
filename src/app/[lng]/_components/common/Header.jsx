@@ -1,20 +1,21 @@
 "use client"
 import React, { useState, useEffect, Suspense } from 'react'
-import { TiThMenu } from "react-icons/ti";
-import { RiCloseFill } from "react-icons/ri";
-import { MdOndemandVideo } from "react-icons/md";
 import { useRouter, usePathname } from 'next/navigation'
 import Link from 'next/link';
-import { useTranslation } from '../../i18n/clinet'
+import "../style.css"
+import Image from "next/image"
+import CompanyLogo from "../../../../../public/imgs/eljewar-logo.jpg"
+import { useTranslation } from '../../../i18n/clinet'
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa6";
 import { FaTwitter } from "react-icons/fa";
-
+import { TiThMenu } from "react-icons/ti";
+import { RiCloseFill } from "react-icons/ri";
+import { MdOndemandVideo } from "react-icons/md";
 import { CgMail } from "react-icons/cg";
-import Image from "next/image"
-import CompanyLogo from "../../../../public/imgs/eljewar-logo.jpg"
-import "./style.css"
+
+
 
 const Header = ({ lng }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

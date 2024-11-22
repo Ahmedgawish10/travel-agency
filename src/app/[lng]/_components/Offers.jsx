@@ -20,8 +20,8 @@ import { GrPrevious } from "react-icons/gr";
 import Image from "next/image";
 
 export default function Offers({ lng }) {
-        const imagesOffers = [Img1,Img2,Img3,Img4,Img5,Img6]; 
-        const altImages=["elhagOffers","elumrahOffers","ghardaOffers","northcoastOffers","dubaiOffers","oarisOffers"]
+  const imagesOffers = [Img1, Img2, Img3, Img4, Img5, Img6];
+  const altImages = ["elhagOffers", "elumrahOffers", "ghardaOffers", "northcoastOffers", "dubaiOffers", "oarisOffers"]
 
   const AnimationHeading = {
     hidden: { opacity: 0, x: "-25vw" },
@@ -76,12 +76,12 @@ export default function Offers({ lng }) {
           spaceBetween={30}
           slidesPerGroup={2}
           pagination={{ clickable: true }}
-        navigation={{
-        nextEl: '.custom-next',
-        prevEl: '.custom-prev',
-      }}
-          autoplay={{ delay: 8000, disableOnInteraction: false }} 
-          modules={[Pagination, Navigation]} 
+          navigation={{
+            nextEl: '.custom-next',
+            prevEl: '.custom-prev',
+          }}
+          autoplay={{ delay: 8000, disableOnInteraction: false }}
+          modules={[Pagination, Navigation]}
           className="mySwiper swiper-offer md:container max-auto"
           onSlideChange={handleSlideChange}
           loop={true}
@@ -104,18 +104,15 @@ export default function Offers({ lng }) {
                   <div
                     className={`h-[200px] md:h-[260px] rounded-tl-lg rounded-tr-lg rounded-t-lg relative text-center`}
                   >
-                          <Image
-                          className="rounded-[10px]"
-      key={index}     
-      src={imagesOffers[index]} 
-      alt={`Image ${index + 1}`}
-      
-      className="h-[100%] w-[100%] rounded-[10px]"
-    lazy="loading"
-    alt={altImages[index]}
-    
+                    <Image
+                      key={index}
+                      src={imagesOffers[index]}
+                      className="h-[100%] w-[100%] rounded-[10px]"
+                      lazy="loading"
+                      alt={altImages[index]}
 
-    />
+
+                    />
 
                     <span className="offer-title w-[100%] font-bold absolute top-0 left-0 bg-white text-black p-3 rounded-tl-lg rounded-tr-lg">
                       {offer}
@@ -159,13 +156,13 @@ export default function Offers({ lng }) {
               </div>
             </SwiperSlide>
           ))}
-           <div className={`custom-next absolute z-[300] top-[60%] cursor-pointer  ${lng=="en" ?'right-0' : ''}`}>
-            <GrNext className="text-3xl text-[orange]"/>
-            </div>
-            <div className={`custom-prev absolute  z-[300] top-[60%] cursor-pointer 
-                ${lng=="en" ?'left-0' : ' left-0 lg:left-[60px] 2xl:left-[10%]'}`}>
-            <GrPrevious className="text-3xl text-[orange]"/>
-            </div>
+          <div className={`custom-next absolute z-[300] top-[60%] cursor-pointer  ${lng == "en" ? 'right-0' : ''}`}>
+            <GrNext className="text-3xl text-[orange]" />
+          </div>
+          <div className={`custom-prev absolute  z-[300] top-[60%] cursor-pointer 
+                ${lng == "en" ? 'left-0' : ' left-0 lg:left-[60px] 2xl:left-[10%]'}`}>
+            <GrPrevious className="text-3xl text-[orange]" />
+          </div>
         </Swiper>
       </div>
 

@@ -1,6 +1,6 @@
 import React,{Suspense} from 'react';
 import { FaFacebookF, FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
-import { useTranslation } from '../../i18n';
+import { useTranslation } from '../../../i18n';
 import { LuInstagram } from "react-icons/lu";
 import { IoLogoTwitter } from "react-icons/io";
 import Link from 'next/link';
@@ -132,8 +132,8 @@ async function Footer({ lng }) {
             <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
               {t('footer.all_rights_reserved')}
             </span>
-            <div className={`flex ${lng == "ar" ? "flex-row-reverse" : ""} text-gray-200 sm:mt-4`}>
-              <span className="px-2">Develop By</span>
+            <div className={`flex gap-2 ${lng == "ar" ? "flex-row-reverse" : ""} text-gray-500 sm:mt-4`}>
+              <span >Develop By</span>
               <a aria-label="developer portfolio" href="https://portfolio-react-1-mauve.vercel.app/" target="_blank" className="text-white">Ahmed Gawish</a>
             </div>
           </div>

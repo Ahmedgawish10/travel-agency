@@ -5,13 +5,13 @@ import { MdOutlineLanguage } from "react-icons/md";
 import { useTranslation } from '../i18n';
 
 // Lazy load dynmic components
-const SliderMain = dynamic(() => import("../[lng]/_components/SliderMain"), { suspense: true });
+const SliderMain = dynamic(() => import("../[lng]/_components/common/SliderMain"), { suspense: true });
 const BookingSystem = dynamic(() => import("../[lng]/_components/BookingSystem"), { suspense: true });
 const ElgiwarFeatures = dynamic(() => import("../[lng]/_components/ElgiwarFeatures"), { suspense: true });
 const Offers = dynamic(() => import("../[lng]/_components/Offers"), { suspense: true });
 const WhyUs = dynamic(() => import("../[lng]/_components/WhyUs"), { suspense: true });
 const OurLocation = dynamic(() => import("../[lng]/_components/OurLocation"), { suspense: true });
-const LoadingPage = dynamic(() => import("../[lng]/_components/LoadingPage"), { suspense: true });
+const LoadingPage = dynamic(() => import("../[lng]/_components/common/LoadingPage"), { suspense: true });
 
 const Home = async ({ params: { lng } }) => {
   const { t } = await useTranslation(lng, "home");

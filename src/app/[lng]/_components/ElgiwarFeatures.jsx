@@ -65,7 +65,7 @@ function ElgiwarFeatures({ lng }) {
                     <a href="tel:+201094487922" className="underline">{firstTwoWords}</a>
                     <span>{restOfText}</span>
                 </motion.div>
-                
+
                 <div className="elgiwar-works grid gap-4 mb-10 mt-12">
                     <div className="box1 w-full lg:w-none lg:container mx-auto grid grid-cols-[repeat(auto-fit,minmax(0,1fr))] gap-6">
                         {Featuers.OurFeatures?.map((feature, index) => (
@@ -87,9 +87,9 @@ function ElgiwarFeatures({ lng }) {
                                         <Image
                                             className="absolute left-0 top-0 w-full h-full md:object-cover"
                                             key={index}
-                                            src={images[index]} 
+                                            src={images[index]}
                                             alt={`Image ${index + 1}`}
-                                            
+
                                         />
                                         <div className="work1 text-[#03245a] absolute right-[12%] top-[60%] font-bold text-xl text-center">
                                             {feature.Feat1.split(' ').map((word, i, arr) => (

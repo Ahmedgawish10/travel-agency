@@ -8,15 +8,15 @@ import ModelBookingInfo from "./ModelBookingInfo";
 const BookingForm = ({ lng }) => {
   const { t } = useTranslation(lng, "home");
   const BookingsData = t("Bookings", { returnObjects: true });
-  const todayDate=new Date();
-  const [open, setOpen] = useState(null); 
-  const [departureCountry, setDepartureCountry] = useState(null);  
-  const [arrivalCountry,  setArrivalCountry] = useState(null);  
-  const [typeTravel, setTypeTravel] = useState(null);  
-  const [phone, setPhone] = useState(null); 
-  const [date, setDate] = useState(todayDate.toISOString().split('T')[0]);  
-  const [adults, setAdults] = useState(1);  
-  const [children, setChildren] = useState(0); 
+  const todayDate = new Date();
+  const [open, setOpen] = useState(null);
+  const [departureCountry, setDepartureCountry] = useState(null);
+  const [arrivalCountry, setArrivalCountry] = useState(null);
+  const [typeTravel, setTypeTravel] = useState(null);
+  const [phone, setPhone] = useState(null);
+  const [date, setDate] = useState(todayDate.toISOString().split('T')[0]);
+  const [adults, setAdults] = useState(1);
+  const [children, setChildren] = useState(0);
   const [errors, setErrors] = useState({});
   // functions for incrementing&decrementing adults and children
   const incrementAdults = () => setAdults(adults + 1);
@@ -24,88 +24,88 @@ const BookingForm = ({ lng }) => {
   const incrementChildren = () => setChildren(children + 1);
   const decrementChildren = () => { if (children > 0) setChildren(children - 1); };
   // function to toggle all dropdown
-  const toggleDropdown = (index) => { setOpen((prev) => (prev === index ? null : index))};
+  const toggleDropdown = (index) => { setOpen((prev) => (prev === index ? null : index)) };
   // functions to select options for different dropdowns
   const handleDepartureCountry = (value) => { setDepartureCountry(value); setOpen(null); };
-  const handleArrivalCountry = (value) => {  setArrivalCountry(value); setOpen(null); };
+  const handleArrivalCountry = (value) => { setArrivalCountry(value); setOpen(null); };
   const handleTypeTravel = (value) => { setTypeTravel(value); setOpen(null); };
   // handle form submit
-   const handleSubmit = (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     const newErrors = {};
-if (departureCountry==null) {
-      newErrors.departureCountry = (t('BookingValidation.departureCountry')); 
+    if (departureCountry == null) {
+      newErrors.departureCountry = (t('BookingValidation.departureCountry'));
     }
- if (arrivalCountry==null) {
-      newErrors.arrivalCountry = (t('BookingValidation.arrivalCountry')); 
+    if (arrivalCountry == null) {
+      newErrors.arrivalCountry = (t('BookingValidation.arrivalCountry'));
     }
- if (typeTravel==null) {
-      newErrors.typeTravel = (t('BookingValidation.typeTravel')); 
+    if (typeTravel == null) {
+      newErrors.typeTravel = (t('BookingValidation.typeTravel'));
     }
- if (phone==null ||phone=="") {
-      newErrors.phone = (t('BookingValidation.phone')); 
+    if (phone == null || phone == "") {
+      newErrors.phone = (t('BookingValidation.phone'));
     }
 
- if (Object.keys(newErrors).length > 0) {
-     console.log(newErrors);
-     setErrors(newErrors);
-        return;
+    if (Object.keys(newErrors).length > 0) {
+      console.log(newErrors);
+      setErrors(newErrors);
+      return;
     }
     // sent WhatsApp message
-  const message = `${lng=="en"?"Hello, I would like to know the details of this flight ticket price.":"السلام عليكم كنت عايز اعرف تفاصيل سعر تذكرة الطيران. "}
+    const message = `${lng == "en" ? "Hello, I would like to know the details of this flight ticket price." : "السلام عليكم كنت عايز اعرف تفاصيل سعر تذكرة الطيران. "}
    From: ${departureCountry}
    To: ${arrivalCountry}
    Travel Type: ${typeTravel}
    Number of Adults: ${adults}
    Number of Children: ${children}
    Travel Date: ${date}`;
-   const encodedMessage = encodeURIComponent(message);
+    const encodedMessage = encodeURIComponent(message);
     // Redirect to WhatsApp
-   window.open(`https://api.whatsapp.com/send?phone=+201094487922&text=${encodedMessage}`, '_blank');
+    window.open(`https://api.whatsapp.com/send?phone=+201094487922&text=${encodedMessage}`, '_blank');
 
-    // Reset the states to their default values
-   setDepartureCountry(null);
+    // reset the states 
+    setDepartureCountry(null);
     setArrivalCountry(null);
-   setTypeTravel(null);
+    setTypeTravel(null);
     setPhone("");
-   setDate(new Date().toISOString().split('T')[0]);
-   setAdults(1);
-   setChildren(0);
-   setErrors({});
+    setDate(new Date().toISOString().split('T')[0]);
+    setAdults(1);
+    setChildren(0);
+    setErrors({});
     setPopupVisible(true);
-};
+  };
 
   return (
     <div className="mt-[20px] w-[90%] md:container mx-auto  overflow-hidden">
-<motion.div
-  initial={{ opacity: 0, x: "25vw" }}
-  whileInView={{ opacity: 1, x: 0 }}
-  viewport={{ once: true }}
-  transition={{
-    delay: 0.1,
-    duration: 1, 
-    ease: "easeInOut",
-  }}
-  className="1 pb-5"
->
-  <div className="text-center text-3xl flex gap-2 justify-center items-center font-extrabold text-[#03245a]">
-    <span className="heading-booking">{t("BookTicketTitle")}</span>
-    <span className="icon-booking">
-      <ModelBookingInfo lng={lng} />
-    </span>
-  </div>
-</motion.div>
+      <motion.div
+        initial={{ opacity: 0, x: "25vw" }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{
+          delay: 0.1,
+          duration: 1,
+          ease: "easeInOut",
+        }}
+        className="1 pb-5"
+      >
+        <div className="text-center text-3xl flex gap-2 justify-center items-center font-extrabold text-[#03245a]">
+          <span className="heading-booking">{t("BookTicketTitle")}</span>
+          <span className="icon-booking">
+            <ModelBookingInfo lng={lng} />
+          </span>
+        </div>
+      </motion.div>
 
-<form onSubmit={handleSubmit}>
-  <motion.div
-    initial={{ opacity: 0, x: "25vw", y: "100px" }}
-    whileInView={{ opacity: 1, x: 0, y: 0 }}
-    viewport={{ once: true }}
-    transition={{
-      delay: 0.1,
-      duration: 0.2,
-      ease: "easeInOut",
-    }} className=" bg-[#e1effe] !px-5 !py-4 grid grid-cols-1 md:grid-cols-2 gap-5 lg:w-[60%] mx-auto px-4 md:px-0">
+      <form onSubmit={handleSubmit}>
+        <motion.div
+          initial={{ opacity: 0, x: "25vw", y: "100px" }}
+          whileInView={{ opacity: 1, x: 0, y: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            delay: 0.1,
+            duration: 0.2,
+            ease: "easeInOut",
+          }} className=" bg-[#e1effe] !px-5 !py-4 grid grid-cols-1 md:grid-cols-2 gap-5 lg:w-[60%] mx-auto px-4 md:px-0">
           {/* loop on each booking items */}
           {BookingsData?.map((booking, index) => (
             (booking.DepartureCountry || booking.ArrivalCountry || booking.Travel ||
@@ -160,14 +160,14 @@ if (departureCountry==null) {
                           <div
                             key={idx}
                             className="cursor-pointer px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-600"
-                            onClick={() =>  handleArrivalCountry(option)}
+                            onClick={() => handleArrivalCountry(option)}
                           >
                             <p>{option}</p>
                           </div>
                         ))}
                       </div>
                     )}
-                 {errors.arrivalCountry && <p className={`text-red-500  px-2 pt-1 text-[14px]`}>{errors.arrivalCountry}</p>}
+                    {errors.arrivalCountry && <p className={`text-red-500  px-2 pt-1 text-[14px]`}>{errors.arrivalCountry}</p>}
                   </div>
                 )}
 
@@ -197,7 +197,7 @@ if (departureCountry==null) {
                         ))}
                       </div>
                     )}
-             {errors.typeTravel && <p className={`text-red-500  px-2 pt-1 text-[14px]`}>{errors.typeTravel}</p>}
+                    {errors.typeTravel && <p className={`text-red-500  px-2 pt-1 text-[14px]`}>{errors.typeTravel}</p>}
 
                   </div>
                 )}
@@ -213,7 +213,7 @@ if (departureCountry==null) {
                       className="mt-1 block w-full bg-[#03245a] text-white px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white dark:border-gray-600"
                       onChange={(e) => setPhone(e.target.value)}
                     />
-             {errors.phone && <p className={`text-red-500  px-2 pt-1 text-[14px]`}>{errors.phone}</p>}
+                    {errors.phone && <p className={`text-red-500  px-2 pt-1 text-[14px]`}>{errors.phone}</p>}
 
                   </div>
                 )}
@@ -281,20 +281,20 @@ if (departureCountry==null) {
                     </div>
                   </div>
                 )}
-                
-                            {booking.Send && (
-  <div className="relative  mx-auto  flex  flex-col justify-center text-left   md:!mt-[30px]">
-          <button
-            type="submit"
-            className="button-send  text-white bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-          >
-            {booking.Send.sendMsg}
-          </button>
-        </div>)}
-                
-                
-                
-                
+
+                {booking.Send && (
+                  <div className="relative  mx-auto  flex  flex-col justify-center text-left   md:!mt-[30px]">
+                    <button
+                      type="submit"
+                      className="button-send  text-white bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                    >
+                      {booking.Send.sendMsg}
+                    </button>
+                  </div>)}
+
+
+
+
               </div>
             )
           ))}

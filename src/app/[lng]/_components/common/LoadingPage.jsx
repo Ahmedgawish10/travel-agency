@@ -32,7 +32,7 @@ export default function LoadingPage() {
       aria-live="polite"
     >
       <div className="flex flex-col items-center gap-3">
-        <div className="w-30 h-30 bg-white flex justify-center items-center overflow-hidden rounded-full">
+        <div className="w-[120px] h-[120] bg-white flex justify-center items-center overflow-hidden rounded-full">
           <Image
             priority
             src={CompanyLogo}

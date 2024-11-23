@@ -5,7 +5,7 @@ import { MdOutlineLanguage } from "react-icons/md";
 import { useTranslation } from '../i18n';
 import "./globals.css";
 
-// Lazy load dynmic components
+// Lazy load dynmic components.
 const SliderMain = dynamic(() => import("../[lng]/_components/common/SliderMain"), { suspense: true });
 const BookingSystem = dynamic(() => import("../[lng]/_components/BookingSystem"), { suspense: true });
 const ElgiwarFeatures = dynamic(() => import("../[lng]/_components/ElgiwarFeatures"), { suspense: true });

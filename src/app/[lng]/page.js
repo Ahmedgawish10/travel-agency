@@ -3,6 +3,7 @@ import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { MdOutlineLanguage } from "react-icons/md";
 import { useTranslation } from '../i18n';
+import "./globals.css";
 
 // Lazy load dynmic components
 const SliderMain = dynamic(() => import("../[lng]/_components/common/SliderMain"), { suspense: true });

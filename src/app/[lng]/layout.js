@@ -27,7 +27,7 @@ export default async function RootLayout({ children, params: { lng } }) {
               <div className="w-[120px] h-[120px]  bg-white flex justify-center items-center overflow-hidden rounded-full">
                 <Image  priority src={LoadingImg} className="w-[90px] h-[120px]  " alt='logo' />
                </div> 
-               <div className="loader2 dots"></div>
+               <div className="loader2 "></div>
             </div>
          </div>
                            }>

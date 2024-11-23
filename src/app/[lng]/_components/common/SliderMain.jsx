@@ -48,8 +48,8 @@ export default function MainSlider({ lng }) {
                 src={images[index]}
                 alt={`Image ${index + 1}`}
                 className="w-full h-full object-cover"
-                priority={index === 0} // Prioritize first image for LCP
-                loading={index === 0 ? "eager" : "lazy"} // Lazy load other images
+                priority={index === 0} 
+                loading={index === 0 ? "eager" : "lazy"}
               />
 
               {/* Overlay and Content */}

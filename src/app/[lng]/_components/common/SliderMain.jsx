@@ -48,12 +48,8 @@ export default function MainSlider({ lng }) {
                 src={images[index]}
                 alt={`Image ${index + 1}`}
                 className="w-full h-full object-cover"
-<<<<<<< HEAD
                 priority={index === 0} 
                 loading={index === 0 ? "eager" : "lazy"}
-=======
-                priority
->>>>>>> af1cc8928a2ee423653e4b3489b1749786510533
               />
 
               {/* Overlay and Content */}

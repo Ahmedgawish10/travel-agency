@@ -1,4 +1,3 @@
-/* ------------------------Al-Jewar Tours------------------------------------  */
 /*section whyus*/
 .why-us .content{
         background-image: url("../../../../public/imgs/why-us-overlay.avif");
@@ -10,9 +9,6 @@
 @media screen and (max-width:768px){
     .elgiwar-works .box1 {
         grid-template-columns: repeat(2,1fr) !important;
-    }
-    .elgiwar-works .box1 > div{
-/*        height: 290px !important;*/
     }
 }
 /*media for xsm media*/

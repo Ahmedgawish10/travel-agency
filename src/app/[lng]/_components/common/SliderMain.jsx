@@ -11,10 +11,10 @@ import Image from "next/image";
 import { GrNext, GrPrevious } from "react-icons/gr";
 
 // Images
-import Img1 from "../../../../../public/imgs/elhag.png";
-import Img2 from "../../../../../public/imgs/fly.gif";
-import Img3 from "../../../../../public/imgs/hotels-reserv.png";
-import Img4 from "../../../../../public/imgs/outside-travels.gif";
+import Img1 from "../../../../../public/imgs/elhag1.jpg";
+import Img2 from "../../../../../public/imgs/fly1.png";
+import Img3 from "../../../../../public/imgs/hotel1.jpg";
+import Img4 from "../../../../../public/imgs/egypt1.jpg";
 
 export default function MainSlider({ lng }) {
   const images = [Img1, Img2, Img3, Img4];
@@ -49,7 +49,7 @@ export default function MainSlider({ lng }) {
                 alt={`Image ${index + 1}`}
                 className="w-full h-full object-cover"
                 priority={index === 0} 
-                loading={index === 0 ? "eager" : "lazy"}
+                
               />
 
               {/* Overlay and Content */}

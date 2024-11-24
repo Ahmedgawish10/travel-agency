@@ -28,29 +28,18 @@ const Home = async ({ params: { lng } }) => {
       </div>
 
       {/* Lazy-loady comps */}
-      <Suspense fallback={<LoadingPage />}>
         <SliderMain lng={lng} />
-      </Suspense>
+      
 
-      <Suspense fallback={<LoadingPage />}>
         <ElgiwarFeatures lng={lng} />
-      </Suspense>
 
-      <Suspense fallback={<LoadingPage />}>
         <BookingSystem lng={lng} ticket="ticket" />
-      </Suspense>
 
-      <Suspense fallback={<LoadingPage />}>
         <Offers lng={lng} />
-      </Suspense>
 
-      <Suspense fallback={<LoadingPage />}>
         <WhyUs lng={lng} />
-      </Suspense>
 
-      <Suspense fallback={<LoadingPage />}>
         <OurLocation lng={lng} />
-      </Suspense>
     </main>
   );
 };

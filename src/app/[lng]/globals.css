@@ -336,7 +336,7 @@ a {
   height: 2px;
   content: "";
   width: 100%;
-  background: url("../../../public/imgs/line.png") repeat 0 0;
+  background-image: url("../../../public/imgs/line.png") repeat 0 0;
   z-index: 0;
   animation: slide 1s linear infinite;
 }

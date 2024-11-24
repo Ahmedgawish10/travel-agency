@@ -16,7 +16,6 @@ import { MdOndemandVideo } from "react-icons/md";
 import { CgMail } from "react-icons/cg";
 
 
-
 const Header = ({ lng }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { t } = useTranslation(lng, 'home')

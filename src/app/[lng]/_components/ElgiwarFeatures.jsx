@@ -89,6 +89,8 @@ function ElgiwarFeatures({ lng }) {
                                             key={index}
                                             src={images[index]}
                                             alt={`Image ${index + 1}`}
+                                            width={200}
+                                            height={200}
 
                                         />
                                         <div className="work1 text-[#03245a] absolute right-[12%] top-[60%] font-bold text-xl text-center">

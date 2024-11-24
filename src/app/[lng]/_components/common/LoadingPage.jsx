@@ -40,7 +40,7 @@ export default function LoadingPage() {
             alt="Company Logo"
           />
         </div>
-        <div className="loader dots"></div>
+        <div className="loader2 dots"></div>
       </div>
     </div>
   );

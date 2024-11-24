@@ -49,7 +49,8 @@ export default function MainSlider({ lng }) {
                 alt={`Image ${index + 1}`}
                 className="w-full h-full object-cover"
                 priority={index === 0} 
-                
+                width={500}
+                height={500}
               />
 
               {/* Overlay and Content */}
